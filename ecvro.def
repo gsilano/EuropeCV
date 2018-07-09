@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation not yet finished
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvro.def}[europecv Romanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}
@@ -8,7 +8,7 @@
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@officekey{\ecv@utf{Fax}}
 \def\ecv@emailkey{\ecv@utf{E-mail}}
 \def\ecv@nationalitykey{\ecv@utf{Cet{\u a}{\c t}enia}}
 \def\ecv@birthkey{\ecv@utf{Data na{\c s}terii}}

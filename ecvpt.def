@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/11
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvpt.def}[europecv Portuguese definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa\c{c}\~ao pessoal}}
@@ -8,7 +8,7 @@
 \def\ecv@addresskey{\ecv@utf{Morada(s)}}
 \def\ecv@telkey{\ecv@utf{Telefone(s)}}
 \def\ecv@mobilekey{\ecv@utf{Telem\'ovel}}
-\def\ecv@faxkey{\ecv@utf{Fax(es)}}
+\def\ecv@officekey{\ecv@utf{Fax(es)}}
 \def\ecv@emailkey{\ecv@utf{Correio(s) electr\'onico(s)}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidade(s)}}
 \def\ecv@birthkey{\ecv@utf{Data de nascimento}}

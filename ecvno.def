@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/11
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvno.def}[europecv Norwegian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige opplysninger}}
@@ -8,7 +8,7 @@
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefonnumre}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
-\def\ecv@faxkey{\ecv@utf{Faksnumre}}
+\def\ecv@officekey{\ecv@utf{Faksnumre}}
 \def\ecv@emailkey{\ecv@utf{E-postadresse(r)}}
 \def\ecv@nationalitykey{\ecv@utf{Nasjonalitet(er)}}
 \def\ecv@birthkey{\ecv@utf{F\o dselsdato}}

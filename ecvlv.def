@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvlv.def}[europecv Latvian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personas dati}}
@@ -8,7 +8,7 @@
 \def\ecv@addresskey{\ecv@utf{Adrese}}
 \def\ecv@telkey{\ecv@utf{T{\=a}lrunis}}
 \def\ecv@mobilekey{\ecv@utf{Mobilais t{\=a}lrunis}}
-\def\ecv@faxkey{\ecv@utf{Fakss}}
+\def\ecv@officekey{\ecv@utf{Fakss}}
 \def\ecv@emailkey{\ecv@utf{E-pasts}}
 \def\ecv@nationalitykey{\ecv@utf{Pilson{\=\i}ba}}
 \def\ecv@birthkey{\ecv@utf{Dzim{\v s}anas datums}}

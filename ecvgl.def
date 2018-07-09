@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/03/23
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvgl.def}[europecv Galician definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on persoal}}
+\def\ecv@date{\ecv@utf{Actualizado a \today}}
 \def\ecv@namekey{\ecv@utf{Apelidos / Nome}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono}}
 \def\ecv@mobilekey{\ecv@utf{M\'obil}}
-\def\ecv@faxkey{\ecv@utf{Fax(es)}}
+\def\ecv@officekey{\ecv@utf{Oficina}}
 \def\ecv@emailkey{\ecv@utf{Correo electr\'onico}}
+\def\ecv@professionalkey{\ecv@utf{Correo profesional}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidade}}
 \def\ecv@birthkey{\ecv@utf{Data de nacemento}}
 \def\ecv@genderkey{\ecv@utf{Sexo}}

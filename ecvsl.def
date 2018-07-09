@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvsl.def}[europecv Slovenian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osebni podatki}}
@@ -8,7 +8,7 @@
 \def\ecv@addresskey{\ecv@utf{Naslov}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Prenosni telefon}}
-\def\ecv@faxkey{\ecv@utf{Telefaks}}
+\def\ecv@officekey{\ecv@utf{Telefaks}}
 \def\ecv@emailkey{\ecv@utf{E-po{\v s}ta}}
 \def\ecv@nationalitykey{\ecv@utf{Dr{\v z}avljanstvo}}
 \def\ecv@birthkey{\ecv@utf{Datum rojstva}}

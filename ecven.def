@@ -4,20 +4,24 @@
 \ProvidesFile{ecven.def}[europecv English definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personal information}}
-\def\ecv@namekey{\ecv@utf{Surname(s) / First name(s)}}
-\def\ecv@addresskey{\ecv@utf{Address(es)}}
-\def\ecv@telkey{\ecv@utf{Telephone(s)}}
+\def\ecv@date{\ecv@utf{Updated \\ \today}}
+\def\ecv@namekey{\ecv@utf{Surname / First name}}
+\def\ecv@addresskey{\ecv@utf{Address}}
+\def\ecv@telkey{\ecv@utf{Telephone}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
-\def\ecv@faxkey{\ecv@utf{Fax(es)}}
-\def\ecv@emailkey{\ecv@utf{Email(s)}}
-\def\ecv@nationalitykey{\ecv@utf{Nationality(-ies)}}
+\def\ecv@ufficiokey{\ecv@utf{Office}}
+\def\ecv@emailkey{\ecv@utf{Personal Email}}
+\def\ecv@professionalkey{\ecv@utf{Professional Email}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@nationalitykey{\ecv@utf{Nationality}}
 \def\ecv@birthkey{\ecv@utf{Date of birth}}
 \def\ecv@genderkey{\ecv@utf{Gender}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Page}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ of}}
 % Language table
-\def\ecv@mothertonguekey{\ecv@utf{Mother tongue(s)}}
+\def\ecv@mothertonguekey{\ecv@utf{Mother tongue}}
 \def\ecv@assesskey{\ecv@utf{Self-assessment}}
 \def\ecv@levelkey{\ecv@utf{European level}}
 \def\ecv@understandkey{\ecv@utf{Understanding}}

@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2005/05/05
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvfr.def}[europecv French definitions]
 % Informations personnelles
 \def\ecv@infosectionkey{\ecv@utf{Informations personnelles}}
+\def\ecv@date{\ecv@utf{Mis à jour pour \today}}
 \def\ecv@namekey{\ecv@utf{Nom(s) / Pr\'enom(s)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(s)}}
 \def\ecv@telkey{\ecv@utf{T\'el\'ephone(s)}}
 \def\ecv@mobilekey{\ecv@utf{Portable}}
-\def\ecv@faxkey{\ecv@utf{T\'el\'ecopie(s)}}
+\def\ecv@officekey{\ecv@utf{Bureau}}
 \def\ecv@emailkey{\ecv@utf{Courrier(s) \'electronique(s)}}
+\def\ecv@professionalkey{\ecv@utf{E-mail Professionnel}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nationalit\'e(s)}}
 \def\ecv@birthkey{\ecv@utf{Date de naissance}}
 \def\ecv@genderkey{\ecv@utf{Sexe}}

@@ -9,7 +9,7 @@
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
 \def\ecv@telkey{\ecv@utf{In-numru tat-telefown}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
-\def\ecv@faxkey{\ecv@utf{In-numru tal-faks}}
+\def\ecv@officekey{\ecv@utf{In-numru tal-faks}}
 \def\ecv@emailkey{\ecv@utf{Email}}
 \def\ecv@nationalitykey{\ecv@utf{Nazzjonalita' / Nazzjonalitajiet}}
 \def\ecv@birthkey{\ecv@utf{Data tat-twelid}}

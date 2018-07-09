@@ -1,0 +1,25 @@
+%!TEX encoding = UTF-8 Unicode
+%
+% Example of Greek input
+%
+\documentclass[a4paper,greek]{europecv}
+%\usepackage[T1]{fontenc}
+\usepackage[10pt]{type1ec} % To use CB-Greek
+\usepackage[greek,english]{babel} % This is mandatory
+\usepackage{graphicx}
+\ecvlastname{Επώνυμο}
+\ecvfirstname{Όνομα}
+\ecvaddress{Οδός, αριθμός, ταχυδρομικός κωδικός, πόλη, χώρα (Προαιρετικά, βλ. οδηγίες)}
+\ecvtelephone{(Προαιρετικά, βλ. οδηγίες)}
+\ecvfax{(Προαιρετικά, βλ. οδηγίες)}
+\ecvemail{(Προαιρετικά, βλ. οδηγίες)}
+\ecvnationality{(Προαιρετικά, βλ. οδηγίες)}
+\ecvgender{(Προαιρετικά, βλ. οδηγίες)}
+\ecvdateofbirth{\foreignlanguage{english}{You can use the Latin alphabet.}}
+
+\begin{document}
+\selectlanguage{greek}
+  \begin{europecv}
+  \ecvpersonalinfo
+  \end{europecv}
+\end{document} 

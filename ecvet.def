@@ -12,7 +12,7 @@
 \def\ecv@faxkey{\ecv@utf{Faks(id)}}
 \def\ecv@officekey{\ecv@utf{Kontor}}
 \def\ecv@emailkey{\ecv@utf{E-post(id)}}
-\def\ecv@professionalkey{\ecv@utf{TööE-post(id)}}
+\def\ecv@professionalkey{\ecv@utf{Töö E-post(id)}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Kodakondsus}}

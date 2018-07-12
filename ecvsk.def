@@ -4,12 +4,16 @@
 \ProvidesFile{ecvsk.def}[europecv Slovak definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'e} {\'u}daje}}
+\def\ecv@date{\ecv@utf{Aktualizované na \today}}
 \def\ecv@namekey{\ecv@utf{Priezvisko({\'a}) / Meno({\'a})}}
 \def\ecv@addresskey{\ecv@utf{Adresa(y)}}
 \def\ecv@telkey{\ecv@utf{Telef\'on(y)}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
-\def\ecv@officekey{\ecv@utf{Fax(y)}}
+\def\ecv@officekey{\ecv@utf{Kancelária}}
 \def\ecv@emailkey{\ecv@utf{E-mail(y)}}
+\def\ecv@professionalkey{\ecv@utf{Profesionálny e-mail}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{{\v S}t{\'a}tna(e) pr{\'\i}slu{\v s}nost'(ti)}}
 \def\ecv@birthkey{\ecv@utf{D{\'a}tum narodenia}}
 \def\ecv@genderkey{\ecv@utf{Pohlavie}}

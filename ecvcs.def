@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation yet to be finished
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobiln{\'\i} telefon}}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{St{\'a}tn{\'\i} p{\v r}{\'\i}slu{\v s}nost}}
 \def\ecv@birthkey{\ecv@utf{Datum narozen{\'\i}}}
 \def\ecv@genderkey{\ecv@utf{Pohlav{\'\i}}}

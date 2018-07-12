@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/07/08
+% Translation yet to be finished
 \ProvidesFile{ecvlt.def}[europecv Lithuanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Asmenin{\.e} informacija}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Vardas~(-ai)~/ Pavard{\.e}~(-s)}}
 \def\ecv@addresskey{\ecv@utf{Adresas~(-ai)}}
 \def\ecv@telkey{\ecv@utf{Telefonas~(-ai)}}
 \def\ecv@mobilekey{\ecv@utf{Mobilus}}
-\def\ecv@faxkey{\ecv@utf{Faksas~(-ai)}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{El. pa{\v s}tas~(-ai)}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Pilietyb{\.e}}}
 \def\ecv@birthkey{\ecv@utf{Gimimo data}}
 \def\ecv@genderkey{\ecv@utf{Lytis}}

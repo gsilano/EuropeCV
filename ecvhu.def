@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/07/08
+% Translation yet to be finished
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
 \def\ecv@namekey{\ecv@utf{Vezet\'ekn\'ev/Ut\'on\'ev}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@addresskey{\ecv@utf{C\'\i m}}
 \def\ecv@telkey{\ecv@utf{Telefonsz\'am}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{\'Allampolg\'ars\'ag}}
 \def\ecv@birthkey{\ecv@utf{Sz\"ulet\'esi d\'atum}}
 \def\ecv@genderkey{\ecv@utf{Neme}}

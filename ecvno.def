@@ -4,12 +4,16 @@
 \ProvidesFile{ecvno.def}[europecv Norwegian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige opplysninger}}
+\def\ecv@date{\ecv@utf{Oppdatert til \today}}
 \def\ecv@namekey{\ecv@utf{Navn}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefonnumre}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@officekey{\ecv@utf{Faksnumre}}
 \def\ecv@emailkey{\ecv@utf{E-postadresse(r)}}
+\def\ecv@professionalkey{\ecv@utf{Profesjonell e-post}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nasjonalitet(er)}}
 \def\ecv@birthkey{\ecv@utf{F\o dselsdato}}
 \def\ecv@genderkey{\ecv@utf{Kj\o nn}}

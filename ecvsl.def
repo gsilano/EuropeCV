@@ -4,12 +4,17 @@
 \ProvidesFile{ecvsl.def}[europecv Slovenian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osebni podatki}}
+\def\ecv@date{\ecv@utf{Posodobljeno na \today}}
 \def\ecv@namekey{\ecv@utf{Ime~/ Priimek}}
 \def\ecv@addresskey{\ecv@utf{Naslov}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Prenosni telefon}}
 \def\ecv@officekey{\ecv@utf{Telefaks}}
 \def\ecv@emailkey{\ecv@utf{E-po{\v s}ta}}
+def\ecv@officekey{\ecv@utf{Urad}}
+\def\ecv@professionalkey{\ecv@utf{Strokovni E-poštni naslov}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Dr{\v z}avljanstvo}}
 \def\ecv@birthkey{\ecv@utf{Datum rojstva}}
 \def\ecv@genderkey{\ecv@utf{Spol}}

@@ -4,12 +4,16 @@
 \ProvidesFile{ecvnl.def}[europecv Dutch definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Persoonsgegevens}}
+def\ecv@date{\ecv@utf{Bijgewerkt naar \today}}
 \def\ecv@namekey{\ecv@utf{Achternaam~(-namen)/ Voornaam~(-namen)}}
 \def\ecv@addresskey{\ecv@utf{Adres(sen)}}
 \def\ecv@telkey{\ecv@utf{Telefoon(s)}}
 \def\ecv@mobilekey{\ecv@utf{Mobiel}}
-\def\ecv@officekey{\ecv@utf{Faxnummer(s)}}
+\def\ecv@officekey{\ecv@utf{Kantoor}}
 \def\ecv@emailkey{\ecv@utf{E-mailadres(sen)}}
+\def\ecv@professionalkey{\ecv@utf{professionele e-mail}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nationaliteit}}
 \def\ecv@birthkey{\ecv@utf{Geboortedatum}}
 \def\ecv@genderkey{\ecv@utf{Geslacht}}

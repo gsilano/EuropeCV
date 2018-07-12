@@ -4,12 +4,16 @@
 \ProvidesFile{ecvpt.def}[europecv Portuguese definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa\c{c}\~ao pessoal}}
+\def\ecv@date{\ecv@utf{Atualizado para\today}}
 \def\ecv@namekey{\ecv@utf{Apelido(s) - Nome(s)}}
 \def\ecv@addresskey{\ecv@utf{Morada(s)}}
 \def\ecv@telkey{\ecv@utf{Telefone(s)}}
 \def\ecv@mobilekey{\ecv@utf{Telem\'ovel}}
-\def\ecv@officekey{\ecv@utf{Fax(es)}}
+\def\ecv@officekey{\ecv@utf{Escritório}}
 \def\ecv@emailkey{\ecv@utf{Correio(s) electr\'onico(s)}}
+\def\ecv@professionalkey{\ecv@utf{Email profissional}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidade(s)}}
 \def\ecv@birthkey{\ecv@utf{Data de nascimento}}
 \def\ecv@genderkey{\ecv@utf{Sexo}}

@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed 06.02.2006.
+% Translation completed on 2018/08/07
 \ProvidesFile{ecvsr.def}[europecv Serbian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Li{\v c}ni podaci}}
+\def\ecv@date{\ecv@utf{Ažurirano \today}}
 \def\ecv@namekey{\ecv@utf{Prezime~/ ime}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobilan}}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@officekey{\ecv@utf{Ured}}
 \def\ecv@emailkey{\ecv@utf{E - mail}}
+\def\ecv@professionalkey{\ecv@utf{Radnu E-poštu}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalnost}}
 \def\ecv@birthkey{\ecv@utf{Datum ro{\dj}enja}}
 \def\ecv@genderkey{\ecv@utf{Pol}}

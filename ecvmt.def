@@ -1,16 +1,20 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation not yet finished
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvmt-utf8.def}[europecv Maltese definitions]
 \inputencoding{utf8x}
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Tagħrif personali}}
+def\ecv@date{\ecv@utf{Aġġornat għal \today}}
 \def\ecv@namekey{\ecv@utf{Kunjom(ijiet) Isem (Ismijiet)}}
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
 \def\ecv@telkey{\ecv@utf{In-numru tat-telefown}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
-\def\ecv@faxkey{\ecv@utf{In-numru tal-faks}}
+\def\ecv@officekey{\ecv@utf{In-numru tal-faks}}
 \def\ecv@emailkey{\ecv@utf{Email}}
+\def\ecv@professionalkey{\ecv@utf{Email Professjonali}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nazzjonalita' / Nazzjonalitajiet}}
 \def\ecv@birthkey{\ecv@utf{Data tat-twelid}}
 \def\ecv@genderkey{\ecv@utf{Sess}}
@@ -29,6 +33,6 @@
 \def\ecv@interactkey{\ecv@utf{Komunikazzjoni Verbali}}
 \def\ecv@productkey{\ecv@utf{Ħila fil-komunikkazzjoni}}
 \def\ecv@langfooterkey{\ecv@utf{Qafas Ewropew ta’ Referenza Komuni għall-lingwi}}
-\def\ecv@cefbasickey{\ecv@utf{Basic user}} % To be translated
-\def\ecv@cefindepkey{\ecv@utf{Independent user}} % To be translated
-\def\ecv@cefprofkey{\ecv@utf{Proficient user}} % To be translated
+\def\ecv@cefbasickey{\ecv@utf{Livell elementari}}
+\def\ecv@cefindepkey{\ecv@utf{Livell intermedju}}
+\def\ecv@cefprofkey{\ecv@utf{Livell avvanzat}} 

@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % European curriculum vitae class
-% Author: Nicola Vitacolonna (vitacolo@dimi.uniud.it)
+% Author: Nicola Vitacolonna (vitacolo@dimi.uniud.it), Giuseppe Silano (giuseppe.silano@unisannio.it)
 % This material is subject to the LaTeX Project Public License.
 % See  http://www.ctan.org/tex-archive/help/Catalogue/licenses.lppl.html
 % for the details of that license
@@ -356,9 +356,11 @@
 \newcommand*{\ecvname}[1]{\def\ecv@name{#1}} % Replaces the above
 \newcommand*{\ecvfootername}[1]{\def\ecv@footername{#1}}
 \newcommand*{\ecvaddress}[1]{\def\ecv@address{#1}}
-\newcommand*{\ecvtelephone}[2][]{\def\ecv@telephone{#2}\def\ecv@mobile{#1}}
-\newcommand*{\ecvfax}[1]{\def\ecv@fax{#1}}
+\newcommand*{\ecvtelephone}[3][]{\def\ecv@telephone{#3}\def\ecv@mobile{#2}\def\ecv@office{#1}}
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
+\newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
+\newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
+\newcommand*{\ecvpec}[1]{\def\ecv@pec{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
 \newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
 \newcommand*{\ecvdateofbirth}[1]{\def\ecv@birth{#1}}
@@ -385,14 +387,16 @@
 \ecvfootername{\ecv@name}
 \ecvaddress{}
 \ecvtelephone{}
-\ecvfax{}
 \ecvemail{}
+\ecvpec{}
 \ecvnationality{}
 \ecvdateofbirth{}
 \ecvgender{}
 \ecvpicture{}
 
+
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
+{\large\par\textbf{\ecv@date}} & \tabularnewline
 & \tabularnewline
 \ifx\@empty\ecvdrawpicture\else
    &\ecv@beforepic\ecvdrawpicture\ecv@afterpic\tabularnewline
@@ -404,15 +408,22 @@
 \ecv@addresskey     &\ecv@address   \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@telephone\else
-\ecv@telkey         &\ecv@telephone
- \ifx\@empty\ecv@mobile\else\qquad\ecv@mobilekey: \ecv@mobile\fi
+	\ecv@telkey      &\ecv@telephone
+	\ifx\@empty\ecv@mobile\else\qquad\ecv@mobilekey: \ecv@mobile\fi
+	\ifx\@empty\ecv@office\else\qquad\ecv@ufficiokey: \ecv@office\fi
 \tabularnewline[5pt]
-\fi
-\ifx\@empty\ecv@fax\else
-\ecv@faxkey         &\ecv@fax \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@email\else
 \ecv@emailkey       &\ecv@email \tabularnewline[5pt]
+\fi
+\ifx\@empty\ecv@professional\else
+\ecv@professionalkey       &\ecv@professional \tabularnewline[5pt]
+\fi
+\ifx\@empty\ecv@pec\else
+\ecv@peckey       &\ecv@pec \tabularnewline[5pt]
+\fi
+\ifx\@empty\ecv@skype\else
+\ecv@skypekey       &\ecv@skype \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@nationality\else
 \ecv@nationalitykey & \ecv@nationality \tabularnewline[5pt]
@@ -588,7 +599,7 @@
 }
 {\end{longtable}}
 
-\newcommand{\ecvsection}[2][10pt]{%
+\renewcommand{\section}[2][10pt]{%
   {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
 }
           

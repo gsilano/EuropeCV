@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation yet to be finished
 \ProvidesFile{ecvbg.def}[europecv Bulgarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Лична информация}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Фамилия (ии), Собствено (и) име (на)}}
 \def\ecv@addresskey{\ecv@utf{Адрес}}
 \def\ecv@telkey{\ecv@utf{Телефон}}
 \def\ecv@mobilekey{\ecv@utf{Мобилен телефон}}
-\def\ecv@faxkey{\ecv@utf{Факс}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Националност}}
 \def\ecv@birthkey{\ecv@utf{Дата на раждане}}
 \def\ecv@genderkey{\ecv@utf{Пол}}

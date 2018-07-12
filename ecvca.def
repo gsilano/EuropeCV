@@ -4,12 +4,16 @@
 \ProvidesFile{ecvca.def}[europecv Catalan definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'o personal}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Nom}}
 \def\ecv@addresskey{\ecv@utf{Adre\c{c}a }}
 \def\ecv@telkey{\ecv@utf{Tel\`efon}}
 \def\ecv@mobilekey{\ecv@utf{M\`obil: }}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{Correu electr\`onic}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalitat}}
 \def\ecv@birthkey{\ecv@utf{Data de naixement}}
 \def\ecv@genderkey{\ecv@utf{Gender}} % To be translated

@@ -1,15 +1,20 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation completed on 2018/07/08
 \ProvidesFile{ecvet.def}[europecv Estonian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Isikuandmed}}
+\def\ecv@date{\ecv@utf{Ajakohastatud\today}}
 \def\ecv@namekey{\ecv@utf{Perekonnanimi/eesnimi}}
 \def\ecv@addresskey{\ecv@utf{Aadress(id)}}
 \def\ecv@telkey{\ecv@utf{Telefon(id)}}
 \def\ecv@mobilekey{\ecv@utf{Mobiiltelefon}}
 \def\ecv@faxkey{\ecv@utf{Faks(id)}}
+\def\ecv@officekey{\ecv@utf{Kontor}}
 \def\ecv@emailkey{\ecv@utf{E-post(id)}}
+\def\ecv@professionalkey{\ecv@utf{Töö E-post(id)}}
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Kodakondsus}}
 \def\ecv@birthkey{\ecv@utf{S\"unniaeg}}
 \def\ecv@genderkey{\ecv@utf{Sugu}}

@@ -1,15 +1,19 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2006/01/13
+% Translation yet to be finished
 \ProvidesFile{ecvis.def}[europecv Icelandic definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Pers{\'o}nulegar uppl{\'y}singar}}
+\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Nafn}}
 \def\ecv@addresskey{\ecv@utf{Heimilisfang/(-f{\"o}ng)}}
 \def\ecv@telkey{\ecv@utf{S{\'\i}mi/(-ar)}}
 \def\ecv@mobilekey{\ecv@utf{Fars{\'\i}mi}}
-\def\ecv@faxkey{\ecv@utf{Br{\'e}fas{\'\i}mi}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{Netfang/(-f{\"o}ng)}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{{\TH}j{\'o}{\dh}erni}}
 \def\ecv@birthkey{\ecv@utf{F{\ae}{\dh}ingardagur}}
 \def\ecv@genderkey{\ecv@utf{Kyn}}

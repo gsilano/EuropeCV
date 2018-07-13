@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/07/12
+% Translation yet to be finished, 2018/07/13
 \ProvidesFile{ecvsv.def}[europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}

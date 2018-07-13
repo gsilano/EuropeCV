@@ -2,11 +2,11 @@
 %
 % European curriculum vitae class
 % Author: Nicola Vitacolonna (vitacolo@dimi.uniud.it) and Giuseppe Silano (giuseppe.silano@unisannio.it)
-% This material is subject to the LaTeX Project Public License Version 1.3c
+% This material is subject to the LaTeX Project Public License, either version 1.3
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[2018/07/12 (beta+Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[2018/07/13 (beta+Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -193,6 +193,7 @@
     \ClassWarningNoLine{europecv}{Serbian definition file 'ecvsr.def' not found}}%
   }%
 }
+
 
 
 % Input encodings

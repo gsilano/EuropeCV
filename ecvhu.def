@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished
+% Translation yet to be finished, 2018/07/12
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}

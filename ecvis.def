@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished
+% Translation yet to be finished, 2018/07/12
 \ProvidesFile{ecvis.def}[europecv Icelandic definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Pers{\'o}nulegar uppl{\'y}singar}}

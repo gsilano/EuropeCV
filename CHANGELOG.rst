@@ -5,6 +5,7 @@ Changelog for package europecv
 2018.07.13
 ----------
 * Bug fix
+* Removed the CR-LF line terminators
 * Contributors: Giuseppe Silano
 
 2018.07.12

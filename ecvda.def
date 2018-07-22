@@ -8,6 +8,7 @@
 \def\ecv@namekey{\ecv@utf{Efternavn(e), fornavn(e) og mellemnavn(e)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail-adresse(r)}}

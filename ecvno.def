@@ -8,6 +8,7 @@
 \def\ecv@namekey{\ecv@utf{Navn}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefonnumre}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@officekey{\ecv@utf{Faksnumre}}
 \def\ecv@emailkey{\ecv@utf{E-postadresse(r)}}

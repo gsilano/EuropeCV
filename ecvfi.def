@@ -9,6 +9,7 @@
 \def\ecv@addresskey{\ecv@utf{Osoitteet}}
 \def\ecv@telkey{\ecv@utf{Puhelinnumero(t)}}
 \def\ecv@mobilekey{\ecv@utf{Matkapuhelin}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Toimisto}}
 \def\ecv@emailkey{\ecv@utf{S\"ahk\"oposti(t)}}
 \def\ecv@professionalkey{\ecv@utf{Ammatillinen Sähköposti}}

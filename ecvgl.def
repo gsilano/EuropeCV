@@ -7,6 +7,7 @@
 \def\ecv@date{\ecv@utf{Actualizado a \today}}
 \def\ecv@namekey{\ecv@utf{Apelidos / Nome}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono}}
 \def\ecv@mobilekey{\ecv@utf{M\'obil}}
 \def\ecv@officekey{\ecv@utf{Oficina}}

@@ -11,6 +11,7 @@
 \def\ecv@namekey{\ecv@utf{\foreignlanguage{greek}{Επώνυμο (-α)~/ Όνομα (-τα)}}}
 \def\ecv@addresskey{\ecv@utf{\foreignlanguage{greek}{Διεύθυνση~(-εις)}}}
 \def\ecv@telkey{\ecv@utf{\foreignlanguage{greek}{Τηλέφωνο~(-α)}}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{\foreignlanguage{greek}{Κινητό}}}
 \def\ecv@officekey{\ecv@utf{\foreignlanguage{greek}{γραφείο}}}
 \def\ecv@emailkey{\ecv@utf{\foreignlanguage{greek}{Ηλεκτρονικό ταχυδρομείο}}}

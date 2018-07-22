@@ -10,6 +10,7 @@
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobilan}}
 \def\ecv@officekey{\ecv@utf{Ured}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@emailkey{\ecv@utf{E - mail}}
 \def\ecv@professionalkey{\ecv@utf{Radnu E-poštu}}
 \def\ecv@skypekey{\ecv@utf{Skype}}

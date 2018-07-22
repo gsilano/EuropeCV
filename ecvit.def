@@ -10,6 +10,7 @@
 \def\ecv@telkey{\ecv@utf{Telefono}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
 \def\ecv@officekey{\ecv@utf{Ufficio}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@emailkey{\ecv@utf{Email}}
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
@@ -19,7 +20,7 @@
 \def\ecv@genderkey{\ecv@utf{Sesso}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Pagina}}
-\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ et studiorum}}
+\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\}}
 % Language table
 \def\ecv@mothertonguekey{\ecv@utf{Madrelingua}}
 \def\ecv@assesskey{\ecv@utf{Autovalutazione}}

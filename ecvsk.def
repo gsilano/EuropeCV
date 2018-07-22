@@ -9,6 +9,7 @@
 \def\ecv@addresskey{\ecv@utf{Adresa(y)}}
 \def\ecv@telkey{\ecv@utf{Telef\'on(y)}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Kancelária}}
 \def\ecv@emailkey{\ecv@utf{E-mail(y)}}
 \def\ecv@professionalkey{\ecv@utf{Profesionálny e-mail}}

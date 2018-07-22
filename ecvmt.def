@@ -8,6 +8,7 @@
 def\ecv@date{\ecv@utf{Aġġornat għal \today}}
 \def\ecv@namekey{\ecv@utf{Kunjom(ijiet) Isem (Ismijiet)}}
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{In-numru tat-telefown}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}
 \def\ecv@officekey{\ecv@utf{In-numru tal-faks}}

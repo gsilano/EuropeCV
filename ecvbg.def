@@ -8,6 +8,7 @@
 \def\ecv@namekey{\ecv@utf{Фамилия (ии), Собствено (и) име (на)}}
 \def\ecv@addresskey{\ecv@utf{Адрес}}
 \def\ecv@telkey{\ecv@utf{Телефон}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Мобилен телефон}}
 \def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail}}

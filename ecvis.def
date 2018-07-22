@@ -9,6 +9,7 @@
 \def\ecv@addresskey{\ecv@utf{Heimilisfang/(-f{\"o}ng)}}
 \def\ecv@telkey{\ecv@utf{S{\'\i}mi/(-ar)}}
 \def\ecv@mobilekey{\ecv@utf{Fars{\'\i}mi}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{Netfang/(-f{\"o}ng)}}
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated

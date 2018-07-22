@@ -7,6 +7,7 @@
 \def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
 \def\ecv@namekey{\ecv@utf{Nom}}
 \def\ecv@addresskey{\ecv@utf{Adre\c{c}a }}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{Tel\`efon}}
 \def\ecv@mobilekey{\ecv@utf{M\`obil: }}
 \def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated

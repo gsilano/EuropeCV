@@ -1,6 +1,10 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2018.07.22
+----------
+* Some changes based on #2. Specifically, the \ecvsection and \ecvfax commands have been restored. Furthermore, the documentation has been updtated explaining how to use the \ecvtelephone command.
+* Cotributors: Giuseppe Silano
 
 2018.07.13
 ----------

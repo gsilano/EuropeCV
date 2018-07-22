@@ -8,6 +8,7 @@
 \def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Mobiln{\'\i} telefon}}
 \def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-mail}}

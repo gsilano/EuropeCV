@@ -9,6 +9,7 @@ def\ecv@date{\ecv@utf{Bijgewerkt naar \today}}
 \def\ecv@addresskey{\ecv@utf{Adres(sen)}}
 \def\ecv@telkey{\ecv@utf{Telefoon(s)}}
 \def\ecv@mobilekey{\ecv@utf{Mobiel}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Kantoor}}
 \def\ecv@emailkey{\ecv@utf{E-mailadres(sen)}}
 \def\ecv@professionalkey{\ecv@utf{professionele e-mail}}

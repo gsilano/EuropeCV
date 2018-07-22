@@ -10,6 +10,7 @@
 \def\ecv@telkey{\ecv@utf{T{\=a}lrunis}}
 \def\ecv@mobilekey{\ecv@utf{Mobilais t{\=a}lrunis}}
 \def\ecv@officekey{\ecv@utf{Biuras}}
+\def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@emailkey{\ecv@utf{E-pasts}}
 \def\ecv@professionalkey{\ecv@utf{Profesionalus el. paštas}}
 \def\ecv@skypekey{\ecv@utf{Skype}}

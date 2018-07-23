@@ -217,7 +217,7 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\ecv{lastname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
 	\ecvitem{\ecv{address}\texttt{\{}\textit{addr}\texttt{\}}}{Sets the address to \emph{addr}.}
 	\ecvitem{\ecv{fax}\texttt{\{}\textit{fax}\texttt{\}}}{Sets the fax number to \emph{fax}. If you do not have any fax number, you can leave it empty.}
-	\ecvitem{\ecv{telephone}\texttt{[}\textit{office}\texttt{]}\texttt{\{}\textit{mobile}\texttt{\}}\\\texttt{\{}\textit{tel}\texttt{\}}}{Sets the telephone number to \emph{tel} and, optionally, the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
+	\ecvitem{\ecv{telephone}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\\texttt{\{}\textit{tel}\texttt{\}}}{Sets the telephone number to \emph{tel} and, optionally, the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{fax}\texttt{\{}\textit{fax}\texttt{\}}}{Sets the fax number to \emph{fax}.}
 	\ecvitem{\ecv{email}\texttt{\{}\textit{email}\texttt{\}}}{Sets the email to \emph{email}.}
 	\ecvitem{\ecv{professional}\texttt{\{}\textit{professional}\texttt{\}}}{Sets the professional email to \emph{professional}.}
@@ -249,7 +249,7 @@ For example, consider the following document:
 	\ecvname{Alan Touring}
 	\ecvfootername{}
 	\ecvaddress{Wilmslow, Cheshire, England}	
-	\ecvtelephone[1234]{5678}{4321}
+	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
 	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
@@ -275,7 +275,7 @@ The above will produce the following output:
    \ecvname{Alan Touring}
    \ecvfootername{}
    \ecvaddress{Wilmslow, Cheshire, England}	
-   \ecvtelephone[1234]{5678}{4321}
+   \ecvtelephone[1234][5678]{4321}
    \ecvfax{0055884321}
    \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
    \ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
@@ -302,7 +302,7 @@ If you do not want to use so much space, you may add some negative space with \e
 	\ecvname{Alan Touring}
 	\ecvfootername{}
 	\ecvaddress{Wilmslow, Cheshire, England}	
-	\ecvtelephone[1234]{5678}{4321}{0055884321}
+	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
 	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
@@ -327,9 +327,9 @@ The output of the above code looks like this:
 	\ecvname{Alan Touring}
 	\ecvfootername{}
 	\ecvaddress{Wilmslow, Cheshire, England}	
-	\ecvtelephone[1234]{5678}{4321}
+	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
-    \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
+        \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
  	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
  	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
  	\ecvskype{alan-touring}
@@ -518,7 +518,7 @@ Some parameters can be set by using the following commands.
 The main weakness of this class is related to bibliographies. If you insert a bibliography inside the \verb|europecv| environment with a command like:
 \begin{quote}
 	\begin{verbatim}
-	\ecvsection{Additional Information}
+	\section{Additional Information}
 	\ecvitem{}{\bibliographystyle{plain}
 	\nocite{*}
 	\bibliography{mypublications}}
@@ -528,7 +528,7 @@ the bibliography will flow out if it does not fit in the current page. The reaso
 
 Another possibility is to use the \textsf{bibentry} package, and put each \verb|\bibentry| command inside an \ecv{item} command:
 \begin{quote}
-	%\ecvsection{Additional Information}
+	%\section{Additional Information}
 	\begin{verbatim}
 	\ecvitem{}{\textsc{Publications}}
 	\ecvitem{}{\bibentry{pub1}}

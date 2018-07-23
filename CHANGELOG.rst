@@ -1,6 +1,14 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2018.07.23
+----------
+* More changes based on #2. The \ecvtelephone command changed to maintain forward compatibility.
+* added the new commands to \ecvspace
+* redefine thebibliography environment due to errors in the wake of \section redefinition
+* Fix some minor documentations quirks.
+* Contributor: Jürgen Spitzmüller
+
 2018.07.22
 ----------
 * Some changes based on #2. Specifically, the \ecvsection and \ecvfax commands have been restored. Furthermore, the documentation has been updtated explaining how to use the \ecvtelephone command.

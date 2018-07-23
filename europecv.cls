@@ -403,16 +403,16 @@
 \ecvname{\ecv@lastname\ \ecv@firstname}
 \ecvfootername{\ecv@name}
 \ecvaddress{}
+\ecvskype{}
+\ecvprofessional{}
 \ecvtelephone{}
 \ecvfax{}
-\ecvskype{}
 \ecvemail{}
 \ecvpec{}
 \ecvnationality{}
 \ecvdateofbirth{}
 \ecvgender{}
 \ecvpicture{}
-\ecvprofessional{}
 
 
 \providecommand{\ecvpersonalinfo}[1][0pt]{%

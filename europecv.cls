@@ -6,7 +6,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[2018/07/22 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[2018/07/23 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -357,7 +357,22 @@
 \newcommand*{\ecvname}[1]{\def\ecv@name{#1}} % Replaces the above
 \newcommand*{\ecvfootername}[1]{\def\ecv@footername{#1}}
 \newcommand*{\ecvaddress}[1]{\def\ecv@address{#1}}
-\newcommand*{\ecvtelephone}[3][]{\def\ecv@telephone{#2}\def\ecv@mobile{#1}\def\ecv@office{#3}}
+% \ecvtelephone[mobile][office]{home}
+\def\ecvtelephone{%
+   \@ifnextchar[%
+     {\ecvtelephone@i}
+     {\ecvtelephone@i[]}%
+}
+\def\ecvtelephone@i[#1]{%
+   \@ifnextchar[%
+     {\ecvtelephone@ii{#1}}
+     {\ecvtelephone@ii{#1}[]}%
+}
+\def\ecvtelephone@ii#1[#2]#3{%
+ \def\ecv@mobile{#1}
+ \def\ecv@office{#2}
+ \def\ecv@telephone{#3}
+}
 \newcommand*{\ecvfax}[1]{\def\ecv@fax{#1}}
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
 \newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
@@ -390,12 +405,14 @@
 \ecvaddress{}
 \ecvtelephone{}
 \ecvfax{}
+\ecvskype{}
 \ecvemail{}
 \ecvpec{}
 \ecvnationality{}
 \ecvdateofbirth{}
 \ecvgender{}
 \ecvpicture{}
+\ecvprofessional{}
 
 
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
@@ -410,10 +427,15 @@
 \ifx\@empty\ecv@address\else
 \ecv@addresskey     &\ecv@address   \tabularnewline[5pt]
 \fi
-\ifx\@empty\ecv@telephone  \else         \ecv@telkey      &\ecv@telephone
-\ifx\@empty\ecv@mobile     \else \qquad  \ecv@mobilekey:  \ecv@mobile\fi
-\ifx\@empty\ecv@office     \else \qquad  \ecv@officekey:  \ecv@office\fi
-\tabularnewline[5pt]
+\ifx\@empty\ecv@telephone\else
+   \ecv@telkey &\ecv@telephone
+   \ifx\@empty\ecv@mobile\else
+     \qquad  \ecv@mobilekey:  \ecv@mobile
+   \fi
+   \ifx\@empty\ecv@office\else
+     \qquad  \ecv@officekey:  \ecv@office
+   \fi
+   \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@fax\else
 \ecv@faxkey       &\ecv@fax \tabularnewline[5pt]
@@ -608,9 +630,29 @@
   {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
 }
 
-\newcommand{\ecvsection}[2][10pt]{%
-  {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
-}
+% Alias for backwards compatibility
+\let\ecvsection\section
+
+% Redefine from article.cls without section header
+\renewenvironment{thebibliography}[1]
+     {%\section*{\refname}%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
           
 \newif\if@ecvitemstar
 \newcommand\ecvitem{\@ifstar{\@ecvitemstartrue \@ecvitem}%

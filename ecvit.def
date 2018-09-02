@@ -20,7 +20,7 @@
 \def\ecv@genderkey{\ecv@utf{Sesso}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Pagina}}
-\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\}}
+\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae}}
 % Language table
 \def\ecv@mothertonguekey{\ecv@utf{Madrelingua}}
 \def\ecv@assesskey{\ecv@utf{Autovalutazione}}

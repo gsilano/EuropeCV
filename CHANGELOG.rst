@@ -1,6 +1,11 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2018.09.02
+----------
+* Fixed bug (italian \ae and removed "et studiorum") in according to #6
+* Contributors: lgelmi
+
 2018.07.23
 ----------
 * More changes based on #2. The \ecvtelephone command changed to maintain forward compatibility.

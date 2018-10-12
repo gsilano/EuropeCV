@@ -4,15 +4,15 @@
 \ProvidesFile{ecvde.def}[europecv German definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Angaben zur Person}}
-\def\ecv@date{\ecv@utf{Aktualisiert auf \today}}
+\def\ecv@date{\ecv@utf{Aktualisiert am \today}}
 \def\ecv@namekey{\ecv@utf{Nachname(n) / Vorname(n)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(n)}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Büro}}
-\def\ecv@emailkey{\ecv@utf{E-mail}}
-\def\ecv@professionalkey{\ecv@utf{Arbeit E-Mail}}
+\def\ecv@emailkey{\ecv@utf{E-Mail}}
+\def\ecv@professionalkey{\ecv@utf{E-Mail (gesch\"aftlich)}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Staatsangeh\"origkeit(en)}}

@@ -1,6 +1,11 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2018.10.12
+----------
+* Update of the "ecvde.def" file with the German translation
+* Contributors: redlulz
+
 2018.09.02
 ----------
 * Fixed bug (italian \ae and removed "et studiorum") in according to #6

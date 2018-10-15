@@ -3,7 +3,7 @@
 % WARNING: Requires the babel package loaded with options
 % [english,greek] (at least) for \foreignlanguage
 %
-% Translation completed on 2018/07/13
+% Translation completed on 2018/10/15
 \ProvidesFile{ecvgr.def}[europecv Greek definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{\foreignlanguage{greek}{Προσωπικές πληροφορίες}}}
@@ -18,6 +18,7 @@
 \def\ecv@professionalkey{\ecv@utf{\foreignlanguage{greek}{Επαγγελματικό μήνυμα ηλεκτρονικού ταχυδρομείου}}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{\foreignlanguage{greek}{Υπηκοότητα (ή υπηκοότητες)}}}
 \def\ecv@birthkey{\ecv@utf{\foreignlanguage{greek}{Ημερομηνία γέννησης}}}
 \def\ecv@genderkey{\ecv@utf{\foreignlanguage{greek}{Φύλο}}}

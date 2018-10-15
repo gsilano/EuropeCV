@@ -1,6 +1,13 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2018.10.15
+----------
+* Updated the template "cv_template_en" and added the template "cv_template_academic_en"
+* Added instructions for using the command \pdfbookmark and how to automatically update the publications in the manual
+* Added the command "ecvhomepage"
+* Contributors: Giuseppe Silano
+
 2018.10.12
 ----------
 * Update of the "ecvde.def" file with the German translation

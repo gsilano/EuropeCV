@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/07/13
+% Translation completed on 2018/10/15
 \ProvidesFile{ecvsk.def}[europecv Slovak definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'e} {\'u}daje}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Profesionálny e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{{\v S}t{\'a}tna(e) pr{\'\i}slu{\v s}nost'(ti)}}
 \def\ecv@birthkey{\ecv@utf{D{\'a}tum narodenia}}
 \def\ecv@genderkey{\ecv@utf{Pohlavie}}

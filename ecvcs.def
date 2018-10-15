@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/07/13
+% Translation yet to be finished, 2018/10/15
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{St{\'a}tn{\'\i} p{\v r}{\'\i}slu{\v s}nost}}
 \def\ecv@birthkey{\ecv@utf{Datum narozen{\'\i}}}
 \def\ecv@genderkey{\ecv@utf{Pohlav{\'\i}}}

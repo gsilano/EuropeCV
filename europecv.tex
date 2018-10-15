@@ -51,7 +51,7 @@
     Department of Engineering\\
     University of Sannio in Benevento, Italy\\
 }
-\date{October 12, 2018}
+\date{October 15, 2018}
 
 
 \begin{document}
@@ -220,8 +220,9 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\ecv{telephone}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\\texttt{\{}\textit{tel}\texttt{\}}}{Sets the telephone number to \emph{tel} and, optionally, the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{email}\texttt{\{}\textit{email}\texttt{\}}}{Sets the email to \emph{email}.}
 	\ecvitem{\ecv{professional}\texttt{\{}\textit{professional}\texttt{\}}}{Sets the professional email to \emph{professional}.}
-	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{PEC}.}
-	\ecvitem{\ecv{Skype}\texttt{\{}\textit{skype}\texttt{\}}}{Sets the Skype account to \emph{Skype}.}
+	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{pec}.}
+	\ecvitem{\ecv{homepage}\texttt{\{}\texttt{\textbackslash}\texttt{url\{URL\}}\texttt{\}}}{Sets the Home page to \emph{URL}.}
+	\ecvitem{\ecv{Skype}\texttt{\{}\textit{skype}\texttt{\}}}{Sets the Skype account to \emph{skype}.}
 	\ecvitem{\ecv{nationality}\texttt{\{}\textit{nationality}\texttt{\}}}{Sets the nationality to \emph{nationality}.}
 	\ecvitem{\ecv{dateofbirth}\texttt{\{}\textit{birth}\texttt{\}}}{Sets the date of birth to \emph{birth}.}
 	\ecvitem{\ecv{gender}\texttt{\{}\textit{gender}\texttt{\}}}{Sets the gender to~\emph{gender}.}
@@ -253,6 +254,7 @@ For example, consider the following document:
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
 	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
 	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
+	\ecvhomepage{\url{www.homepage.com}}
 	\ecvskype{alan-touring}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
@@ -279,6 +281,7 @@ The above will produce the following output:
    \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
    \ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
    \ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
+   \ecvhomepage{\url{www.homepage.com}}
    \ecvskype{alan-touring}
    \ecvnationality{English}
    \ecvdateofbirth{June 23 1927}
@@ -306,6 +309,7 @@ If you do not want to use so much space, you may add some negative space with \e
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
 	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
 	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
+	\ecvhomepage{\url{www.homepage.com}}
 	\ecvskype{alan-touring}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
@@ -328,9 +332,10 @@ The output of the above code looks like this:
 	\ecvaddress{Wilmslow, Cheshire, England}	
 	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
-        \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
+    \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
  	\ecvprofessional{\href{mailto:alan.touring@alan.touring.work}{alan.touring@alan.touring.work}}
  	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
+ 	\ecvhomepage{\url{www.homepage.com}}
  	\ecvskype{alan-touring}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
@@ -352,7 +357,8 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 \begin{europecv}
 	\section{Sectioning commands}
 	\ecvitem{\texttt{\textbackslash}{\texttt{section}}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{title}\texttt{\}}}{Starts a new section. For example, the current section has been started with \texttt{\textbackslash}{\texttt{section}}\texttt{\{Sectioning commands\}}.}
-	\ecvitem{\texttt{\textbackslash}{\texttt{ecvsection}}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{title}\texttt{\}}}{\textbf{Deprecated. It is still available for backward compatibility.} Starts a new section. For example, the current section has been started with \texttt{\textbackslash}{\texttt{ecvsection}}\texttt{\{Sectioning commands\}}.}
+	\ecvitem{\texttt{\textbackslash}{\texttt{ecvsection}}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{title}\texttt{\}}}{\textbf{Deprecated. It is still available for backward compatibility.} Starts a new section. For example, the current section has been started with \texttt{\textbackslash}{\texttt{ecvsection}}\texttt{\{Sectioning commands\}}.
+	Use the command  \texttt{\textbackslash}{\texttt{pdfbookmark}}\texttt{\{Name of the section\}}\texttt{\{Name of the section\}} if you want add the section into the table of contents.}
 	\ecvitem{\ecv{item}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{left}\texttt{\}}\texttt{\{}\textit{right}\texttt{\}}}{Puts \emph{left\/} text on the left of the vertical rule and \emph{right\/} text on the right of the vertical rule.}
 	\ecvitem[15pt]{\ecv{item*}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{left}\texttt{\}}\texttt{\{}\textit{right}\texttt{\}}}{\textbf{Deprecated}. The same as above, but produces a small bullet before \emph{left\/} text, as in the next item.}
 	\ecvitem*{Notes}{Sectioning commands must be used inside the \texttt{europecv} environment, and text within the environment should be typeset only inside a sectioning command. All of them have an optional argument that specifies how much vertical space to leave \emph{after} that command. For instance, the previous item has been specified by
@@ -536,6 +542,76 @@ Another possibility is to use the \textsf{bibentry} package, and put each \verb|
 	\end{verbatim}
 \end{quote}
 The drawback of this solution is that you have to use a \verb|\bibentry| command for each bibliography item you want to appear. If you have written many publications, this can be a pain in the neck. Unfortunately, the only solution I know is to write a script to perform the task automatically.
+
+Finally, you can add references to your publications using the commands (and also defining new ones following the same rules) \texttt{\textbackslash}{\texttt{conferencePublications}}\texttt{[Name of the label]} and \texttt{\textbackslash}{\texttt{refconferencePublications}} \texttt{[Name of the label]}. Below the code that you have to insert in the preamble.
+
+\begin{quote}
+	\begin{verbatim}
+	\makeatletter
+	\let\oldhypertarget\hypertarget
+	\renewcommand{\hypertarget}[2]{%
+		\oldhypertarget{#1}{#2}%
+		\protected@write\@mainaux{}{%
+			\string\expandafter\string\gdef
+			\string\csname\string\detokenize{#1}\string\endcsname{#2}%
+		}%
+	}
+	\newcommand{\myhyperlink}[1]{%
+		\hyperlink{#1}{\csname #1\endcsname}%
+	}
+	\makeatother
+	
+	% The counters. They have to be defined for each publication (journal papers, books, and so on).
+	\newcounter{ConferencePapers} %For the conference papers
+	\setcounter{ConferencePapers}{0}
+	
+	\newcounter{JournalPapers} %For the journal papers
+	\setcounter{JournalPapers}{0}
+	
+	% These commands have to be ridefined for each publication type (journal, paper, etc.)
+	\newcommand{\conferencePublications}[1][]{
+		\stepcounter{ConferencePapers}
+		\hypertarget{#1}{[C\theConferencePapers]} %C is the indexing of your conference papers
+	}
+	
+	\newcommand{\juournalPublications}[1][]{
+	\stepcounter{ConferencePapers}
+	\hypertarget{#1}{[J\theJuournalPapers]}  %J is the indexing of your jounal papers
+	}
+	
+	\newcommand{\refconferencesPublications}[1][]{
+		\myhyperlink{#1}
+	}	
+	
+	\newcommand{\refjournalPublications}[1][]{
+	\myhyperlink{#1}
+	}
+\end{verbatim}
+\end{quote}
+
+In such a way, you can refer your publications into the text as reported below and in the ``\texttt{cv\_template\_academic\_en}''.
+
+\begin{europecv}
+\pdfbookmark{Research activities}{Research activities}
+\section{Research activities}
+
+\ecvitem{}{\textbf{Stability of piecewise-linear systems}}
+\ecvitem{}{Something related to the picewise-linear systems \hyperlink{FirstPubLabel}{[C1]}, \hyperlink{SecondPubLabel}{[C2]} ad \hyperlink{ThirdPubLabel}{[C3]}.}
+
+\pdfbookmark{Publications}{Publications}
+\section{Publications}
+
+\subpdfbookmark{Refereed conference proceedings}{Refereed conference proceedings}
+\ecvitem{}{\textbf{Refereed conference proceedings}}
+\\
+
+\ecvitem[10pt]{[C1]\vspace{-0.25cm}\label{FirstPubLabel}}{Details related to the conference paper}
+
+\ecvitem[10pt]{[C2]\vspace{-0.25cm}\label{SecondPubLabel}}{Details related to the conference paper}
+
+\ecvitem[10pt]{[C3]\vspace{-0.25cm}\label{ThirdPubLabel}}{Details related to the conference paper}
+
+\end{europecv}
 
 \vspace{0.5cm}
 \textbf{\large{5\hspace{0.5cm}\setword{Dependencies}{sec:dependencies}}}

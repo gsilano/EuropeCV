@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/07/13
+% Translation completed on 2018/10/15
 \ProvidesFile{ecves.def}[europecv Spanish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on personal}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Correo(s) electr\'onico(s)} de trabajo}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidad(es)}}
 \def\ecv@birthkey{\ecv@utf{Fecha de nacimiento}}
 \def\ecv@genderkey{\ecv@utf{Sexo}}

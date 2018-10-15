@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/07/13
+% Translation yet to be finished, 2018/10/15
 \ProvidesFile{ecvsv.def}[europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Medborgarskap}}
 \def\ecv@birthkey{\ecv@utf{F\"odelsedatum}}
 \def\ecv@genderkey{\ecv@utf{K\"on}}

@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/07/13
+% Translation completed on 2018/10/15
 \ProvidesFile{ecvno.def}[europecv Norwegian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige opplysninger}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Profesjonell e-post}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nasjonalitet(er)}}
 \def\ecv@birthkey{\ecv@utf{F\o dselsdato}}
 \def\ecv@genderkey{\ecv@utf{Kj\o nn}}

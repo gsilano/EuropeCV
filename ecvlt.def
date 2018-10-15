@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/07/13
+% Translation yet to be finished, 2018/10/15
 \ProvidesFile{ecvlt.def}[europecv Lithuanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Asmenin{\.e} informacija}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Pilietyb{\.e}}}
 \def\ecv@birthkey{\ecv@utf{Gimimo data}}
 \def\ecv@genderkey{\ecv@utf{Lytis}}

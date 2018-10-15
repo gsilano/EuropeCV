@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/12
+% Translation completed on 2018/10/15
 \ProvidesFile{ecvde.def}[europecv German definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Angaben zur Person}}
@@ -15,6 +15,7 @@
 \def\ecv@professionalkey{\ecv@utf{E-Mail (gesch\"aftlich)}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Staatsangeh\"origkeit(en)}}
 \def\ecv@birthkey{\ecv@utf{Geburtsdatum}}
 \def\ecv@genderkey{\ecv@utf{Geschlecht}}

@@ -5,8 +5,40 @@
 \usepackage[english]{babel}
 \usepackage{url}
 \usepackage{bookmark}
+\usepackage{scrextend}
+\usepackage{pgfkeys}
+\usepackage{etoolbox}
 
 \renewcommand{\ttdefault}{phv} % Uses Helvetica instead of fixed width font
+
+\makeatletter
+\let\oldhypertarget\hypertarget
+\renewcommand{\hypertarget}[2]{%
+	\oldhypertarget{#1}{#2}%
+	\protected@write\@mainaux{}{%
+		\string\expandafter\string\gdef
+		\string\csname\string\detokenize{#1}\string\endcsname{#2}%
+	}%
+}
+\newcommand{\myhyperlink}[1]{%
+	\hyperlink{#1}{\csname #1\endcsname}%
+}
+\makeatother
+
+% The counters. They can be defined for each publication (journal papers, books, and so on).
+\newcounter{ConferencePublications}
+\setcounter{ConferencePublications}{0}
+
+% These commands have to be ridefined for each publication type (journal, paper, etc.)
+\newcommand{\conferencePublications}[1][]{
+	\stepcounter{ConferencePublications}
+	\hypertarget{#1}{[C\theConferencePublications]}
+	
+}
+
+\newcommand{\refconferencesPublications}[1][]{
+	\myhyperlink{#1}
+}
 
 \newcommand*{\SignatureAndDate}[1]{%
 	\par\noindent\makebox[2.5in]{Place \textsc{(Province)}, \today}
@@ -58,6 +90,21 @@
 \ecvitem{Name and type of organization providing education and training}{\ldots}
 \ecvitem{Level in national or international classification\footnote{If appropriate.}}{\ldots}
 
+\pdfbookmark{Academic appointments}{Academic appointments}
+\section{Academic appointments}
+
+\ecvitem{Dates [from - to]}{\textbf{Associate Professor} at University of XX, YY, Department of ZZ.}
+
+\pdfbookmark{Professional and scientific appointments}{Professional and scientific appointments}
+\section{Professional and scientific appointments}
+
+\ecvitem{Dates}{\textbf{IEEE Senior Membership} obtained from Institute of Electrical and Electronics Engineers.}
+
+\pdfbookmark{Research areas}{Research areas}
+\section{Research areas}
+
+\ecvitem{}{Autonomous systems; distributed control and optimization over networks; nonsmooth systems; picewise quadratic stability.}
+
 \pdfbookmark{Personal skills and~competences}{Personal skills and~competences}
 \section{Personal skills and~competences}
 
@@ -82,9 +129,79 @@
 \ecvitem{}{\textbf{Personal interests}}
 \ecvitem{}{\ldots}
 
+\pdfbookmark{Research projects and collaborations}{Research projects and collaborations}
+\section{Research projects and collaborations}
+
+\ecvitem{}{Participation and operative responsibility within the XX European research project YY, project number 012345. Title ``\textbf{The title of the project}''. January XX - December YY. Project amount: 999 kEuros (only related to University XX activities).}
+
+\pdfbookmark{Research visits}{Research visits}
+\section{Research visits\footnote{At least one week}}
+
+\ecvitem{Dates}{\textit{University of YY}, the state [Italy], Prof. [name of the professor].}
+
+\pdfbookmark{Invited talks}{Invited talks}
+\section{Invited talks}
+
+\ecvitem{Dates}{The name of the talk, Place.}
+
+\pdfbookmark{Scientific and editorial activity}{Scientific and editorial activity}
+\section{Scientific and editorial activity}
+
+\subpdfbookmark{Editorial Board}{Editorial Board}
+\ecvitem{}{\textbf{Editorial Board}}
+
+\\
+
+\subpdfbookmark{Editor of edited books}{Editor of edited books}
+\ecvitem{}{\textbf{Editor of edited books}}
+
+
+\pdfbookmark{Conferences services}{Conferences services}
+\section{Conferences services}
+
+\subpdfbookmark{Program committees}{Program committees}
+\ecvitem{}{\textbf{Program committees}}
+
+\\
+
+\subpdfbookmark{Associate editor}{Associate editor}
+\ecvitem{}{\textbf{Associate editor}}
+
+\pdfbookmark{Teaching activity}{Teaching activity}
+\section{Teaching activity}
+
+\ecvitem{Academics Years: since YY/ZZ - today}{Graduate course ``Title of the course'', number of credits, when e where.}
+
 \pdfbookmark{Annexes}{Annexes}
 \section{Annexes}
 \ecvitem{}{List any item attached to the CV}
+
+\pdfbookmark{Referencens}{References}
+\section{References}
+
+\ecvitem{}{List of references}
+
+
+\pdfbookmark{Research activities}{Research activities}
+\section{Research activities}
+
+\ecvitem{}{\textbf{Stability of piecewise-linear systems}}
+\ecvitem{}{Something related to the picewise-linear systems \refconferencesPublications[FirstPubLabel], \refconferencesPublications[SecondPubLabel] ad \refconferencesPublications[ThirdPubLabel].}
+
+\pdfbookmark{Publications}{Publications}
+\section{Publications}
+
+\subpdfbookmark{Refereed conference proceedings}{Refereed conference proceedings}
+\ecvitem{}{\textbf{Refereed conference proceedings}}
+\\
+
+\ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[FirstPubLabel]}{Details related to the conference paper}
+
+\ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[SecondPubLabel]}{Details related to the conference paper}
+
+\ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[ThirdPubLabel]}{Details related to the conference paper}
+
+
 \end{europecv}
 
 \vspace{5.0cm}

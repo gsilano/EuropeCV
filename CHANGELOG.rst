@@ -1,6 +1,11 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2019.01.24
+----------
+* Completed the "ecvsv.def" file with the Swedish translation
+* Contributors: Emil Gardström
+
 2018.10.15
 ----------
 * Updated the template "cv_template_en" and added the template "cv_template_academic_en"

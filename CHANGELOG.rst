@@ -1,7 +1,7 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-2019.01.24
+2019.01.25
 ----------
 * Completed the "ecvsv.def" file with the Swedish translation
 * Contributors: Emil Gardström

@@ -22,6 +22,8 @@ Well, if you are reading this section it means that you are thinking of helping 
 
 2. Each change must be reported in the ```CHANGELOG``` file. Please, do not forget to be clear and specify who made this contribution.
 
-3. In the head of each file, is the date on which the last changes were made. Please, do not forget to update this information. The same procedure must be followed in the tex file ```europecv.tex```.
+3. In the head of each file, there is the date on which the last changes were made. Please, do not forget to update this information. The same procedure must be followed in the tex file ```europecv.tex``` (at the beginning of the file a date says when the file has been changed).
+
+In any case, please take a look to the [Contributing.md](https://github.com/gsilano/EuropeCV/blob/master/CONTRIBUTING.md) file.
 
 

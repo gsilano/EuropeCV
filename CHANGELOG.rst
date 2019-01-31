@@ -1,6 +1,10 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2019.01.31
+----------
+* Optional CV update date by using the command \ecvdate{}
+* Contributors: Giuseppe Silano
 2019.01.25
 ----------
 * Completed the "ecvsv.def" file with the Swedish translation

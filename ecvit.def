@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/15
+% Translation completed on 2019/01/31
 \ProvidesFile{ecvit.def}[europecv Italian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informazioni personali}}
-\def\ecv@date{\ecv@utf{Aggiornato al \today}}
+\def\ecv@datekey{\ecv@utf{Aggiornato al }}
 \def\ecv@namekey{\ecv@utf{Cognome nome}}
 \def\ecv@addresskey{\ecv@utf{Indirizzo}}
 \def\ecv@telkey{\ecv@utf{Telefono}}
@@ -15,13 +15,13 @@
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
-\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nazionalit\`a}}
 \def\ecv@birthkey{\ecv@utf{Data di nascita}}
+\def\ecv@homepagekey{\ecv@utf{Sito web}}
 \def\ecv@genderkey{\ecv@utf{Sesso}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Pagina}}
-\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae}}
+\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ et studiorum di Giuseppe Silano}}
 % Language table
 \def\ecv@mothertonguekey{\ecv@utf{Madrelingua}}
 \def\ecv@assesskey{\ecv@utf{Autovalutazione}}

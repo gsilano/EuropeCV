@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/15
+% Translation completed on 2019/01/31
 \ProvidesFile{ecvro.def}[europecv Romanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}
-\def\ecv@date{\ecv@utf{Actualizat la \today}}
+\def\ecv@datekey{\ecv@utf{Actualizat la}}
 \def\ecv@namekey{\ecv@utf{Nume~/ Prenume}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}

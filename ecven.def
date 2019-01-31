@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/15
+% Translation completed on 2019/01/31
 \ProvidesFile{ecven.def}[europecv English definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personal information}}
-\def\ecv@date{\ecv@utf{Updated \\ \today}}
+\def\ecv@datekey{\ecv@utf{Updated \\}}
 \def\ecv@namekey{\ecv@utf{Surname / First name}}
 \def\ecv@addresskey{\ecv@utf{Address}}
 \def\ecv@telkey{\ecv@utf{Telephone}}
@@ -16,13 +16,12 @@
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
-\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nationality}}
 \def\ecv@birthkey{\ecv@utf{Date of birth}}
 \def\ecv@genderkey{\ecv@utf{Gender}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Page}}
-\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ of}}
+\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ et studiorum of Giuseppe Silano}}
 % Language table
 \def\ecv@mothertonguekey{\ecv@utf{Mother tongue}}
 \def\ecv@assesskey{\ecv@utf{Self-assessment}}

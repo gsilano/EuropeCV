@@ -51,7 +51,7 @@
     Department of Engineering\\
     University of Sannio in Benevento, Italy\\
 }
-\date{January 25, 2019}
+\date{January 31, 2019}
 
 
 \begin{document}
@@ -211,6 +211,8 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 
 \begin{europecv}
 	\section{Personal information}
+	\ecvitem{\ecv{date}\texttt{\{}\textit{date}\texttt{\}}}{Sets CV update date to \emph{date}. To 
+	enter the current date use the \texttt{$\setminus$}\texttt{today} command.}
 	\ecvitem{\ecv{name}\texttt{\{}\textit{name}\texttt{\}}}{Sets your name to \emph{name}.}
 	\ecvitem{\ecv{footername}\texttt{\{}\textit{name}\texttt{\}}}{Sets your name as it appears in the footer. By default, the name in the footer is the same as the one specified with \ecv{name}. Use \ecv{footername} is you want it to be different (for example, if you want to exchange the order of first name and last name).}
 	\ecvitem{\ecv{firstname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
@@ -261,6 +263,7 @@ For example, consider the following document:
 	\ecvgender{Male}
 	\ecvbeforepicture{\raggedright}
 	\ecvpicture[height=3cm]{examples/at}
+	\ecvdate{\today}
 	
 	\begin{document}
 	\begin{europecv}
@@ -286,6 +289,7 @@ The above will produce the following output:
    \ecvnationality{English}
    \ecvdateofbirth{June 23 1927}
    \ecvgender{Male}
+   \ecvdate{\today}
 	\ecvpicture[height=3cm]{examples/at}
 	\fontfamily{phv}\fontseries{mc}\selectfont
 	\renewcommand{\bfdefault}{bc}
@@ -317,6 +321,7 @@ If you do not want to use so much space, you may add some negative space with \e
 	\ecvbeforepicture{\raggedleft}
 	\ecvpicture[height=3cm]{examples/at}
 	\ecvafterpicture{\ecvspace{-3.5cm}}
+	\ecvdate{\today}
 	
 	\begin{document}
 	\begin{europecv}
@@ -340,6 +345,7 @@ The output of the above code looks like this:
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
 	\ecvgender{Male}
+	\ecvdate{\today}
 	\ecvbeforepicture{\raggedleft}
 	\ecvpicture[height=3cm]{examples/at}
 	\ecvafterpicture{\ecvspace{-3.5cm}}

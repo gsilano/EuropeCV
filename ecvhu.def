@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/10/15
+% Translation yet to be finished, 2019/01/31
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
 \def\ecv@namekey{\ecv@utf{Vezet\'ekn\'ev/Ut\'on\'ev}}
-\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
+\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
 \def\ecv@addresskey{\ecv@utf{C\'\i m}}
 \def\ecv@telkey{\ecv@utf{Telefonsz\'am}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}

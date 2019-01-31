@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/10/15
+% Translation yet to be finished, 2019/01/31
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
-\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
+\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
 \def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}

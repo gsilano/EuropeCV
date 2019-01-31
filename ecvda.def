@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2018/10/15
+% Translation yet to be finished, 2019/01/31
 \ProvidesFile{ecvda.def}[europecv Danish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige oplysninger}}
-\def\ecv@date{\ecv@utf{Aggiornato al \today}} % To be translated
+\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
 \def\ecv@namekey{\ecv@utf{Efternavn(e), fornavn(e) og mellemnavn(e)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefon}}

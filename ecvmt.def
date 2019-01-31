@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/15
+% Translation completed on 2019/01/31
 \ProvidesFile{ecvmt-utf8.def}[europecv Maltese definitions]
 \inputencoding{utf8x}
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Tagħrif personali}}
-def\ecv@date{\ecv@utf{Aġġornat għal \today}}
+def\ecv@datekey{\ecv@utf{Aġġornat għal}}
 \def\ecv@namekey{\ecv@utf{Kunjom(ijiet) Isem (Ismijiet)}}
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

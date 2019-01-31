@@ -6,7 +6,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[2018/10/15 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[2018/07/23 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -374,6 +374,7 @@
  \def\ecv@telephone{#3}
 }
 \newcommand*{\ecvfax}[1]{\def\ecv@fax{#1}}
+\newcommand*{\ecvdate}[1]{\def\ecv@date{#1}}
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
 \newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
 \newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
@@ -397,13 +398,13 @@
 % or \ecvafterpicture
 \newcommand*{\ecvspace}[1]{\tabularnewline[#1] &}
 \ecvbeforepicture{\raggedleft}
+\ecvdate{}
 \ecvafterpicture{}
 \ecvfirstname{}
 \ecvlastname{}
 \ecvname{\ecv@lastname\ \ecv@firstname}
 \ecvfootername{\ecv@name}
 \ecvaddress{}
-\ecvhomepage{}
 \ecvskype{}
 \ecvprofessional{}
 \ecvtelephone{}
@@ -413,11 +414,14 @@
 \ecvnationality{}
 \ecvdateofbirth{}
 \ecvgender{}
+\ecvhomepage{}
 \ecvpicture{}
 
 
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
-{\large\par\textbf{\ecv@date}} & \tabularnewline
+{\ifx\@empty\ecv@date\else
+	\large\par\textbf{\ecv@datekey \ecv@date}
+\fi} & \tabularnewline
 & \tabularnewline
 \ifx\@empty\ecvdrawpicture\else
    &\ecv@beforepic\ecvdrawpicture\ecv@afterpic\tabularnewline
@@ -451,7 +455,7 @@
 \ecv@peckey       &\ecv@pec \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@homepage\else
-\ecv@homepagekey      & \ecv@homepage \tabularnewline[#1]
+\ecv@homepagekey       &\ecv@homepage \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@skype\else
 \ecv@skypekey       &\ecv@skype \tabularnewline[5pt]

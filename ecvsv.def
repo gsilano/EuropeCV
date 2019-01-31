@@ -1,21 +1,21 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/25
+% Translation yet to be finished, 2019/01/31
 \ProvidesFile{ecvsv.def}[europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}
-\def\ecv@date{\ecv@utf{Uppdaterad \today}}
+\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
 \def\ecv@namekey{\ecv@utf{Efternamn / F\"ornamn}}
 \def\ecv@addresskey{\ecv@utf{Adress(er)}}
 \def\ecv@telkey{\ecv@utf{Telefonnummer}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
-\def\ecv@officekey{\ecv@utf{Kontor}}
+\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
 \def\ecv@emailkey{\ecv@utf{E-postadress(er)}}
-\def\ecv@professionalkey{\ecv@utf{Professionell E-postadress}}
+\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
-\def\ecv@homepagekey{\ecv@utf{Webbsida}}
+\def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Medborgarskap}}
 \def\ecv@birthkey{\ecv@utf{F\"odelsedatum}}
 \def\ecv@genderkey{\ecv@utf{K\"on}}
@@ -28,15 +28,15 @@
 \def\ecv@levelkey{\ecv@utf{Europeisk niv\aa}}
 \def\ecv@understandkey{\ecv@utf{F\"orst\aa else}}
 \def\ecv@speakkey{\ecv@utf{Tala}}
-\def\ecv@writekey{\ecv@utf{Skriftlig F\"ardighet}}
+\def\ecv@writekey{\ecv@utf{Skriva}}
 \def\ecv@listenkey{\ecv@utf{H\"orf\"orst\aa else}}
 \def\ecv@readkey{\ecv@utf{L\"asf\"orst\aa else}}
-\def\ecv@interactkey{\ecv@utf{Samtal / muntlig interaktion}}
+\def\ecv@interactkey{\ecv@utf{Muntlig interaktion}}
 \def\ecv@productkey{\ecv@utf{Muntlig produktion}}
 \def\ecv@langfooterkey{\ecv@utf{Niv\aa n inom de Gemensamma europeiska referensramarna (CEF)}}
-\def\ecv@cefbasickey{\ecv@utf{Anv\"andare på nyb\"orjarniv\aa}}
-\def\ecv@cefindepkey{\ecv@utf{Sj\"alvst\"andig spr\aa kanv\"andare}}
-\def\ecv@cefprofkey{\ecv@utf{Avancerad spr\aa kanv\"andare}}
+\def\ecv@cefbasickey{\ecv@utf{Den baspresterande spr\aa kanv\"andaren}}
+\def\ecv@cefindepkey{\ecv@utf{Den sj\"alvst\"andige spr\aa kanv\"andaren}}
+\def\ecv@cefprofkey{\ecv@utf{Den avancerade spr\aa kanv\"andaren}}
 
 \renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]

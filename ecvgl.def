@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2018/10/15
+% Translation completed on 2019/01/31
 \ProvidesFile{ecvgl.def}[europecv Galician definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on persoal}}
-\def\ecv@date{\ecv@utf{Actualizado a \today}}
+\def\ecv@datekey{\ecv@utf{Actualizado a}}
 \def\ecv@namekey{\ecv@utf{Apelidos / Nome}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

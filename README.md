@@ -1,5 +1,5 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors)
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # EuropeCV
 TeX code associated to the EuropeCV [CTAN repository](https://ctan.org/pkg/europecv).

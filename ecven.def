@@ -21,7 +21,7 @@
 \def\ecv@genderkey{\ecv@utf{Gender}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{Page}}
-\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ et studiorum of Giuseppe Silano}}
+\def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ of}}
 % Language table
 \def\ecv@mothertonguekey{\ecv@utf{Mother tongue}}
 \def\ecv@assesskey{\ecv@utf{Self-assessment}}

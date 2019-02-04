@@ -4,18 +4,18 @@
 \ProvidesFile{ecvpt.def}[europecv Portuguese definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa\c{c}\~ao pessoal}}
-\def\ecv@datekey{\ecv@utf{Atualizado para}}
+\def\ecv@datekey{\ecv@utf{Atualizado a}}
 \def\ecv@namekey{\ecv@utf{Apelido(s) - Nome(s)}}
 \def\ecv@addresskey{\ecv@utf{Morada(s)}}
 \def\ecv@telkey{\ecv@utf{Telefone(s)}}
 \def\ecv@mobilekey{\ecv@utf{Telem\'ovel}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Escritório}}
-\def\ecv@emailkey{\ecv@utf{Correio(s) electr\'onico(s)}}
-\def\ecv@professionalkey{\ecv@utf{Email profissional}}
+\def\ecv@emailkey{\ecv@utf{\textit{E-mail} Pessoal}}
+\def\ecv@professionalkey{\ecv@utf{\textit{E-mail} Profissional}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@peckey{\ecv@utf{PEC}}
-\def\ecv@homepagekey{\ecv@utf{Home page}}
+\def\ecv@homepagekey{\ecv@utf{\textit{Home page}}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidade(s)}}
 \def\ecv@birthkey{\ecv@utf{Data de nascimento}}
 \def\ecv@genderkey{\ecv@utf{Sexo}}
@@ -26,11 +26,11 @@
 \def\ecv@mothertonguekey{\ecv@utf{L\'ingua(s) materna(s)}}
 \def\ecv@assesskey{\ecv@utf{Auto-avalia\c{c}\~ao}}
 \def\ecv@levelkey{\ecv@utf{N\'ivel  europeu}}
-\def\ecv@understandkey{\ecv@utf{Compreender}}
-\def\ecv@speakkey{\ecv@utf{Falar}}
-\def\ecv@writekey{\ecv@utf{Escrever}}
+\def\ecv@understandkey{\ecv@utf{Compreens\~ao}}
+\def\ecv@speakkey{\ecv@utf{Conversas\~ao}}
+\def\ecv@writekey{\ecv@utf{Escrita}}
 \def\ecv@listenkey{\ecv@utf{Compreens\~ao oral}}
-\def\ecv@readkey{\ecv@utf{Leitura}}
+\def\ecv@readkey{\ecv@utf{Compreens\~ao escrita}}
 \def\ecv@interactkey{\ecv@utf{Interac\c{c}\~ao oral}}
 \def\ecv@productkey{\ecv@utf{Produ\c{c}\~ao oral}}
 \def\ecv@langfooterkey{\ecv@utf{N\'ivel do Quadro Europeu Comum de Refer\^encia (CECR)}}

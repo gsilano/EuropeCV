@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/31
+% Translation completed on 2019/02/04
 \ProvidesFile{ecven.def}[europecv English definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personal information}}

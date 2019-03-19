@@ -356,7 +356,22 @@
 \newcommand*{\ecvlastname}[1]{\def\ecv@lastname{#1}} % Deprecated
 \newcommand*{\ecvname}[1]{\def\ecv@name{#1}} % Replaces the above
 \newcommand*{\ecvfootername}[1]{\def\ecv@footername{#1}}
-\newcommand*{\ecvaddress}[1]{\def\ecv@address{#1}}
+% \ecvaddress[mobileAddress][officeAddress]{homeAddress}
+\def\ecvaddress{%
+   \@ifnextchar[%
+     {\ecvaddress@i}
+     {\ecvaddress@i[]}%
+}
+\def\ecvaddress@i[#1]{%
+   \@ifnextchar[%
+     {\ecvaddress@ii{#1}}
+     {\ecvaddress@ii{#1}[]}%
+}
+\def\ecvaddress@ii#1[#2]#3{%
+ \def\ecv@mobileAddress{#1}
+ \def\ecv@officeAddress{#2}
+ \def\ecv@address{#3}
+}
 % \ecvtelephone[mobile][office]{home}
 \def\ecvtelephone{%
    \@ifnextchar[%
@@ -432,7 +447,16 @@
 & \tabularnewline
 \ecv@namekey & \large\textbf{\ecv@name}\tabularnewline[5pt]
 \ifx\@empty\ecv@address\else
-\ecv@addresskey     &\ecv@address   \tabularnewline[5pt]
+   \ecv@addresskey &\ecv@address
+   \tabularnewline[5pt]
+   \ifx\@empty\ecv@mobileAddress \else
+     \ecv@addresskey &\ecv@mobileAddress
+     \tabularnewline[5pt]
+   \fi
+   \ifx\@empty\ecv@officeAddress \else
+     \ecv@addresskey  &\ecv@officeAddress 
+     \tabularnewline[5pt]
+   \fi
 \fi
 \ifx\@empty\ecv@telephone\else
    \ecv@telkey &\ecv@telephone

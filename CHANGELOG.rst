@@ -5,6 +5,7 @@ Changelog for package europecv
 2019.03.19
 ----------
 * Now you can integrate your YouTube channel into your CV
+* Now you can add multiple addresses
 * Contributors: Giuseppe Silano
 
 2019.02.04
@@ -15,7 +16,7 @@ Changelog for package europecv
 
 2019.01.31
 ----------
-* Optional CV update date by using the command \ecvdate{}
+* Optional CV "update date" by using the command \ecvdate{}
 * Contributors: Giuseppe Silano
 
 2019.01.25

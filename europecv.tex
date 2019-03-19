@@ -217,9 +217,13 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\ecv{footername}\texttt{\{}\textit{name}\texttt{\}}}{Sets your name as it appears in the footer. By default, the name in the footer is the same as the one specified with \ecv{name}. Use \ecv{footername} is you want it to be different (for example, if you want to exchange the order of first name and last name).}
 	\ecvitem{\ecv{firstname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
 	\ecvitem{\ecv{lastname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
-	\ecvitem{\ecv{address}\texttt{\{}\textit{addr}\texttt{\}}}{Sets the address to \emph{addr}.}
+	\ecvitem{\ecv{address}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\
+	\texttt{\{}\textit{address}\texttt{\}}}{Sets the addressr to \emph{address} and, optionally, 
+	the mobile and the office addresses to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{fax}\texttt{\{}\textit{fax}\texttt{\}}}{Sets the fax number to \emph{fax}. If you do not have any fax number, you can leave it empty.}
-	\ecvitem{\ecv{telephone}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\\texttt{\{}\textit{tel}\texttt{\}}}{Sets the telephone number to \emph{tel} and, optionally, the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
+	\ecvitem{\ecv{telephone}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\
+	\texttt{\{}\textit{tel}\texttt{\}}}{Sets the telephone number to \emph{tel} and, optionally, 
+	the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{email}\texttt{\{}\textit{email}\texttt{\}}}{Sets the email to \emph{email}.}
 	\ecvitem{\ecv{professional}\texttt{\{}\textit{professional}\texttt{\}}}{Sets the professional email to \emph{professional}.}
 	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{pec}.}
@@ -253,7 +257,8 @@ For example, consider the following document:
 	% Define personal data
 	\ecvname{Alan Touring}
 	\ecvfootername{}
-	\ecvaddress{Wilmslow, Cheshire, England}	
+	\ecvaddress[Wilmslow 1, Cheshire, England][Wilmslow 2, Cheshire, England]{Wilmslow 3, 
+	Cheshire, England}	
 	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
@@ -282,7 +287,8 @@ The above will produce the following output:
 {
    \ecvname{Alan Touring}
    \ecvfootername{}
-   \ecvaddress{Wilmslow, Cheshire, England}	
+   \ecvaddress[Wilmslow 1, Cheshire, England][Wilmslow 2, Cheshire, England]{Wilmslow 3, 
+   Cheshire, England}
    \ecvtelephone[1234][5678]{4321}
    \ecvfax{0055884321}
    \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
@@ -312,7 +318,8 @@ If you do not want to use so much space, you may add some negative space with \e
 	
 	\ecvname{Alan Touring}
 	\ecvfootername{}
-	\ecvaddress{Wilmslow, Cheshire, England}	
+	\ecvaddress[Wilmslow 1, Cheshire, England][Wilmslow 2, Cheshire, England]{Wilmslow 3, 
+	Cheshire, England}	
 	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
 	\ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}
@@ -340,7 +347,8 @@ The output of the above code looks like this:
 {
 	\ecvname{Alan Touring}
 	\ecvfootername{}
-	\ecvaddress{Wilmslow, Cheshire, England}	
+	\ecvaddress[Wilmslow 1, Cheshire, England][Wilmslow 2, Cheshire, England]{Wilmslow 3, 
+	Cheshire, England}	
 	\ecvtelephone[1234][5678]{4321}
 	\ecvfax{0055884321}
     \ecvemail{\href{mailto:alan.touring@alan.turing}{alan.touring@alan.turing}}

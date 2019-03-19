@@ -6,7 +6,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[2019/01/31 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[2019/03/19 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -378,6 +378,7 @@
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
 \newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
 \newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
+\newcommand*{\ecvyoutube}[1]{\def\ecv@youtube{#1}}
 \newcommand*{\ecvpec}[1]{\def\ecv@pec{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
 \newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
@@ -406,6 +407,7 @@
 \ecvfootername{\ecv@name}
 \ecvaddress{}
 \ecvskype{}
+\ecvyoutube{}
 \ecvprofessional{}
 \ecvtelephone{}
 \ecvfax{}
@@ -459,6 +461,9 @@
 \fi
 \ifx\@empty\ecv@skype\else
 \ecv@skypekey       &\ecv@skype \tabularnewline[5pt]
+\fi
+\ifx\@empty\ecv@youtube\else
+\ecv@youtubekey      &\ecv@youtube \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@nationality\else
 \ecv@nationalitykey & \ecv@nationality \tabularnewline[5pt]

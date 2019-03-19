@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/02/04
+% Translation completed on 2019/03/19
 \ProvidesFile{ecvit.def}[europecv Italian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informazioni personali}}
@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{Email}}
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@nationalitykey{\ecv@utf{Nazionalit\`a}}
 \def\ecv@birthkey{\ecv@utf{Data di nascita}}

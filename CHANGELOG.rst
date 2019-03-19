@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2019.03.19
+----------
+* Now you can integrate your YouTube channel into your CV
+* Contributors: Giuseppe Silano
+
 2019.02.04
 ----------
 * Improved Portuguese translation

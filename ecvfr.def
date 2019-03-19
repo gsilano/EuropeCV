@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/31
+% Translation completed on 2019/03/19
 \ProvidesFile{ecvfr.def}[europecv French definitions]
 % Informations personnelles
 \def\ecv@infosectionkey{\ecv@utf{Informations personnelles}}
@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{Courrier(s) \'electronique(s)}}
 \def\ecv@professionalkey{\ecv@utf{E-mail Professionnel}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nationalit\'e(s)}}
@@ -22,7 +23,7 @@
 % Pied de page
 \def\ecv@pagekey{\ecv@utf{Page}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ de}}
-% Grille d'Autovaluation des langues
+% Grille d'Autovaluation des langues
 \def\ecv@mothertonguekey{\ecv@utf{Langue(s) maternelle(s)}}
 \def\ecv@assesskey{\ecv@utf{Auto \'evaluation}}
 \def\ecv@levelkey{\ecv@utf{Niveau europ\'een}}

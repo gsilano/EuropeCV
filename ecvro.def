@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/31
+% Translation completed on 2019/03/19
 \ProvidesFile{ecvro.def}[europecv Romanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}
@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{E-mail}}
 \def\ecv@professionalkey{\ecv@utf{E-mail profesional}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Cet{\u a}{\c t}enia}}

@@ -3,4 +3,5 @@
 *.out
 *.log
 *.aux
+*.json
 

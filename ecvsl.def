@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/31
+% Translation completed on 2019/03/19
 \ProvidesFile{ecvsl.def}[europecv Slovenian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osebni podatki}}
@@ -15,6 +15,7 @@
 def\ecv@officekey{\ecv@utf{Urad}}
 \def\ecv@professionalkey{\ecv@utf{Strokovni E-poštni naslov}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Dr{\v z}avljanstvo}}

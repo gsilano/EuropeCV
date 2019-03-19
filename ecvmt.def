@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/01/31
+% Translation completed on 2019/03/19
 \ProvidesFile{ecvmt-utf8.def}[europecv Maltese definitions]
 \inputencoding{utf8x}
 % Personal information
@@ -15,6 +15,7 @@ def\ecv@datekey{\ecv@utf{Aġġornat għal}}
 \def\ecv@emailkey{\ecv@utf{Email}}
 \def\ecv@professionalkey{\ecv@utf{Email Professjonali}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nazzjonalita' / Nazzjonalitajiet}}

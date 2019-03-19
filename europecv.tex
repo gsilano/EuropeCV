@@ -51,7 +51,7 @@
     Department of Engineering\\
     University of Sannio in Benevento, Italy\\
 }
-\date{February 4, 2019}
+\date{March 19, 2019}
 
 
 \begin{document}
@@ -224,7 +224,10 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\ecv{professional}\texttt{\{}\textit{professional}\texttt{\}}}{Sets the professional email to \emph{professional}.}
 	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{pec}.}
 	\ecvitem{\ecv{homepage}\texttt{\{}\texttt{\textbackslash}\texttt{url\{URL\}}\texttt{\}}}{Sets the Home page to \emph{URL}.}
-	\ecvitem{\ecv{Skype}\texttt{\{}\textit{skype}\texttt{\}}}{Sets the Skype account to \emph{skype}.}
+	\ecvitem{\ecv{skype}\texttt{\{}\textit{skype}\texttt{\}}}{Sets the Skype account to 
+	\emph{skype}.}
+	\ecvitem{\ecv{youtube}\texttt{\{}\textit{youtubeChannel}\texttt{\}}}{Sets the YouTube Channel 
+	link to \emph{youtubeChannel}.}
 	\ecvitem{\ecv{nationality}\texttt{\{}\textit{nationality}\texttt{\}}}{Sets the nationality to \emph{nationality}.}
 	\ecvitem{\ecv{dateofbirth}\texttt{\{}\textit{birth}\texttt{\}}}{Sets the date of birth to \emph{birth}.}
 	\ecvitem{\ecv{gender}\texttt{\{}\textit{gender}\texttt{\}}}{Sets the gender to~\emph{gender}.}
@@ -258,6 +261,7 @@ For example, consider the following document:
 	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
 	\ecvhomepage{\url{www.homepage.com}}
 	\ecvskype{alan-touring}
+	\ecvyoutube{\url{www.youtube.com/AlanTouringChannel}}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
 	\ecvgender{Male}
@@ -289,6 +293,7 @@ The above will produce the following output:
    \ecvnationality{English}
    \ecvdateofbirth{June 23 1927}
    \ecvgender{Male}
+   \ecvyoutube{\url{www.youtube.com/AlanTouringChannel}}
    \ecvdate{\today}
 	\ecvpicture[height=3cm]{examples/at}
 	\fontfamily{phv}\fontseries{mc}\selectfont
@@ -315,6 +320,7 @@ If you do not want to use so much space, you may add some negative space with \e
 	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
 	\ecvhomepage{\url{www.homepage.com}}
 	\ecvskype{alan-touring}
+	\ecvyoutube{\url{www.youtube.com/AlanTouringChannel}}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
 	\ecvgender{Male}
@@ -342,6 +348,7 @@ The output of the above code looks like this:
  	\ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
  	\ecvhomepage{\url{www.homepage.com}}
  	\ecvskype{alan-touring}
+ 	\ecvyoutube{\url{www.youtube.com/AlanTouringChannel}}
 	\ecvnationality{English}
 	\ecvdateofbirth{June 23 1927}
 	\ecvgender{Male}

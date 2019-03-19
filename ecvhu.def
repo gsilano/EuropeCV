@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 2019/01/31
+% Translation yet to be finished, 2019/03/19
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{E-mail}}
 \def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{\'Allampolg\'ars\'ag}}

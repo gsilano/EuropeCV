@@ -39,8 +39,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Samostatn{\'y} u{\v z}ivatel}}
 \def\ecv@cefprofkey{\ecv@utf{Zku{\v s}en{\'y} u{\v z}ivatel}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{{\v z}\ecv@kern i\ecv@kern v\ecv@kern o\ecv@kern
 t\ecv@kern o\ecv@kern p\ecv@kern i\ecv@kern s}}}
 

@@ -39,8 +39,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Independent user}}
 \def\ecv@cefprofkey{\ecv@utf{Proficient user}}
 
-\providecommand*{\ecvtitle}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\providecommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\providecommand*{\ecvtitle}{\ecvbranding\ecv@utf{
 \Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
 i\ecv@kern t\ecv@kern a\ecv@kern e}}}

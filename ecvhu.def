@@ -39,8 +39,9 @@
 \def\ecv@cefindepkey{\ecv@utf{\"on\'all\'o nyelvhaszn\'al\'o}}
 \def\ecv@cefprofkey{\ecv@utf{mesterfok\'u nyelvhaszn\'al\'o}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{\"O\ecv@kern n\ecv@kern \'e\ecv@kern l\ecv@kern
 e\ecv@kern t\ecv@kern r\ecv@kern a\ecv@kern j\ecv@kern z}}}
 

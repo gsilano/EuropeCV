@@ -248,6 +248,11 @@
   \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
 }
 
+% No branding (i.e., "Europass" logotype)
+\DeclareOption{nobranding}{%
+  \AtEndOfPackage{\renewcommand*\ecvbranding{}}%
+}
+
 % Europass logo
 \DeclareOption{logo}{%
 \providecommand*\draweuropasslogo{%

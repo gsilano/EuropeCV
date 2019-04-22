@@ -42,5 +42,6 @@
 \def\ecv@cefindepkey{\ecv@utf{\foreignlanguage{greek}{Ανεξάρτητος χρήστης}}}
 \def\ecv@cefprofkey{\ecv@utf{\foreignlanguage{greek}{Αυτάρκης χρήστης}}}
 
+\renewcommand*\ecvbranding{\ecv@utf{\Large\textbf{\foreignlanguage{english}{Europass}}}}
 \renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{\foreignlanguage{greek}{Β\ecv@kern ι\ecv@kern ο\ecv@kern γ\ecv@kern ρ\ecv@kern α\ecv@kern φ\ecv@kern ι\ecv@kern κ\ecv@kern ό}}\\[5pt]
-\Large\textbf{\foreignlanguage{greek}{σ\ecv@kern η\ecv@kern μ\ecv@kern ε\ecv@kern ί\ecv@kern ω\ecv@kern μ\ecv@kern α} \foreignlanguage{english}{Europass}}}}
+\Large\textbf{\foreignlanguage{greek}{σ\ecv@kern η\ecv@kern μ\ecv@kern ε\ecv@kern ί\ecv@kern ω\ecv@kern μ\ecv@kern α}}}\ecvbranding}

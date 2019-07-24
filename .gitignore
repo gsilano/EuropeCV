@@ -5,3 +5,7 @@
 *.aux
 *.json
 
+# Exceptions
+!templates/*
+!examples/*
+

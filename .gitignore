@@ -6,6 +6,8 @@
 *.json
 
 # Exceptions
-!templates/*
-!examples/*
+!templates/.pdf
+!examples/.pdf
+!templates/.tex
+!examples/.tex
 

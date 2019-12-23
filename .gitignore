@@ -5,3 +5,9 @@
 *.aux
 *.json
 
+# Exceptions
+!templates/*
+!examples/*
+
+# Vscode folder
+.vscode/*

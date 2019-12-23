@@ -11,3 +11,5 @@
 !templates/.tex
 !examples/.tex
 
+# Vscode folder
+.vscode/*

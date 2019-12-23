@@ -51,7 +51,7 @@
     Department of Engineering\\
     University of Sannio in Benevento, Italy\\
 }
-\date{March 19, 2019}
+\date{December 23, 2019}
 
 
 \begin{document}
@@ -67,7 +67,11 @@
 	
 As of 11 March 2002 the European Commission has defined a common format for curricula vit\ae. This class is an unofficial \LaTeX\ implementation of that format. Although primarily intended for users in the European Union, the class can be used for any kind of curriculum vit\ae.
 
-To simplify the package distribution and its improvements, a GitHub repository has been opened. Such repository is available at the link \url{https://github.com/gsilano/EuropeCV}. Please, feel free to open an issue if you find mistakes or errors. At the same time, if you want you can collaborate as a developer: your name will be added to the list of contributors.
+To simplify the package distribution and its improvements, a GitHub repository has been opened. 
+Such repository is available at the link \url{https://github.com/gsilano/EuropeCV}. Please, feel 
+free to open an issue if you find mistakes or errors. At the same time, you can collaborate as a 
+developer making the LaTeX packages even better. In this case, your name will be added to the 
+contributors list (at the end of the manual).
 	
 \end{abstract}
 
@@ -80,7 +84,12 @@ This class is an unofficial \LaTeX\ implementation of the standard model for cur
 
 The Europass~CV defines both the content and the layout of a curriculum vit\ae. The \textsf{europecv} class provides support for the latter, and for the former as far as personal information and spoken languages are concerned. If you want to know how the content of a Europass~CV must be structured you must read the documentation provided by the Europass website.\footnote{\url{http://europass.cedefop.eu.int/htm/index.htm}.}
 
-This class tries to be as close as possible to the standard model without sacrificing flexibility. Although it is primarily intended for users of the European Union, the class can be used for any kind of curriculum vit\ae\ (possibly with the options \texttt{notitle} and \texttt{nologo}, see below), or even for other kinds of documents: for example, this documentation file has been typeset using the \textsf{europecv} class. The source files are included in the package.
+This class tries to be as close as possible to the standard model without sacrificing flexibility. 
+Although it is primarily intended for users of the European Union, the class can be used for any 
+kind of curriculum vit\ae\ (possibly with the options \texttt{notitle}, \texttt{nobranding} and 
+\texttt{nologo}, see below), or even for other kinds of documents: for example, this documentation 
+file has been typeset using the \textsf{europecv} class. The source files are included in the 
+package.
 \medskip
 
 A minimal (empty) curriculum vit\ae, quite similar to the official one, can be obtained with the following code:
@@ -115,7 +124,8 @@ The main differences with respect to the official model are the use of Helvetica
 
 The following options can be used with the \texttt{\textbackslash documentclass} command, e.g.
 \begin{quote}
-	\texttt{\textbackslash documentclass[latin1,helvetica,narrow,italian,logo,notitle,totpages]\{europecv\}}
+	\texttt{\textbackslash 
+	documentclass[latin1,helvetica,narrow,italian,logo,notitle,nobranding,totpages]\{europecv\}}
 \end{quote}
 \renewcommand*{\ecvtitle}{}
 \renewcommand*{\draweuropasslogo}{}
@@ -190,8 +200,12 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{Notes}{The \textsf{graphicx} package must be included in your document for the Europass logo to be drawn.}
 	
 	\section{Title option}
-	\ecvitem[15pt]{\texttt{notitle}}{Omits the title (``Europass Curriculum Vit\ae'') at the beginning of the curriculum vit\ae.}
-	\ecvitem{Notes}{Users outside the European Community who might want to use the \textsf{europecv} class may specify \texttt{notitle} and \texttt{nologo} among the class options.}
+	\ecvitem[15pt]{\texttt{notitle}}{Omits the title (``Europass Curriculum Vit\ae'') at the 
+	beginning of the curriculum vit\ae.}
+	\ecvitem[15pt]{\texttt{nobranding}}{Turns off the ``Europass'' branding text.}
+	\ecvitem{Notes}{Users outside the European Community who might want to use the 
+	\textsf{europecv} class may specify \texttt{notitle}, \texttt{nobranding} and \texttt{nologo} 
+	among the class options.}
 	
 	\section{Page numbering}
 	\ecvitem[15pt]{\texttt{totpages}}{Prints the total number of pages on each page.}
@@ -251,7 +265,7 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 For example, consider the following document:
 \begin{quote}
 	\begin{verbatim}
-	\documentclass[helvetica,notitle,nologo]{europecv}
+	\documentclass[helvetica,notitle,nobranding,nologo]{europecv}
 	\usepackage{graphicx}
 	
 	% Define personal data
@@ -313,7 +327,7 @@ The above will produce the following output:
 If you do not want to use so much space, you may add some negative space with \ecv{space} in order to raise the personal information block. In this case, the picture should be put at the rightmost position. The following is an example that shows how to put your personal picture on the side of the personal information block:
 \begin{quote}
 	\begin{verbatim}
-	\documentclass[helvetica,notitle,nologo]{europecv}
+	\documentclass[helvetica,notitle,nobranding,nologo]{europecv}
 	\usepackage{graphicx}
 	
 	\ecvname{Alan Touring}
@@ -688,7 +702,8 @@ Europass logo. Thanks to \textbf{Roman Bertle} for suggesting to redefine item m
 \textbf{J\"urgen Spitzm\"uller} and \textbf{lgelmi} for fixing the bugs into the 2018.07.22 and 
 2018.09.02 package releases, respectively. Thanks to \textbf{redlulz} and \textbf{Emil 
 Gardstr\"{o}m} for fixing the German (2018.10.12) and Swedish (2019.01.25) translation, 
-respectively. Thanks to \textbf{JPSPLeite} for improving the Portuguese translation.
+respectively. Thanks to \textbf{JPSPLeite} for improving the Portuguese translation. Thanks to 
+\textbf{Marc-Andre Hermanns} for adding the \texttt{nobranding} feature.
 
 \vspace{0.5cm}
 \textbf{\large{8\hspace{0.5cm}Disclaimer}}

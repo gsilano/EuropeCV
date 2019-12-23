@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/03/19
+% Translation completed on 12/23/2019
 \ProvidesFile{ecvde.def}[europecv German definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Angaben zur Person}}
@@ -39,7 +39,8 @@
 \def\ecv@cefindepkey{\ecv@utf{Selbst\"andige Sprachverwendung}}
 \def\ecv@cefprofkey{\ecv@utf{Kompetente Sprachverwendung}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{L\ecv@kern e\ecv@kern b\ecv@kern e\ecv@kern
 n\ecv@kern s\ecv@kern l\ecv@kern a\ecv@kern u\ecv@kern f\ecv@kern}}}

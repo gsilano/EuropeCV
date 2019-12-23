@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/03/19
+% Translation completed on 12/23/2019
 \ProvidesFile{ecvet.def}[europecv Estonian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Isikuandmed}}
@@ -39,8 +39,9 @@
 \def\ecv@cefindepkey{\ecv@utf{Iseseisev  keelekasutus}}
 \def\ecv@cefprofkey{\ecv@utf{Vaba keelekasutus}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s\ecv@kern i}\\[5pt]
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{c\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern
 i\ecv@kern t\ecv@kern a\ecv@kern e}}}

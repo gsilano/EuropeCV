@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/03/19
+% Translation completed on 12/23/2019
 \ProvidesFile{ecvit.def}[europecv Italian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informazioni personali}}
@@ -41,8 +41,9 @@
 
 
 
+\renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
+r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
 \renewcommand*{\ecvtitle}{\ecv@utf{%
 \Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
 i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern
-i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
-\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+i\ecv@kern t\ecv@kern a\ecv@kern e}}\ecvbranding}

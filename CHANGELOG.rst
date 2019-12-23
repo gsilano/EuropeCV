@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2019.12.23
+----------
+* Integrated the nobranding features
+* Contributors: Marc-Andre Hermanns
+
 2019.03.19
 ----------
 * Now you can integrate your YouTube channel into your CV

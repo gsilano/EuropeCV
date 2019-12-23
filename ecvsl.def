@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 2019/03/19
+% Translation completed on 12/23/2019
 \ProvidesFile{ecvsl.def}[europecv Slovenian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osebni podatki}}

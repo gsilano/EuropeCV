@@ -6,7 +6,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[2019/03/19 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[12/23/2019 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -247,6 +247,8 @@
 \DeclareOption{notitle}{%
   \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
 }
+
+% The nobranding function was created by Marc-Andre Hermanns 
 
 % No branding (i.e., "Europass" logotype)
 \DeclareOption{nobranding}{%

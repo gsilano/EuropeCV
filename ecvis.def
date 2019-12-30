@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation not yet completed, 12/23/2019
 \ProvidesFile{ecvis.def}[europecv Icelandic definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Pers{\'o}nulegar uppl{\'y}singar}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
+\def\ecv@datekey{\ecv@utf{Uppfært til}}
 \def\ecv@namekey{\ecv@utf{Nafn}}
 \def\ecv@addresskey{\ecv@utf{Heimilisfang/(-f{\"o}ng)}}
 \def\ecv@telkey{\ecv@utf{S{\'\i}mi/(-ar)}}

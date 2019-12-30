@@ -4,8 +4,8 @@
 \ProvidesFile{ecvda.def}[europecv Danish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige oplysninger}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
-\def\ecv@namekey{\ecv@utf{Efternavn(e), fornavn(e) og mellemnavn(e)}}
+\def\ecv@datekey{\ecv@utf{Opdateret til}} 
+\def\ecv@namekey{\ecv@utf{Navn, efternavn}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

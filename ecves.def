@@ -5,7 +5,7 @@
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on personal}}
 \def\ecv@datekey{\ecv@utf{Actualizado a}}
-\def\ecv@namekey{\ecv@utf{Apellido(s) / Nombre(s)}}
+\def\ecv@namekey{\ecv@utf{Nombre(s) / Apellido(s)}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on(es)}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono(s)}}
 \def\ecv@mobilekey{\ecv@utf{M\'ovil}}

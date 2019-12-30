@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation not yet completed, 12/23/2019
 \ProvidesFile{ecvlt.def}[europecv Lithuanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Asmenin{\.e} informacija}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
+\def\ecv@datekey{\ecv@utf{Atnaujinta}} 
 \def\ecv@namekey{\ecv@utf{Vardas~(-ai)~/ Pavard{\.e}~(-s)}}
 \def\ecv@addresskey{\ecv@utf{Adresas~(-ai)}}
 \def\ecv@telkey{\ecv@utf{Telefonas~(-ai)}}

@@ -8,7 +8,7 @@
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{\foreignlanguage{greek}{Προσωπικές πληροφορίες}}}
 \def\ecv@datekey{\ecv@utf{\foreignlanguage{greek}{Επώνυμο (-α)~/ Όνομα (-τα)}}}
-\def\ecv@namekey{\ecv@utf{\foreignlanguage{greek}{Επώνυμο (-α)~/ Όνομα (-τα)}}}
+\def\ecv@namekey{\ecv@utf{\foreignlanguage{greek}{Όνομα (-α) ~ / Επώνυμο (-α)}}}
 \def\ecv@addresskey{\ecv@utf{\foreignlanguage{greek}{Διεύθυνση~(-εις)}}}
 \def\ecv@telkey{\ecv@utf{\foreignlanguage{greek}{Τηλέφωνο~(-α)}}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

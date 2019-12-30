@@ -4,8 +4,8 @@
 \ProvidesFile{ecvsv.def}[europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
-\def\ecv@namekey{\ecv@utf{Efternamn / F\"ornamn}}
+\def\ecv@datekey{\ecv@utf{Uppdaterad till}} 
+\def\ecv@namekey{\ecv@utf{F\"ornamn~/ Efternamn}}
 \def\ecv@addresskey{\ecv@utf{Adress(er)}}
 \def\ecv@telkey{\ecv@utf{Telefonnummer}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}

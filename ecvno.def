@@ -5,7 +5,7 @@
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige opplysninger}}
 \def\ecv@datekey{\ecv@utf{Oppdatert til}}
-\def\ecv@namekey{\ecv@utf{Navn}}
+\def\ecv@namekey{\ecv@utf{Navn, etternavn}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefonnumre}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

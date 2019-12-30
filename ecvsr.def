@@ -5,7 +5,7 @@
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Li{\v c}ni podaci}}
 \def\ecv@datekey{\ecv@utf{Ažurirano}}
-\def\ecv@namekey{\ecv@utf{Prezime~/ ime}}
+\def\ecv@namekey{\ecv@utf{Ime~/ prezime}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@mobilekey{\ecv@utf{Mobilan}}

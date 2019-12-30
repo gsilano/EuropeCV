@@ -1,25 +1,25 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation not yet completed, 12/23/2019
 \ProvidesFile{ecvca.def}[europecv Catalan definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'o personal}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
-\def\ecv@namekey{\ecv@utf{Nom}}
+\def\ecv@datekey{\ecv@utf{Actualitzat fins avui}}
+\def\ecv@namekey{\ecv@utf{Nom, cognoms}}
 \def\ecv@addresskey{\ecv@utf{Adre\c{c}a }}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{Tel\`efon}}
 \def\ecv@mobilekey{\ecv@utf{M\`obil: }}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Oficina}}
 \def\ecv@emailkey{\ecv@utf{Correu electr\`onic}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{correu electrònic professional}} 
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalitat}}
 \def\ecv@birthkey{\ecv@utf{Data de naixement}}
-\def\ecv@genderkey{\ecv@utf{Gender}} % To be translated
+\def\ecv@genderkey{\ecv@utf{Gènere}} 
 % Footer
 \def\ecv@pagekey{\ecv@utf{P\`agina}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ de}}

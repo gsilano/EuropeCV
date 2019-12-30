@@ -4,8 +4,8 @@
 \ProvidesFile{ecvbg.def}[europecv Bulgarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Лична информация}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
-\def\ecv@namekey{\ecv@utf{Фамилия (ии), Собствено (и) име (на)}}
+\def\ecv@datekey{\ecv@utf{Актуализиран до}} 
+\def\ecv@namekey{\ecv@utf{Собствено (и) име (на), Фамилия (или)}}
 \def\ecv@addresskey{\ecv@utf{Адрес}}
 \def\ecv@telkey{\ecv@utf{Телефон}}
 \def\ecv@faxkey{\ecv@utf{Fax}}

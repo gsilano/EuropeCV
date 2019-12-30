@@ -4,7 +4,7 @@
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
+\def\ecv@datekey{\ecv@utf{Aktualizováno na}} 
 \def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}

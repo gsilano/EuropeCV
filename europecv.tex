@@ -51,7 +51,7 @@
     Department of Engineering\\
     University of Sannio in Benevento, Italy\\
 }
-\date{December 23, 2019}
+\date{January 06, 2020}
 
 
 \begin{document}
@@ -145,11 +145,14 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	
 	\section{Language options}
 	\ecvitem[15pt]{\textbf{Important!}}{The following options are not related to \textsf{babel}. See the Notes at the end of this list.}
-	\ecvitem{\texttt{bulgarian}}{Chooses Bulgarian language (translation not yet completed). You should load the \textsf{fontenc} package with~\texttt{T2A} option, or equivalent encoding (\texttt{\textbackslash usepackage[T2A]\{fontenc\}} in the preamble of your document). See the \textsf{examples} folder for an example. Of course, you must also have Cyrillic fonts.}
+	\ecvitem{\texttt{bulgarian}}{Chooses Bulgarian language. You should load the \textsf{fontenc} 
+	package with~\texttt{T2A} option, or equivalent encoding (\texttt{\textbackslash 
+	usepackage[T2A]\{fontenc\}} in the preamble of your document). See the \textsf{examples} folder 
+	for an example. Of course, you must also have Cyrillic fonts.}
 	\ecvitem{\texttt{catalan}}{Chooses Catalan language (translation not yet completed).}
 	
-	\ecvitem{\texttt{czech}}{Chooses Czech language (translation not yet completed).}
-	\ecvitem{\texttt{danish}}{Chooses Danish language (translation not yet completed).}
+	\ecvitem{\texttt{czech}}{Chooses Czech language.}
+	\ecvitem{\texttt{danish}}{Chooses Danish language.}
 	\ecvitem{\texttt{dutch}}{Chooses Dutch language.}
 	\ecvitem{\texttt{english}}{Chooses English language. This is the default.}
 	\ecvitem{\texttt{estonian}}{Chooses Estonian language.}
@@ -158,11 +161,17 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\texttt{galician}}{Chooses Galician language.}
 	\ecvitem{\texttt{german}}{Chooses German language.}
 	\ecvitem{\texttt{greek}}{Chooses the Greek language. The \textsf{babel} package must be included in your document with at least the Greek and English language options (put \texttt{\textbackslash usepackage[greek,english]\{babel\}} in the preamble of your document.) See the \textsf{examples} folder for a minimal example. Of course, you must also have Greek fonts.}
-	\ecvitem{\texttt{hungarian}}{Chooses Hungarian language (translation not yet completed).}
-	\ecvitem{\texttt{icelandic}}{Chooses Icelandic language (translation not yet completed). Note that this option does not work with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the preamble of your document).}
+	\ecvitem{\texttt{hungarian}}{Chooses Hungarian language.}
+	\ecvitem{\texttt{icelandic}}{Chooses Icelandic language. Note that this option does not work 
+	with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate 
+	font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the 
+	preamble of your document).}
 	\ecvitem{\texttt{italian}}{Chooses Italian language.}
 	\ecvitem{\texttt{latvian}}{Chooses Latvian language.}
-	\ecvitem{\texttt{lithuanian}}{Chooses Lithuanian language (translation not yet completed). Note that this option does not work with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the preamble of your document).}
+	\ecvitem{\texttt{lithuanian}}{Chooses Lithuanian language. Note that this option does not work 
+	with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate 
+	font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the 
+	preamble of your document).}
 	\ecvitem{\texttt{maltese}}{Chooses Maltese language. You should use the \texttt{T4} font encoding (put \texttt{\textbackslash usepackage[T4]\{fontenc\}} font encoding (put \texttt{\textbackslash usepackage[T4]\{fontenc\}} in the preamble of your document), or include the \textsf{maltese} package and use the commands \texttt{\textbackslash mh},  \texttt{\textbackslash mH} and so on, for~\/mh, \/mH\ etc\ldots See the \textsf{examples}.}
 	\ecvitem{\texttt{norwegian}}{Chooses Norwegian language.}
 	\ecvitem{\texttt{polish}}{Chooses Polish language. Note that this option does not work with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the preamble of your document).}
@@ -172,12 +181,23 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\texttt{slovak}}{Chooses Slovak language.}
 	\ecvitem{\texttt{slovenian}}{Chooses Slovenian language.}
 	\ecvitem{\texttt{spanish}}{Chooses Spanish language.}
-	\ecvitem[15pt]{\texttt{swedish}}{Chooses Swedish language (translation not yet completed).}
-	\ecvitem[15pt]{Notes}{The choice of the language only affects the appearance of the title (``Europass Curriculum Vit\ae''), the personal information section, the spoken language table and the footer with the page number. In some cases, it may affects the used alphabet (e.g. in Bulgarian).
+	\ecvitem[15pt]{\texttt{swedish}}{Chooses Swedish language.}
+	\ecvitem[15pt]{Notes}{The choice of the language only affects the appearance of the title 
+	(``Europass Curriculum Vit\ae''), the personal information section, the spoken language table 
+	and the footer with the page number. In some cases, it may affects the used alphabet (e.g., in 
+	Bulgarian).
 		
 		If you want to use the hyphenation patterns for the language(s) of your choice, you must include the \textsf{babel} package in your document. The use of \textsf{babel} is mandatory for Greek (see the Greek language option above).
 		
-		If you need a different language, you must create a new \texttt{.def} file, and add the corresponding \texttt{\textbackslash DeclareOption} in the class file.}
+		If you need a different language, you must create a new \texttt{.def} file, and add the 
+		corresponding \texttt{\textbackslash DeclareOption} in the class file.
+	    
+	    \vspace{0.25cm}
+	    
+		\textbf{IMPORTANT:} In case some translations are wrong, please, do not hesitate to correct 
+		the information reported in the translation files, i.e., \textsf{.def}. The suffix ``it'', 
+		``de'', and so on, indicates the language (e.g., ``it'' means Italian, ``de'' German, 
+		etc.).}
 	\ecvitem{About unfinished translations}{The localizations marked as ``not yet completed'' lack the translation of the following:
 		\begin{itemize}
 			\item ``Basic user''
@@ -241,7 +261,10 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	the mobile and the office numbers to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{email}\texttt{\{}\textit{email}\texttt{\}}}{Sets the email to \emph{email}.}
 	\ecvitem{\ecv{professional}\texttt{\{}\textit{professional}\texttt{\}}}{Sets the professional email to \emph{professional}.}
-	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{pec}.}
+	\ecvitem{\ecv{pec}\texttt{\{}\textit{pec}\texttt{\}}}{Sets the PEC email to \emph{pec}. 
+	Certified email (known as ``Posta elettronica certificata'' in Italy, or PEC in short) is a 
+	special type of email in use in Italy, Switzerland, Hong Kong and Germany. Here the link for 
+	further information \url{https://en.wikipedia.org/wiki/Certified_email}.}
 	\ecvitem{\ecv{homepage}\texttt{\{}\texttt{\textbackslash}\texttt{url\{URL\}}\texttt{\}}}{Sets the Home page to \emph{URL}.}
 	\ecvitem{\ecv{skype}\texttt{\{}\textit{skype}\texttt{\}}}{Sets the Skype account to 
 	\emph{skype}.}

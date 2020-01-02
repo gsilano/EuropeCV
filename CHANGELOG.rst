@@ -2,6 +2,13 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2020.01.06
+-----------
+* Completed all translations. Moreover, inverted the surname with the name (#16)
+* Updated Nicola Vitacolonna's e-mail address (#14)
+* Updated the manual with the new features. Typos have also been corrected.
+* Contributors: Giuseppe Silano
+
 2019.12.23
 ----------
 * Integrated the nobranding features

@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{E-mail}}
 \def\ecv@professionalkey{\ecv@utf{Radnu E-poštu}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}

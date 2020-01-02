@@ -15,6 +15,7 @@ def\ecv@datekey{\ecv@utf{Aġġornat għal}}
 \def\ecv@emailkey{\ecv@utf{Email}}
 \def\ecv@professionalkey{\ecv@utf{Email Professjonali}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}

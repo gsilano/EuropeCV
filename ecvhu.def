@@ -12,8 +12,9 @@
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Iroda}}
 \def\ecv@emailkey{\ecv@utf{E-mail}}
-\def\ecv@professionalkey{\ecv@utf{Professzionális e-mail}} 
+\def\ecv@professionalkey{\ecv@utf{Professzionális e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}

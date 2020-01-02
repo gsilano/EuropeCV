@@ -4,6 +4,7 @@ Changelog for package europecv
 
 2020.01.06
 -----------
+* Added Matrix/Riot support (#18)
 * Completed all translations. Moreover, inverted the surname with the name (#16)
 * Updated Nicola Vitacolonna's e-mail address (#14)
 * Updated the manual with the new features. Typos have also been corrected.

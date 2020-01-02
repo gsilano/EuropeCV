@@ -1,18 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvnl.def}[europecv Dutch definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Persoonsgegevens}}
 def\ecv@datekey{\ecv@utf{Bijgewerkt naar}}
-\def\ecv@namekey{\ecv@utf{Achternaam~(-namen)/ Voornaam~(-namen)}}
+\def\ecv@namekey{\ecv@utf{Achternaam~(-namen)~/ Voornaam~(-namen)}}
 \def\ecv@addresskey{\ecv@utf{Adres(sen)}}
 \def\ecv@telkey{\ecv@utf{Telefoon(s)}}
 \def\ecv@mobilekey{\ecv@utf{Mobiel}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@officekey{\ecv@utf{Kantoor}}
 \def\ecv@emailkey{\ecv@utf{E-mailadres(sen)}}
-\def\ecv@professionalkey{\ecv@utf{professionele e-mail}}
+\def\ecv@professionalkey{\ecv@utf{Professionele e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}

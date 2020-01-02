@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvgl.def}[europecv Galician definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on persoal}}
 \def\ecv@datekey{\ecv@utf{Actualizado a}}
-\def\ecv@namekey{\ecv@utf{Nome/ Apelidos }}
+\def\ecv@namekey{\ecv@utf{Nome~/ Apelidos}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono}}
@@ -43,4 +43,3 @@
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
 \renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e
 \ecvbranding}}}
-

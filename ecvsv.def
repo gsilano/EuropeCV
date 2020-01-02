@@ -1,18 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation completed, 01/06/2020
 \ProvidesFile{ecvsv.def}[europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}
-\def\ecv@datekey{\ecv@utf{Uppdaterad till}} 
+\def\ecv@datekey{\ecv@utf{Uppdaterad till}}
 \def\ecv@namekey{\ecv@utf{F\"ornamn~/ Efternamn}}
 \def\ecv@addresskey{\ecv@utf{Adress(er)}}
 \def\ecv@telkey{\ecv@utf{Telefonnummer}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Office}}
 \def\ecv@emailkey{\ecv@utf{E-postadress(er)}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{Professionell e-post}} 
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}

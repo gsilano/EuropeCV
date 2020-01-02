@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecven.def}[europecv English definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personal information}}
 \def\ecv@datekey{\ecv@utf{Updated \\}}
-\def\ecv@namekey{\ecv@utf{First name/ Surname}}
+\def\ecv@namekey{\ecv@utf{Name~/ Surname}}
 \def\ecv@addresskey{\ecv@utf{Address}}
 \def\ecv@telkey{\ecv@utf{Telephone}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}

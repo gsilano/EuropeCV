@@ -1,22 +1,22 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvpl.def}[europecv Polish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Dane osobowe}}
 \def\ecv@datekey{\ecv@utf{Zaktualizowany do}}
-\def\ecv@namekey{\ecv@utf{Nazwisko / Imi\k{e}}}
+\def\ecv@namekey{\ecv@utf{Nazwisko~/ Imi\k{e}}}
 \def\ecv@addresskey{\ecv@utf{Adres(y)}}
 \def\ecv@telkey{\ecv@utf{Telefon(y)}}
 \def\ecv@mobilekey{\ecv@utf{Tel. kom.}}
-\def\ecv@faxkey{\ecv@utf{Fax}}
+\def\ecv@faxkey{\ecv@utf{Faks}}
 \def\ecv@officekey{\ecv@utf{Urząd}}
 \def\ecv@emailkey{\ecv@utf{Email(e)}}
 \def\ecv@professionalkey{\ecv@utf{Profesjonalny e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
-\def\ecv@homepagekey{\ecv@utf{Home page}}
+\def\ecv@homepagekey{\ecv@utf{Strona główna}}
 \def\ecv@nationalitykey{\ecv@utf{Obywatelstwo}}
 \def\ecv@birthkey{\ecv@utf{Data urodzenia}}
 \def\ecv@genderkey{\ecv@utf{P{\l}e\'c}}

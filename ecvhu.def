@@ -1,18 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation finished, 01/06/2020
 \ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
-\def\ecv@namekey{\ecv@utf{Vezet\'ekn\'ev/Ut\'on\'ev}}
-\def\ecv@datekey{\ecv@utf{Aggiornato al}} % To be translated
+\def\ecv@namekey{\ecv@utf{Név~/ Vezetéknév}}
+\def\ecv@datekey{\ecv@utf{Frissítve:}}
 \def\ecv@addresskey{\ecv@utf{C\'\i m}}
 \def\ecv@telkey{\ecv@utf{Telefonsz\'am}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Iroda}}
 \def\ecv@emailkey{\ecv@utf{E-mail}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{Professzionális e-mail}} 
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
@@ -44,4 +44,3 @@ r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
 \renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{\"O\ecv@kern n\ecv@kern \'e\ecv@kern l\ecv@kern
 e\ecv@kern t\ecv@kern r\ecv@kern a\ecv@kern j\ecv@kern z}}}
-

@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecves.def}[europecv Spanish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on personal}}
 \def\ecv@datekey{\ecv@utf{Actualizado a}}
-\def\ecv@namekey{\ecv@utf{Nombre(s) / Apellido(s)}}
+\def\ecv@namekey{\ecv@utf{Nombre(s)~/ Apellido(s)}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on(es)}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono(s)}}
 \def\ecv@mobilekey{\ecv@utf{M\'ovil}}
@@ -42,4 +42,3 @@
 \renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
 \renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}\ecvbranding}
-

@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvit.def}[europecv Italian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informazioni personali}}
 \def\ecv@datekey{\ecv@utf{Aggiornato al }}
-\def\ecv@namekey{\ecv@utf{Nome, cognome}}
+\def\ecv@namekey{\ecv@utf{Nome~/ Cognome}}
 \def\ecv@addresskey{\ecv@utf{Indirizzo}}
 \def\ecv@telkey{\ecv@utf{Telefono}}
 \def\ecv@mobilekey{\ecv@utf{Mobile}}

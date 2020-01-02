@@ -1,18 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation finished, 01/06/2020
 \ProvidesFile{ecvcs.def}[europecv Czech definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'\i} {\'u}daje}}
-\def\ecv@datekey{\ecv@utf{Aktualizováno na}} 
-\def\ecv@namekey{\ecv@utf{Jm{\'e}no / P{\v r}{\'\i}jmen{\'\i}}}
+\def\ecv@datekey{\ecv@utf{Aktualizováno na}}
+\def\ecv@namekey{\ecv@utf{Jm{\'e}no~/ P{\v r}{\'\i}jmen{\'\i}}}
 \def\ecv@addresskey{\ecv@utf{Adresa}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Mobiln{\'\i} telefon}}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Kancelář}}
 \def\ecv@emailkey{\ecv@utf{E-mail}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{Profesionální e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
@@ -44,4 +44,3 @@ r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
 \renewcommand*\ecvtitle{\ecvbranding\ecv@utf{
 \Large\textbf{{\v z}\ecv@kern i\ecv@kern v\ecv@kern o\ecv@kern
 t\ecv@kern o\ecv@kern p\ecv@kern i\ecv@kern s}}}
-

@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvsk.def}[europecv Slovak definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osobn{\'e} {\'u}daje}}
 \def\ecv@datekey{\ecv@utf{Aktualizované na}}
-\def\ecv@namekey{\ecv@utf{Priezvisko({\'a}) / Meno({\'a})}}
+\def\ecv@namekey{\ecv@utf{Meno({\'a})~/ Priezvisko({\'a})}}
 \def\ecv@addresskey{\ecv@utf{Adresa(y)}}
 \def\ecv@telkey{\ecv@utf{Telef\'on(y)}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}

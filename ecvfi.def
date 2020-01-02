@@ -1,11 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 12/23/2019
+% Translation completed on 01/06/2020
 \ProvidesFile{ecvfi.def}[europecv Finnish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Henkil\"otiedot}}
 \def\ecv@datekey{\ecv@utf{Päivitetty}}
-\def\ecv@namekey{\ecv@utf{Suku-~ja etunimet}}
+\def\ecv@namekey{\ecv@utf{Etunimet~/ Suku-~ja}}
 \def\ecv@addresskey{\ecv@utf{Osoitteet}}
 \def\ecv@telkey{\ecv@utf{Puhelinnumero(t)}}
 \def\ecv@mobilekey{\ecv@utf{Matkapuhelin}}

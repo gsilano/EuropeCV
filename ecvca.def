@@ -1,40 +1,40 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation not yet completed, 12/23/2019
+% Translation completed, 01/06/2020
 \ProvidesFile{ecvca.def}[europecv Catalan definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'o personal}}
 \def\ecv@datekey{\ecv@utf{Actualitzat fins avui}}
-\def\ecv@namekey{\ecv@utf{Nom, cognoms}}
+\def\ecv@namekey{\ecv@utf{Nom~/ Cognoms}}
 \def\ecv@addresskey{\ecv@utf{Adre\c{c}a }}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@telkey{\ecv@utf{Tel\`efon}}
 \def\ecv@mobilekey{\ecv@utf{M\`obil: }}
 \def\ecv@officekey{\ecv@utf{Oficina}}
 \def\ecv@emailkey{\ecv@utf{Correu electr\`onic}}
-\def\ecv@professionalkey{\ecv@utf{correu electrònic professional}} 
+\def\ecv@professionalkey{\ecv@utf{correu electrònic professional}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalitat}}
 \def\ecv@birthkey{\ecv@utf{Data de naixement}}
-\def\ecv@genderkey{\ecv@utf{Gènere}} 
+\def\ecv@genderkey{\ecv@utf{Gènere}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{P\`agina}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ de}}
 % Language table
-\def\ecv@mothertonguekey{\ecv@utf{Mother tongue(s)}} % To be translated
-\def\ecv@assesskey{\ecv@utf{Self-assessment}} % To be translated
-\def\ecv@levelkey{\ecv@utf{European level}} % To be translated
-\def\ecv@understandkey{\ecv@utf{Understanding}} % To be translated
-\def\ecv@speakkey{\ecv@utf{Speaking}} % To be translated
-\def\ecv@writekey{\ecv@utf{Writing}} % To be translated
-\def\ecv@listenkey{\ecv@utf{Listening}} % To be translated
-\def\ecv@readkey{\ecv@utf{Reading}} % To be translated
-\def\ecv@interactkey{\ecv@utf{Spoken interaction}} % To be translated
-\def\ecv@productkey{\ecv@utf{Spoken production}} % To be translated
-\def\ecv@langfooterkey{\ecv@utf{Common European Framework of Reference (CEF) level}} % To be translated
-\def\ecv@cefbasickey{\ecv@utf{Basic user}}       % To be translated
-\def\ecv@cefindepkey{\ecv@utf{Independent user}} % To be translated
-\def\ecv@cefprofkey{\ecv@utf{Proficient user}}   % To be translated
+\def\ecv@mothertonguekey{\ecv@utf{Llengua materna}}
+\def\ecv@assesskey{\ecv@utf{Autoavaluació}}
+\def\ecv@levelkey{\ecv@utf{A nivell europeu}}
+\def\ecv@understandkey{\ecv@utf{Enteniment}}
+\def\ecv@speakkey{\ecv@utf{Parlant}}
+\def\ecv@writekey{\ecv@utf{Escriptura}}
+\def\ecv@listenkey{\ecv@utf{Escoltant}}
+\def\ecv@readkey{\ecv@utf{Lectura}}
+\def\ecv@interactkey{\ecv@utf{Interacció oral}}
+\def\ecv@productkey{\ecv@utf{Producció parlada}}
+\def\ecv@langfooterkey{\ecv@utf{Nivell Marc europeu comú de referència (CEF)}}
+\def\ecv@cefbasickey{\ecv@utf{Usuari bàsic}}
+\def\ecv@cefindepkey{\ecv@utf{Usuari independent}}
+\def\ecv@cefprofkey{\ecv@utf{Usuari competent}}

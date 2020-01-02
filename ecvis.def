@@ -1,22 +1,22 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation not yet completed, 12/23/2019
+% Translation completed, 01/06/2020
 \ProvidesFile{ecvis.def}[europecv Icelandic definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Pers{\'o}nulegar uppl{\'y}singar}}
 \def\ecv@datekey{\ecv@utf{Uppfært til}}
-\def\ecv@namekey{\ecv@utf{Nafn}}
+\def\ecv@namekey{\ecv@utf{Nafn~/ Eftirnafn}}
 \def\ecv@addresskey{\ecv@utf{Heimilisfang/(-f{\"o}ng)}}
 \def\ecv@telkey{\ecv@utf{S{\'\i}mi/(-ar)}}
 \def\ecv@mobilekey{\ecv@utf{Fars{\'\i}mi}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Skrifstofu}}
 \def\ecv@emailkey{\ecv@utf{Netfang/(-f{\"o}ng)}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{Faglegur tölvupóstur}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
-\def\ecv@homepagekey{\ecv@utf{Home page}}
+\def\ecv@homepagekey{\ecv@utf{Heimasíða}}
 \def\ecv@nationalitykey{\ecv@utf{{\TH}j{\'o}{\dh}erni}}
 \def\ecv@birthkey{\ecv@utf{F{\ae}{\dh}ingardagur}}
 \def\ecv@genderkey{\ecv@utf{Kyn}}

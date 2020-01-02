@@ -1,18 +1,18 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation yet to be finished, 12/23/2019
+% Translation finished, 01/06/2020
 \ProvidesFile{ecvda.def}[europecv Danish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige oplysninger}}
-\def\ecv@datekey{\ecv@utf{Opdateret til}} 
-\def\ecv@namekey{\ecv@utf{Navn, efternavn}}
+\def\ecv@datekey{\ecv@utf{Opdateret til}}
+\def\ecv@namekey{\ecv@utf{Navn~/ Efternavn}}
 \def\ecv@addresskey{\ecv@utf{Adresse(r)}}
 \def\ecv@telkey{\ecv@utf{Telefon}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
-\def\ecv@officekey{\ecv@utf{Ufficio}} % To be translated
+\def\ecv@officekey{\ecv@utf{Kontor}}
 \def\ecv@emailkey{\ecv@utf{E-mail-adresse(r)}}
-\def\ecv@professionalkey{\ecv@utf{Email Professionale}} % To be translated
+\def\ecv@professionalkey{\ecv@utf{Professionel e-mail}} 
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}

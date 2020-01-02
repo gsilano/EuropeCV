@@ -17,6 +17,7 @@
 \def\ecv@emailkey{\ecv@utf{\foreignlanguage{greek}{Ηλεκτρονικό ταχυδρομείο}}}
 \def\ecv@professionalkey{\ecv@utf{\foreignlanguage{greek}{Επαγγελματικό μήνυμα ηλεκτρονικού ταχυδρομείου}}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}

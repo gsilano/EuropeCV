@@ -1,12 +1,12 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % European curriculum vitae class
-% Author: Nicola Vitacolonna (vitacolo@dimi.uniud.it) and Giuseppe Silano (giuseppe.silano@unisannio.it)
+% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano (giuseppe.silano@unisannio.it)
 % This material is subject to the LaTeX Project Public License, either version 1.3
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[12/23/2019 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[01/06/2020 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -230,11 +230,11 @@
 \DeclareOption{macukr}{\AtEndOfClass{\inputencoding{macukr}}}
 
 % Set font
-\DeclareOption{helvetica}{%                       
+\DeclareOption{helvetica}{%
   \renewcommand{\rmdefault}{phv}
   \renewcommand{\sfdefault}{phv}
 }
-\DeclareOption{arial}{%                       
+\DeclareOption{arial}{%
   \renewcommand{\rmdefault}{ma1} % (this font is NOT installed by default!)
   \renewcommand{\sfdefault}{ma1}
 }
@@ -248,7 +248,7 @@
   \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
 }
 
-% The nobranding function was created by Marc-Andre Hermanns 
+% The nobranding function was created by Marc-Andre Hermanns
 
 % No branding (i.e., "Europass" logotype)
 \DeclareOption{nobranding}{%
@@ -262,7 +262,7 @@
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 
-% Flag pictures of the EC can be found at 
+% Flag pictures of the EC can be found at
 %   http://europa.eu.int/abc/symbols/emblem/index_en.htm
 \DeclareOption{noflag}{\providecommand*\draweuropeflag{}}
 \DeclareOption{flagWB}{%
@@ -297,7 +297,7 @@
 % Pass all other options (a4paper, 10pt, draft, openbib, etc...) to article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
-} 
+}
 
 \ExecuteOptions{english,noflag,logo,hrule} % Default options
 
@@ -307,7 +307,7 @@
 
 %% start of addition (with permission) by David Carlisle
 \ifx\Umathchar\@undefined
-%% encoding support for pdftex and classic TeX 
+%% encoding support for pdftex and classic TeX
 \RequirePackage{ucs}
 \RequirePackage[utf8x]{inputenc}
 \else
@@ -400,6 +400,7 @@
 \newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
 \newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
 \newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
+\newcommand*{\ecvmatrixriot}[1]{\def\ecv@matrixriot{#1}}
 \newcommand*{\ecvyoutube}[1]{\def\ecv@youtube{#1}}
 \newcommand*{\ecvpec}[1]{\def\ecv@pec{#1}}
 \newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
@@ -429,6 +430,7 @@
 \ecvfootername{\ecv@name}
 \ecvaddress{}
 \ecvskype{}
+\ecvmatrixriot{}
 \ecvyoutube{}
 \ecvprofessional{}
 \ecvtelephone{}
@@ -461,7 +463,7 @@
      \tabularnewline[5pt]
    \fi
    \ifx\@empty\ecv@officeAddress \else
-     \ecv@addresskey  &\ecv@officeAddress 
+     \ecv@addresskey  &\ecv@officeAddress
      \tabularnewline[5pt]
    \fi
 \fi
@@ -492,6 +494,9 @@
 \fi
 \ifx\@empty\ecv@skype\else
 \ecv@skypekey       &\ecv@skype \tabularnewline[5pt]
+\fi
+\ifx\@empty\ecv@matrixriot\else
+\ecv@matrixriotkey       &\ecv@matrixriot \tabularnewline[5pt]
 \fi
 \ifx\@empty\ecv@youtube\else
 \ecv@youtubekey      &\ecv@youtube \tabularnewline[5pt]
@@ -639,7 +644,7 @@
 
 % Text bullet
 \newcommand{\ecvbullet}{\raisebox{.35ex}[0cm][0cm]{\tiny\textbullet}}
-                                          
+
 \newenvironment{europecv}{%
   \ecvLeftColumnWidth{\ecv@leftcolwidth}
   \setlength\arrayrulewidth{\ecv@rulewidth}
@@ -697,7 +702,7 @@
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
-          
+
 \newif\if@ecvitemstar
 \newcommand\ecvitem{\@ifstar{\@ecvitemstartrue \@ecvitem}%
   {\@ecvitemstarfalse\@ecvitem}}

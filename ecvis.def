@@ -14,6 +14,7 @@
 \def\ecv@emailkey{\ecv@utf{Netfang/(-f{\"o}ng)}}
 \def\ecv@professionalkey{\ecv@utf{Faglegur tölvupóstur}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Heimasíða}}

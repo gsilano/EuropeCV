@@ -12,8 +12,9 @@
 \def\ecv@mobilekey{\ecv@utf{Mobil}}
 \def\ecv@officekey{\ecv@utf{Kontor}}
 \def\ecv@emailkey{\ecv@utf{E-mail-adresse(r)}}
-\def\ecv@professionalkey{\ecv@utf{Professionel e-mail}} 
+\def\ecv@professionalkey{\ecv@utf{Professionel e-mail}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
+\def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
 \def\ecv@youtubekey{\ecv@utf{YouTube}}
 \def\ecv@peckey{\ecv@utf{PEC}}
 \def\ecv@homepagekey{\ecv@utf{Home page}}

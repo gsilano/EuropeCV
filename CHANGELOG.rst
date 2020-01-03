@@ -2,7 +2,7 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2020.01.06
+2020.01.03
 -----------
 * Added example with the geometry package (#20)
 * Improved the parenthesis style around CEF (#19)

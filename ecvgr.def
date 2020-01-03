@@ -3,7 +3,7 @@
 % WARNING: Requires the babel package loaded with options
 % [english,greek] (at least) for \foreignlanguage
 %
-% Translation completed on 01/06/2020
+% Translation completed on 01/03/2020
 \ProvidesFile{ecvgr.def}[europecv Greek definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{\foreignlanguage{greek}{Προσωπικές πληροφορίες}}}

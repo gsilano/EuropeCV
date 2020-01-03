@@ -4,6 +4,7 @@ Changelog for package europecv
 
 2020.01.06
 -----------
+* Improved the parenthesis style around CEF (#19)
 * Added Matrix/Riot support (#18)
 * Completed all translations. Moreover, inverted the surname with the name (#16)
 * Updated Nicola Vitacolonna's e-mail address (#14)

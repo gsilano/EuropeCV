@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Lectura}}
 \def\ecv@interactkey{\ecv@utf{Interacció oral}}
 \def\ecv@productkey{\ecv@utf{Producció parlada}}
-\def\ecv@langfooterkey{\ecv@utf{Nivell Marc europeu comú de referència (CEF)}}
+\def\ecv@langfooterkey{\ecv@utf{Nivell Marc europeu comú de referència \ecv@upshape{(}CEF\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Usuari bàsic}}
 \def\ecv@cefindepkey{\ecv@utf{Usuari independent}}
 \def\ecv@cefprofkey{\ecv@utf{Usuari competent}}

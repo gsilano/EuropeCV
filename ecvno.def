@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Lesing}}
 \def\ecv@interactkey{\ecv@utf{Interaksjon}}
 \def\ecv@productkey{\ecv@utf{Muntlig produksjon}}
-\def\ecv@langfooterkey{\ecv@utf{CEF-niv\aa. CEF (Common European Framework) er en felles europeisk referanseramme for spr\aa k.}}
+\def\ecv@langfooterkey{\ecv@utf{CEF-niv\aa. \ecv@upshape{(}CEF\ecv@upshape{)} er en felles europeisk referanseramme for spr\aa k.}}
 \def\ecv@cefbasickey{\ecv@utf{Basisbruker}}
 \def\ecv@cefindepkey{\ecv@utf{Selvstendig bruker}}
 \def\ecv@cefprofkey{\ecv@utf{Avansert bruker}}

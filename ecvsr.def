@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{\v Citanje}}
 \def\ecv@interactkey{\ecv@utf{Govorno sporazumevanje}}
 \def\ecv@productkey{\ecv@utf{Samoizra\v zavanje}}
-\def\ecv@langfooterkey{\ecv@utf{Zajedni\v cki evropski referencni okvir za jezike(CEF)}}
+\def\ecv@langfooterkey{\ecv@utf{Zajedni\v cki evropski referencni okvir za jezike \ecv@upshape{(}CEF\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Osnovni korisnik}}
 \def\ecv@cefindepkey{\ecv@utf{Samostalni korisnik}}
 \def\ecv@cefprofkey{\ecv@utf{Osposobljeni korisnik}}

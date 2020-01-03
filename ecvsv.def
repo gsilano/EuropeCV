@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{L\"asf\"orst\aa else}}
 \def\ecv@interactkey{\ecv@utf{Muntlig interaktion}}
 \def\ecv@productkey{\ecv@utf{Muntlig produktion}}
-\def\ecv@langfooterkey{\ecv@utf{Niv\aa n inom de Gemensamma europeiska referensramarna (CEF)}}
+\def\ecv@langfooterkey{\ecv@utf{Niv\aa n inom de Gemensamma europeiska referensramarna \ecv@upshape{(}CEF\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Den baspresterande spr\aa kanv\"andaren}}
 \def\ecv@cefindepkey{\ecv@utf{Den sj\"alvst\"andige spr\aa kanv\"andaren}}
 \def\ecv@cefprofkey{\ecv@utf{Den avancerade spr\aa kanv\"andaren}}

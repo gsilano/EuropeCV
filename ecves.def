@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Comprensi\'on de lectura}}
 \def\ecv@interactkey{\ecv@utf{Interacci\'on oral}}
 \def\ecv@productkey{\ecv@utf{Expresi\'on oral}}
-\def\ecv@langfooterkey{\ecv@utf{Nivel del Marco Europeo Com\'un de Referencia (MECR)}}
+\def\ecv@langfooterkey{\ecv@utf{Nivel del Marco Europeo Com\'un de Referencia \ecv@upshape{(}MECR\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Usuario b\'asico}}
 \def\ecv@cefindepkey{\ecv@utf{Usuario independiente}}
 \def\ecv@cefprofkey{\ecv@utf{Usuario competente}}

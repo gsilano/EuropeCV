@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{{\v C}{\'\i}tanie}}
 \def\ecv@interactkey{\ecv@utf{{\'U}stna interakcia}}
 \def\ecv@productkey{\ecv@utf{Samostatn{\'y} {\'u}stny prejav}}
-\def\ecv@langfooterkey{\ecv@utf{{\'U}rove{\v n} podl'a Spolo{\v c}n{\'e}ho eur{\'o}pskeho referen{\v c}n{\'e}ho r{\'a}mca (CEF)}}
+\def\ecv@langfooterkey{\ecv@utf{{\'U}rove{\v n} podl'a Spolo{\v c}n{\'e}ho eur{\'o}pskeho referen{\v c}n{\'e}ho r{\'a}mca \ecv@upshape{(}CEF\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Pou{\v z}{\'\i}vatel' z{\'a}kladn{\'e}ho jazyka}}
 \def\ecv@cefindepkey{\ecv@utf{Samostatn{\'y} pou{\v z}{\'\i}vatel'}}
 \def\ecv@cefprofkey{\ecv@utf{Sk{\'u}sen{\'y} pou{\v z}{\'\i}vatel'}}

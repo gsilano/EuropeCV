@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Lettura}}
 \def\ecv@interactkey{\ecv@utf{Interazione}}
 \def\ecv@productkey{\ecv@utf{Produzione orale}}
-\def\ecv@langfooterkey{\ecv@utf{Quadro comune europeo di riferimento per le lingue}}
+\def\ecv@langfooterkey{\ecv@utf{Quadro comune europeo di riferimento per le lingue \ecv@upshape{(}ERL\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Livello elementare}}
 \def\ecv@cefindepkey{\ecv@utf{Livello intermedio}}
 \def\ecv@cefprofkey{\ecv@utf{Livello avanzato}}

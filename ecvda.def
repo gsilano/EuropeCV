@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{L\ae se}}
 \def\ecv@interactkey{\ecv@utf{Samtale}}
 \def\ecv@productkey{\ecv@utf{Redeg\o re}}
-\def\ecv@langfooterkey{\ecv@utf{Europ\ae iske Referencerammes (CEF) niveau}}
+\def\ecv@langfooterkey{\ecv@utf{Europ\ae iske Referencerammes \ecv@upshape{(}CEF\ecv@upshape{)} niveau}}
 \def\ecv@cefbasickey{\ecv@utf{Sprogbruger med basiskundskaber}}
 \def\ecv@cefindepkey{\ecv@utf{Selvst\ae ndig sprogbruger}}
 \def\ecv@cefprofkey{\ecv@utf{Kompetent sprogbruger}}

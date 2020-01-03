@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Lire}}
 \def\ecv@interactkey{\ecv@utf{Prendre part \`a une conversation}}
 \def\ecv@productkey{\ecv@utf{S'exprimer oralement en continu}}
-\def\ecv@langfooterkey{\ecv@utf{Niveau du Cadre europ\'een commun de r\'ef\'erence (CECR)}}
+\def\ecv@langfooterkey{\ecv@utf{Niveau du Cadre europ\'een commun de r\'ef\'erence \ecv@upshape{(}CECR\ecv@upshape{)}}}
 \def\ecv@cefbasickey{\ecv@utf{Utilisateur \'el\'ementaire}}
 \def\ecv@cefindepkey{\ecv@utf{Utilisateur Ind\'ependant}}
 \def\ecv@cefprofkey{\ecv@utf{Utilisateur exp\'eriment\'e}}

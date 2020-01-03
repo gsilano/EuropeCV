@@ -35,7 +35,7 @@
 \def\ecv@readkey{\ecv@utf{Olvas\'as}}
 \def\ecv@interactkey{\ecv@utf{T\'arsalg\'as}}
 \def\ecv@productkey{\ecv@utf{Folyamatos besz\'ed}}
-\def\ecv@langfooterkey{\ecv@utf{K\"oz\"os Eur\'opai Referenciakeret (KER) szintjei}}
+\def\ecv@langfooterkey{\ecv@utf{K\"oz\"os Eur\'opai Referenciakeret \ecv@upshape{(}KER\ecv@upshape{)} szintjei}}
 \def\ecv@cefbasickey{\ecv@utf{alapszint\H u nyelvhaszn\'al\'o}}
 \def\ecv@cefindepkey{\ecv@utf{\"on\'all\'o nyelvhaszn\'al\'o}}
 \def\ecv@cefprofkey{\ecv@utf{mesterfok\'u nyelvhaszn\'al\'o}}

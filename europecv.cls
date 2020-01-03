@@ -18,6 +18,7 @@
 % See comment below.
 
 \newcommand\ecv@utf[1]{{\inputencoding{utf8x}#1}}
+\newcommand{\ecv@upshape}[1]{\upshape{#1}}
 
 % Set language
 \DeclareOption{english}{%

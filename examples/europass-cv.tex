@@ -1,0 +1,82 @@
+%\documentclass[helvetica,notitle,nobranding,nologo]{europecv}
+\documentclass[logo,flagCMYK,totpages,a4paper]{europecv}
+\usepackage{graphicx}
+\usepackage{hyperref,bibentry}
+\usepackage[a4paper,height=24.2truecm,width=17.5truecm]{geometry}
+%\usepackage[gfsneohellenic]{fontsetup}
+%Define personal data
+\ecvname{Pythagoras}
+\ecvfootername{Pythagoras}
+\ecvaddress[][Office Address]{Home Address}
+\ecvtelephone[6936000001][2273067890]{+30 2273012345}
+\ecvfax{0055884321}
+\ecvemail{\href{mailto:pythagoras@home.email}{pythagoras@home.email}}
+\ecvprofessional{\href{mailto:pythagoras@work.email}{pythagoras@work.email}}
+% this is registered email, mainly used in Italy: \ecvpec{\href{mailto:alan.touring@pec.it}{alan.touring@pec.it}}
+\ecvhomepage{\url{www.homepage.com}}
+\ecvskype{Pythagoras}
+\ecvmatrixriot{Pythagoras}
+\ecvyoutube{\url{www.youtube.com/Pythagoras}}
+\ecvnationality{Greek}
+\ecvdateofbirth{206 years after the 1st Olympiad}
+\ecvgender{Male}
+\ecvbeforepicture{\hfill}
+\ecvpicture[height=3cm]{Pythagoras.jpg}
+\ecvafterpicture{\ecvspace{-3.5cm}}
+\ecvdate{\today}
+
+\makeatletter
+
+\ecvRuleWidth{0.8pt} %rule width
+\ecvLeftColumnWidth{5cm}
+\begin{document}
+
+
+\begin{europecv}
+  \ecvpersonalinfo
+\end{europecv}
+
+\renewcommand*\draweuropasslogo{}
+\renewcommand*\draweuropeflag{}
+\renewcommand*\ecvbranding{}
+\renewcommand*\ecvtitle{}
+
+\begin{europecv}
+    \section{Spoken Languages}
+  \ecvmothertongue[10pt]{Greek}
+  \ecvlanguageheader{(*)}
+  \ecvlanguage{French}{\ecvCOne}{\ecvCTwo}{\ecvBTwo}{\ecvCOne}{\ecvCTwo}
+  \ecvlastlanguage{German}{\ecvATwo}{\ecvATwo}{\ecvATwo}{\ecvATwo}{\ecvATwo}\ecvlanguagefooter{(*)}
+\end{europecv}
+
+\begin{europecv}
+  \section{Research Activities}
+%  \ecvitem{}{\bibliographystyle{plain}
+%    \nocite{*}
+%    \bibliography{mypublications}}
+  \ecvitem{}{\textsc{Publications}}
+  \ecvitem{[1]}{First publication}
+  \ecvitem{[2]}{Second publication}
+  \ecvitem{[3]}{Third publication}
+  \ecvitem{[4]}{Fourth publication}
+  \ecvitem[20pt]{[5]}{Fifth publication}
+  \ecvitem[10pt]{}{\textsc{Conference Publications}}
+  \ecvitem{[1]}{First conference publication}
+  \ecvitem{[2]}{Second conference publication}
+  \ecvitem[20pt]{[3]}{Third conference publication}
+  \ecvitem[10pt]{}{\textsc{Conference Talks}}
+  \ecvitem{[1]}{First conference talk}
+  \ecvitem{[2]}{Second conference talk}
+  \ecvitem[20pt]{[3]}{Third conference talk}
+\end{europecv}
+
+\begin{europecv}
+  \section{Teaching Activities}
+  \ecvitem[10pt]{}{\textsc{Course Notes}}
+  \ecvitem{[1]}{Calculus I notes}
+  \ecvitem[20pt]{[2]}{Linear Algebra notes}
+  \ecvitem[10pt]{}{\textsc{Independent teaching}}
+  \ecvitem{[1]}{Calculus I}
+  \ecvitem[20pt]{[2]}{Linear Algebra}
+\end{europecv}
+\end{document}

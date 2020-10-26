@@ -1,0 +1,35 @@
+% !TeX root = ./cv.tex
+
+\makeatletter
+  % Add a row of two cols to a global list
+  % #1: list; #2#3: two cols
+  \def\ecv@blx@additemto#1#2#3{\expandafter\gdef\expandafter#1\expandafter{#1\\#2&#3}}
+
+  % Called for each item
+  \def\blx@bibitem#1{%
+    % Counter for defernumbers
+    \blx@getdata{#1}%
+    \blx@thelabelnumber%
+    %
+    % Add current item to the list
+    \ecv@blx@additemto\ecv@blx@table{%
+      % Hypertarget
+      \raisebox{10pt}[0pt][0pt]{\hypertarget{cite.\the\c@refsection @#1}{}}%
+      % Label
+      \protect\NoHyper\cite{#1}%
+    }{%
+      % Citation
+      \fullcite{#1}\vspace{5pt}%
+    }%
+  }
+
+  \let\std@blx@printbibliography\printbibliography
+  \renewcommand\printbibliography[1][]{%
+    \gdef\ecv@blx@table{}% Init the list of items
+    \std@blx@printbibliography[#1]% Add items to list
+    \ecv@blx@table\\% Print the list of items
+  }
+\makeatother
+
+% Heading
+\defbibheading{bibliography}[\bibname]{\textbf{#1}\vspace{-10pt}}

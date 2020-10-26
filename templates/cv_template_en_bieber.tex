@@ -1,0 +1,306 @@
+% !TeX root = ./cv.tex
+\def\Umathchar{} %prevents europecv to load utf8x
+\documentclass[totpages,openbib,english,flagCMYK,notitle,nobranding,booktabs]{europecv}
+\usepackage[utf8]{inputenc}
+
+\usepackage[backend=biber,style=alphabetic,natbib=false,doi=true,sorting=ydnt,labelnumber,defernumbers=true]{biblatex}%,url=false
+\input{biber}
+\addbibresource{pub.bib}
+\addbibresource{thesis.bib}
+\nocite{*}
+
+\renewbibmacro*{cite}{%
+  \printtext[bibhyperref]{%
+    \printfield{labelprefix}%
+    \ifkeyword{thesis}
+      {T\printfield{labelnumber}}
+      {\printfield{labelalpha}%
+       \printfield{extraalpha}}}}
+
+\usepackage{lmodern} % for middle positioned tilde
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[a4paper,top=1.27cm,left=1cm,right=1cm,bottom=2cm]{geometry}
+\usepackage[english]{babel}
+
+% \usepackage[lowtilde]{url}
+\ifpdf
+\usepackage[pdftex,colorlinks]{hyperref}
+\else
+\usepackage{hyperref}
+\fi
+
+\usepackage[UKenglish]{isodate}
+\cleanlookdateon
+
+\let\copyeuropeflag\draweuropeflag
+\renewcommand\draweuropeflag{}
+
+\renewcommand{\ttdefault}{\familydefault}%{phv} % Uses Helvetica instead of fixed width font
+
+\newcommand*{\SignatureAndDate}[1]{%
+% 	\par\noindent\makebox[2.5in]{Place \textsc{(Province)}, \today}
+% 	\par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+% 	\par\noindent\hfill\makebox[5.43in][l]{\hspace{2cm}Place and date}    \makebox[2.0in][l]{#1}%
+}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INFO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ecvname{John Smith}
+\ecvfootername{John}
+\ecvaddress{address}
+\ecvtelephone{(+1) phone}
+\ecvemail{\href{mailto:john.smith@mail.com}{john.smith@mail.com}}
+\ecvprofessional{\href{mailto:john.smith@acme.com}{john.smith@acme.com}}
+% \ecvpec{\href{mailto:emailo@pec.it}{email@pec.it}}
+\ecvhomepage{\url{https://acme.com/~smithj}}
+% \ecvmatrixriot{(Remove if not relevant)}
+% \ecvskype{(Remove if not relevant)}
+\ecvnationality{Terrestrian}
+\ecvdateofbirth{25 April 1965}
+\ecvgender{Male}
+% \ecvdate{\today}
+\ecvpicture[width=3cm]{photo}
+\ecvafterpicture{\ecvspace{-4cm}}
+%\ecvfootnote{For further details please take a look here: \url{http://europass.cedefop.eu.int}\\
+%\textcopyright~European Communities, 2003.}
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{europecv}
+\tabularnewline[-5.5em]
+& {\Large\textbf{Curriculum vitæ} \hfill\copyeuropeflag}\tabularnewline
+& {Updated \today}\tabularnewline[-2em]
+\ecvpersonalinfo[5pt]
+
+\ecvitem{GitLab}{\url{https://gitlab.com/JohnSmith}}[20pt]
+
+% \ecvitem{\large\textbf{Desired employment/ Occupational~field}}{\large\textbf{(Remove if not relevant)}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% WORK %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Work experience}{Work experience}
+\section{Work experience}
+\ecvitem{\large Intership}{ACME}
+\ecvitem{1/2012 -- 12/2013}{\url{https://acme.com}}
+\ecvitem{}{NYC}
+\ecvitem{}{R\&D in General Systems.}
+[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDUCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Education}{Education}% and training}
+\section{Education}
+
+\ecvitem{\large Master's Degree}{Snack Engineering}
+\ecvitem{9/2010 -- 7/2012}{University of NY}
+\ecvitem{}{\url{https://www.uniny.com}}
+\ecvitem{}{NYC}
+\ecvitem{}{Final grade: 110/110 cum laude}
+\ecvitem{}{Thesis: "How to eat snacks" \cite{master}}
+\ecvitem{}{EQF level: 7}
+\ecvitem{}{Credits: 120 CFU/ECTS}
+[10pt]
+\ecvitem{\large Bachelor’s Degree}{Snack Engineering}
+\ecvitem{9/2006 -- 7/2010}{University of NY}
+\ecvitem{}{\url{https://www.uniny.com}}
+\ecvitem{}{NYC}
+\ecvitem{}{Final grade: 110/110 cum laude}
+\ecvitem{}{Thesis: "How to open snacks" \cite{bachelor}}
+\ecvitem{}{EQF level: 6}
+\ecvitem{}{Credits: 180 CFU/ECTS}
+[10pt]
+
+\ecvitem{\large Maturity Diploma}{Snacks}
+\ecvitem{9/2000 -- 7/2006}{Gynnasium Great Apple}
+\ecvitem{}{\url{http://www.greatapple.com}}
+\ecvitem{}{NYC}
+\ecvitem{}{Final grade: 100/100 cum laude}
+\ecvitem{}{Thesis: "How to buy a snack"}
+\ecvitem{}{EQF level: 4}
+[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ACADEMIC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Academic appointments}{Academic appointments}
+% \section{Academic appointments}
+%
+% \ecvitem{Dates [from -- to]}{\textbf{Associate Professor} at University of XX, YY, Department of ZZ.}
+%
+% \pdfbookmark{Professional and scientific appointments}{Professional and scientific appointments}
+% \section{Professional and scientific appointments}
+%
+% \ecvitem{Dates}{\textbf{IEEE Senior Membership} obtained from Institute of Electrical and Electronics Engineers.}
+%
+% \pdfbookmark{Research areas}{Research areas}
+% \section{Research areas}
+%
+% \ecvitem{}{Autonomous systems; distributed control and optimization over networks; nonsmooth systems; piecewise quadratic stability.}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SKILLS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Personal skills and~competences}{Personal skills and~competences}
+\section{Personal skills and~competences}
+
+\ecvmothertongue[12pt]{English}
+% \ecvitem{\large Other language}{English}
+\ecvlanguageheader{(*)}
+%\ecvlanguage{Language}{}{}{}{}{}
+\ecvlastlanguage{English}{\ecvBOne}{\ecvBTwo}{\ecvCTwo}{\ecvBTwo}{\ecvAOne}
+\ecvlanguagefooter[10pt]{(*)}
+
+% \ecvitem[10pt]{\large Social skills and competences}{Soft skills}
+% \ecvitem[10pt]{\large Organisational skills and competences}{Team work, Project management}
+% \ecvitem[10pt]{\large Technical skills and competences}{Software develop, Electronics}
+\ecvitem[10pt]{\large Computer skills and competences}{Power on/off a PC, Microsoft Office, Minecraft}
+%\ecvitem[10pt]{\large Artistic skills and competences}{Replace this text by a description of these competences and indicate where they were acquired (remove if not relevant).}
+%\ecvitem[10pt]{\large Other skills and competences}{Replace this text by a description of these competences and indicate where they were acquired (remove if not relevant).}
+\ecvitem{\large Driving licence}{Category DE}
+[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ADDITIONAL INFORMATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Additional information}{Additional information}
+% \section{Additional information}
+% \ecvitem[10pt]{}{Include here any other information that may be relevant, for example contact persons, references, etc. (Remove heading if not relevant).}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTERESTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \ecvitem{}{\textbf{Personal interests}}
+% \ecvitem{}{\ldots}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROJECTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Projects and collaborations}{Projects and collaborations}
+\section{Projects and collaborations}
+
+% \ecvitem{10/2020}{\textbf{fidx}}
+% \ecvitem{}{A module for float and custom indexes in Python.}
+% \ecvitem{}{\url{https://pypi.org/project/fidx}}
+% [10pt]
+
+\ecvitem{11/2013 -- 4/2015}{ACME project}
+\ecvitem{}{System for make snacks.}
+\ecvitem{}{\url{https://acme.com/project1234}}
+\ecvitem{}{Promoted by: ACME}
+\ecvitem{}{In collaboration with: Supersnacks}
+\ecvitem{}{Presented at: "My favourite snack" 2015 organized by ACME in NYC}
+[10pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TALKS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Invited talks}{Invited talks}
+% \section{Invited talks}
+%
+% \ecvitem{Dates}{The name of the talk, Place.}
+%%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDITORIAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pdfbookmark{Scientific and editorial activity}{Scientific and editorial activity}
+% \section{Scientific and editorial activity}
+%
+% \subpdfbookmark{Editorial Board}{Editorial Board}
+% \ecvitem{}{\textbf{Editorial Board}}
+%
+% \\
+%
+% \subpdfbookmark{Editor of edited books}{Editor of edited books}
+% \ecvitem{}{\textbf{Editor of edited books}}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Conferences services}{Conferences services}
+% \section{Conferences services}
+%
+% \subpdfbookmark{Program committees}{Program committees}
+% \ecvitem{}{\textbf{Program committees}}
+%
+% \\
+%
+% \subpdfbookmark{Associate editor}{Associate editor}
+% \ecvitem{}{\textbf{Associate editor}}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEACHING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Teaching activity}{Teaching activity}
+\section{Teaching activity}
+
+% \ecvitem{Academics Years: since YY/ZZ -- today}{Graduate course ``Title of the course'', number of credits, when e where.}
+
+\subpdfbookmark{Tutorship}{Tutorship}
+\ecvitem{}{\textbf{Tutorship}}
+\ecvitem{A.Y. 2010/11 -- 12/13}{Tutor of Snack Engineering}
+\ecvitem{}{University Merit College "James Bond"}
+\ecvitem{}{NYC}
+[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANNEXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Annexes}{Annexes}
+% \section{Annexes}
+% \ecvitem{}{List any item attached to the CV}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \pdfbookmark{Referencens}{References}
+% \section{References}
+%
+% \ecvitem{}{List of references}
+%[20pt]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Research activities}{Research activities}
+\section{Research activities}
+
+\ecvitem{}{\textbf{Snacks}}
+\ecvitem{}{Snacks basis. \cite{bachelor, master}}
+\ecvitem{}{Snacks industry. \cite{make,sell,sold}}
+[20pt]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PUBLICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Publications}{Publications}
+\section{Publications}
+
+% \subpdfbookmark{Refereed conference proceedings}{Refereed conference proceedings}
+% \ecvitem{}{\textbf{Refereed conference proceedings}}
+% \\
+%
+% \ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[FirstPubLabel]}{Details related to the conference paper}
+%
+% \ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[SecondPubLabel]}{Details related to the conference paper}
+%
+% \ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[ThirdPubLabel]}{Details related to the conference paper}
+
+\subpdfbookmark{Journal}{Journal}
+&\printbibliography[notkeyword=thesis,title=Conference]
+\\
+
+\subpdfbookmark{Thesis}{Thesis}
+&\printbibliography[keyword=thesis,title=Thesis,resetnumbers]
+
+
+\end{europecv}
+
+\vspace{5.0cm}
+
+
+%\hfill\includegraphics[scale=0.05]{figure/sign.png}
+% \vspace{-2.5cm}
+% \SignatureAndDate{\hspace{1.5cm}Name Surname}
+
+
+
+\end{document}
+
+

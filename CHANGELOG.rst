@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2021.02.04
+----------
+* Improved Portuguese translation
+* Contributors: Nuno Fachada
+
 2020.01.03
 -----------
 * Added example with the geometry package (#20)

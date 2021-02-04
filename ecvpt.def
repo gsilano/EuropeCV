@@ -29,7 +29,7 @@
 \def\ecv@assesskey{\ecv@utf{Auto-avalia\c{c}\~ao}}
 \def\ecv@levelkey{\ecv@utf{N\'ivel  europeu}}
 \def\ecv@understandkey{\ecv@utf{Compreens\~ao}}
-\def\ecv@speakkey{\ecv@utf{Conversas\~ao}}
+\def\ecv@speakkey{\ecv@utf{Conversa\c{c}\~ao}}
 \def\ecv@writekey{\ecv@utf{Escrita}}
 \def\ecv@listenkey{\ecv@utf{Compreens\~ao oral}}
 \def\ecv@readkey{\ecv@utf{Compreens\~ao escrita}}

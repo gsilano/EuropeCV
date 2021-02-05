@@ -2,10 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2021.02.04
+2021.02.05
 ----------
-* Improved Portuguese translation
-* Contributors: Nuno Fachada
+* Improved Portuguese translation (#24)
+* Update package documentation
+* Contributors: Nuno Fachada, Giuseppe Silano
 
 2020.01.03
 -----------

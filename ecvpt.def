@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 01/03/2020
+% Translation completed on 04/02/2021
 \ProvidesFile{ecvpt.def}[europecv Portuguese definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa\c{c}\~ao pessoal}}
@@ -29,7 +29,7 @@
 \def\ecv@assesskey{\ecv@utf{Auto-avalia\c{c}\~ao}}
 \def\ecv@levelkey{\ecv@utf{N\'ivel  europeu}}
 \def\ecv@understandkey{\ecv@utf{Compreens\~ao}}
-\def\ecv@speakkey{\ecv@utf{Conversas\~ao}}
+\def\ecv@speakkey{\ecv@utf{Conversa\c{c}\~ao}}
 \def\ecv@writekey{\ecv@utf{Escrita}}
 \def\ecv@listenkey{\ecv@utf{Compreens\~ao oral}}
 \def\ecv@readkey{\ecv@utf{Compreens\~ao escrita}}

@@ -51,7 +51,7 @@
     Faculty of Electrical Engineering\\
     Czech Technical University in Prague, Czech Republic\\
 }
-\date{February 5, 2021}
+\date{May 9, 2021}
 
 
 \begin{document}
@@ -61,6 +61,8 @@
 \maketitle
 
 \pagestyle{plain}
+
+%%% START SECTION ==========================================================
 
 \label{ABSTRACT}
 \begin{abstract}
@@ -74,6 +76,10 @@ developer making the LaTeX packages even better. In this case, your name will be
 contributors list (at the end of the manual).
 	
 \end{abstract}
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \label{Overview}
 \vspace{0.25cm}
@@ -116,6 +122,10 @@ This produces the following output, having only the \emph{title} (``Europass Cur
 }
 	
 The main differences with respect to the official model are the use of Helvetica (which should be in any standard \LaTeX\ distribution) instead of Arial, and the use of a vector image instead of a low-resolution bitmap.
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \label{A curriculum through class options}
 \vspace{0.5cm}
@@ -236,6 +246,9 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{Notes}{This option affects the appearance of the spoken language table (see p.~\pageref{spoken}).}
 \end{europecv}
 
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 %\pagebreak
 \label{A curriculum through commands}
@@ -679,11 +692,19 @@ In such a way, you can refer your publications into the text as reported below a
 
 \end{europecv}
 
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
+
 \vspace{0.5cm}
 \textbf{\large{5\hspace{0.5cm}\setword{Dependencies}{sec:dependencies}}}
 \vspace{0.25cm}
 
 The \textsf{europecv} class is built upon the \textsf{article} class, so you can use all standard \textsf{article} options, such as \verb|12pt|, \verb|draft|, \verb|a4paper|, and so on. It requires the \textsf{array}, \textsf{longtable}, \textsf{fancyhdr}, \textsf{ucs} and~\textsf{inputenc} packages, which should be available by default on any decent \LaTeX\ distribution.
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \vspace{0.5cm}
 \textbf{\large{6\hspace{0.5cm}Official Europass CV and \textsf{europecv}: the differences}}
@@ -716,6 +737,10 @@ Unless you want to install Arial (Narrow), you will probably typeset your curric
 The \textsf{europecv} class uses standard \LaTeX\ relative font sizes, so there are a few mismatches with respect to the official template. The vertical rule has a different width with respect to the official one(s), but this can easily be changed with \ecv{RuleWidth}. The mobile phone number is placed in an unusual position in the official model: almost flushed right, but not quite. I have decided to put it a \texttt{\textbackslash qquad} from the telephone number, and I have added a colon. Finally, I have decided to put a comma between the last name and the first name in the personal information block, because I think it helps distinguishing between them in some cases.
 %The last noticeable difference is the span of the vertical rule, which in the official model goes through the page footer. The \textsf{europecv} class keeps the footer separate from the text of the curriculum vit\ae.
 
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
+
 \vspace{0.5cm}
 \textbf{\large{7\hspace{0.5cm}Acknowledgments}}
 \vspace{0.25cm}
@@ -737,7 +762,12 @@ respectively. Thanks to \textbf{JPSPLeite} for improving the Portuguese translat
 \textbf{Marc-Andre Hermanns} for adding the \texttt{nobranding} feature. Thanks to \textbf{Antonios 
 Tsolomitis} for his suggestions into the 2020.01.06 package release. Thanks to \textbf{
 Davide Peressoni} for the biber support (2020.10.26 package release). Thanks to \textbf{Nuno 
-Fachada} for his help with the Portuguese translation (2021.02.05 package release).
+Fachada} for his help with the Portuguese translation (2021.02.05 package release). Thanks to 
+\textbf{Pancho Horrillo} for his fix ($\#25$, 2021.05.09 package release).
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \vspace{0.5cm}
 \textbf{\large{8\hspace{0.5cm}Disclaimer}}
@@ -749,12 +779,19 @@ I am not a \TeX pert or a typographer, so I may have introduced typographical mi
 
 The flags have been downloaded from \url{http://europa.eu.int/abc/symbols/emblem/index_en.htm}. The vector image of the logo (in \texttt{eps} and~\texttt{pdf} format) is an unofficial version that was kindly provided by Jo\~ao Ventura. As far as I can understand, distributing those files within this class does not violate any license or copyright.
 
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \vspace{0.5cm}
 \textbf{\large{9\hspace{0.5cm}License}}
 \vspace{0.5cm}
 
 All files in this package may be distributed under the terms of the \LaTeX\ Project Public License. See \url{https://www.latex-project.org/lppl/} for the details of that license.
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
 
 \appendix
 

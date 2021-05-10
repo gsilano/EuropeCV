@@ -4,9 +4,9 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage[backend=biber,style=alphabetic,natbib=false,doi=true,sorting=ydnt,labelnumber,defernumbers=true]{biblatex}%,url=false
-\input{biber}
-\addbibresource{pub.bib}
-\addbibresource{thesis.bib}
+\input{europecv_biber.tex}
+\addbibresource{europecv_pub.bib}
+\addbibresource{europecv_thesis.bib}
 \nocite{*}
 
 \renewbibmacro*{cite}{%
@@ -61,7 +61,7 @@
 \ecvdateofbirth{25 April 1965}
 \ecvgender{Male}
 % \ecvdate{\today}
-\ecvpicture[width=3cm]{photo}
+\ecvpicture[width=3cm]{euopecv_photo}
 \ecvafterpicture{\ecvspace{-4cm}}
 %\ecvfootnote{For further details please take a look here: \url{http://europass.cedefop.eu.int}\\
 %\textcopyright~European Communities, 2003.}

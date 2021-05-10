@@ -4,6 +4,7 @@ Changelog for package europecv
 
 20XX.XX.XX
 ----------
+* Files comply with the CTAN requirements
 * Update templates as required by CTAN
 * Contributors: Giuseppe Silano
 

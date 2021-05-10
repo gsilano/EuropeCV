@@ -12,7 +12,7 @@ Changelog for package europecv
 ----------
 * Update package documentation for new release
 * Fix condensed fontseries name on the narrow option (#25)
-* Contributors: pancho horrillo, Giuseppe Silano
+* Contributors: Pancho Horrillo, Giuseppe Silano
 
 2021.02.05
 ----------

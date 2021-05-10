@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+20XX.XX.XX
+----------
+* Update templates as required by CTAN
+* Contributors: Giuseppe Silano
+
 2021.05.09
 ----------
 * Update package documentation for new release

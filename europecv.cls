@@ -1,7 +1,8 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % European curriculum vitae class
-% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano (giuseppe.silano@unisannio.it)
+% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano 
+%(giuseppe.silano@fel.cvut.cz)
 % This material is subject to the LaTeX Project Public License, either version 1.3
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license

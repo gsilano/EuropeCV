@@ -51,7 +51,7 @@
     Faculty of Electrical Engineering\\
     Czech Technical University in Prague, Czech Republic\\
 }
-\date{May 10, 2021}
+\date{December 24, 2021}
 
 
 \begin{document}
@@ -86,9 +86,16 @@ contributors list (at the end of the manual).
 \textbf{\large{1\hspace{0.5cm}Overview}}
 \vspace{0.25cm}
 
-This class is an unofficial \LaTeX\ implementation of the standard model for curricula vit\ae\ (the \emph{Europass~CV\/}) as recommended by the European Commission.\footnote{\url{http://europa.eu.int/scadplus/leg/en/cha/c11057.htm}.} The Europass~CV replaces the European CV, launched in~2002.
+This class is an unofficial \LaTeX\ implementation of the standard model for curricula vit\ae\ (the 
+\emph{Europass~CV\/}) as recommended by the European 
+Commission\footnote{\url{http://europa.eu.int/scadplus/leg/en/cha/c11057.htm}.}. The Europass~CV 
+replaces the European CV, launched in~2002.
 
-The Europass~CV defines both the content and the layout of a curriculum vit\ae. The \textsf{europecv} class provides support for the latter, and for the former as far as personal information and spoken languages are concerned. If you want to know how the content of a Europass~CV must be structured you must read the documentation provided by the Europass website.\footnote{\url{http://europass.cedefop.eu.int/htm/index.htm}.}
+The Europass~CV defines both the content and the layout of a curriculum vit\ae. The 
+\textsf{europecv} class provides support for the latter, and for the former as far as personal 
+information and spoken languages are concerned. If you want to know how the content of a 
+Europass~CV must be structured you must read the documentation provided by the Europass 
+website\footnote{\url{http://europass.cedefop.eu.int/htm/index.htm}.}.
 
 This class tries to be as close as possible to the standard model without sacrificing flexibility. 
 Although it is primarily intended for users of the European Union, the class can be used for any 
@@ -111,7 +118,8 @@ A minimal (empty) curriculum vit\ae, quite similar to the official one, can be o
 	\end{verbatim}
 \end{quote}
 
-This produces the following output, having only the \emph{title} (``Europass Curriculum Vit\ae''), and the Europass logo:\footnote{It also produces a footer with the page number, not shown here.}
+This produces the following output, having only the \emph{title} (``Europass Curriculum Vit\ae''), 
+and the Europass logo\footnote{It also produces a footer with the page number, not shown here.}:
 
 \bigskip\medskip
 {
@@ -137,19 +145,29 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\texttt{\textbackslash 
 	documentclass[latin1,helvetica,narrow,italian,logo,notitle,nobranding,totpages]\{europecv\}}
 \end{quote}
+
 \renewcommand*{\ecvtitle}{}
 \renewcommand*{\draweuropasslogo}{}
+
 \begin{europecv}
 	\section{Input encoding}
 	\ecvitem[10pt]{\textbf{Important!}}{The default input encoding for the \textsf{europecv} class is UTF-8. If you have a Unicode capable text editor, you should be able to directly type text with accents, diacritics and so on (i.e., no need to use \LaTeX\ commands for special characters). In order for this to work, you must ensure that your document is saved using the UTF-8 text encoding. As an alternative, you may specify a different input encoding for your document (see options below). Please note that the \textsf{ucs} and \textsf{inputenc} packages are needed no matter which encoding you use (see Section~\ref{sec:dependencies}).}
 	\ecvitem{\texttt{utf8}}{Chooses UTF-8 input encoding. This is the default.}
 	\ecvitem[15pt]{Other options}{The other available input encodings are: \texttt{ansinew}, \texttt{applemac}, \texttt{ascii}, \texttt{cp850}, \texttt{cp852}, \texttt{cp858}, \texttt{cp437}, \texttt{cp437de}, \texttt{cp865}, \texttt{cp866}, \texttt{cp1250}, \texttt{cp1251}, \texttt{cp1252}, \texttt{cp1257}, \texttt{decmulti}, \texttt{koi8-r}, \texttt{koi8-ru}, \texttt{koi8-u}, \texttt{latin1}, \texttt{latin2}, \texttt{latin3}, \texttt{latin4}, \texttt{latin5}, \texttt{latin9}, \texttt{latin10},   \texttt{maccyr}, \texttt{macukr}, \texttt{next}.}
-	\ecvitem{Notes}{Any of the above options causes the \textsf{inputenc} package to be loaded with the specified encoding,\footnote{\texttt{utf8} loads \textsf{inputenc} with the option~\texttt{utf8x}.} so that you do not have to load that package in your document.}
+	\ecvitem{Notes}{Any of the above options causes the \textsf{inputenc} package to be loaded with 
+	the specified encoding\footnote{\texttt{utf8}, loads \textsf{inputenc} with the 
+	option~\texttt{utf8x}.} so that you do not have to load that package in your document.}
+	
 	\section{Font options}
 	\ecvitem{\texttt{helvetica}}{Uses Helvetica as the default font.}
 	\ecvitem{\texttt{arial}}{Uses Arial as the default font. In order for this option to take effect, the font must have been installed and must be accessible through \LaTeX.
 		
-		How to install fonts in \LaTeX\ goes beyond the scope of this document: read \emph{The Font Installation Guide} you can find on CTAN. The \textsf{europecv} class expects the font filenames to use \texttt{m} for the supplier (Monotype) and \texttt{a1} for the typeface (Arial). For more information, please refer to the \emph{Fontname} guide you can find on CTAN.}
+		How to install fonts in \LaTeX\ goes beyond the scope of this document: read \emph{The Font 
+		Installation Guide} you can find on CTAN. The \textsf{europecv} class expects the font 
+		filenames to use \texttt{m} for the supplier (Monotype) and \texttt{a1} for the typeface 
+		(Arial). For more information, please refer to the \emph{Fontname} guide you can find on 
+		CTAN.}
+	
 	\ecvitem[15pt]{\texttt{narrow}}{Uses a condensed version of the font. This option must be used with either \texttt{helvetica} or~\texttt{arial}.}
 	\ecvitem{Notes}{If no font option is specified, \textsf{europecv} will use the current font.}
 	
@@ -207,7 +225,7 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 		\textbf{IMPORTANT:} In case some translations are wrong, please, do not hesitate to correct 
 		the information reported in the translation files, i.e., \textsf{.def}. The suffix ``it'', 
 		``de'', and so on, indicates the language (e.g., ``it'' means Italian, ``de'' German, 
-		etc.).}
+		etc.). Pull requests on the GitHub repository are always welcome. So, don't be shy ;).}
 	\ecvitem{About unfinished translations}{The localizations marked as ``not yet completed'' lack the translation of the following:
 		\begin{itemize}
 			\item ``Basic user''
@@ -257,6 +275,7 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 \vspace{0.25cm}
 
 \begin{europecv}
+	
 	\section{Personal information}
 	\ecvitem{\ecv{date}\texttt{\{}\textit{date}\texttt{\}}}{Sets CV update date to \emph{date}. To 
 	enter the current date use the \texttt{$\setminus$}\texttt{today} command.}
@@ -365,7 +384,6 @@ The above will produce the following output:
 	\end{europecv}
 }
 
-
 If you do not want to use so much space, you may add some negative space with \ecv{space} in order to raise the personal information block. In this case, the picture should be put at the rightmost position. The following is an example that shows how to put your personal picture on the side of the personal information block:
 \begin{quote}
 	\begin{verbatim}
@@ -434,6 +452,7 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 
 %\ecvNoHorRule
 \begin{europecv}
+	
 	\section{Sectioning commands}
 	\ecvitem{\texttt{\textbackslash}{\texttt{section}}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{title}\texttt{\}}}{Starts a new section. For example, the current section has been started with \texttt{\textbackslash}{\texttt{section}}\texttt{\{Sectioning commands\}}.}
 	\ecvitem{\texttt{\textbackslash}{\texttt{ecvsection}}\texttt{[}\textit{vspace}\texttt{]}\texttt{\{}\textit{title}\texttt{\}}}{\textbf{Deprecated. It is still available for backward compatibility.} Starts a new section. For example, the current section has been started with \texttt{\textbackslash}{\texttt{ecvsection}}\texttt{\{Sectioning commands\}}.
@@ -445,6 +464,7 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 			\ecv{item}\texttt{[15pt]\{...\}\{...\}}
 		\end{quote}
 	}
+
 	\section{Spoken languages}
 	\ecvitem{\ecv{mothertongue}\texttt{[}\textit{vspace}\texttt{]} \texttt{\{}\textit{language}\texttt{\}}}{Typesets the mother tongue.}
 	\ecvitem{\ecv{languageheader}\texttt{\{}\textit{symbol}\texttt{\}}}{Typesets the header of the language table. The argument is a symbol used as a footnote symbol referring to the language table footer (see below).}
@@ -469,6 +489,74 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 	\ecvitem{\ecv{BTwo}}{Predefined level description: independent user~(B2).}
 	\ecvitem{\ecv{COne}}{Predefined level description: proficient user~(C1).}
 	\ecvitem{\ecv{CTwo}}{Predefined level description: proficient user~(C2).}
+	%
+	\section{Research Activities}\label{p:alternativeBibliogrphy}
+	%
+	\ecvitem{\ecv{displayFootNote\\Counter} \texttt{[}\textit{key}\texttt{]}} 
+	{As for the `$\backslash$label` command in \LaTeX. The command creates a cross link between the 
+	``key'' label and the reference command (i.e., {\ecv{refFootNoteCounter}). A counter is 
+	incremented when a new label is created. \texttt{key} uniquely identifies the footnote into the 
+	document text.}}
+	%
+	\ecvitem{\ecv{displayConference\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}}, but now the command is meant creating a reference to 
+	conference papers.}
+	%
+	\ecvitem{\ecv{displayBookChapter\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}}, but now the command is meant creating a reference to 
+	book chapter papers.}
+	%
+	\ecvitem{\ecv{displayReferredJournals\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}}, but now the command is meant creating a reference to 
+	journal papers.}
+	%
+	\ecvitem{\ecv{displayWorkshops} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}, but now the command is meant creating a reference to 
+	workshop papers.}}
+	%
+	\ecvitem{\ecv{displayPosters} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}, but now the command is meant creating a reference to 
+	poster papers.}}
+	%
+	\ecvitem{\ecv{displayResearch\\Projects} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}}, but now the command is meant creating a reference to 
+	research projects.}
+	%
+	\ecvitem{\ecv{displayAwards} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{displayFootNoteCounter}}, but now the command is meant creating a reference to 
+	awards.}
+	%
+	%
+	\ecvitem{\ecv{refFootNote\\Counter} \texttt{[}\textit{key}\texttt{]}} 
+	{Create a reference for the ``key'' in the {\ecv{displayFootNoteCounter}}.}
+	%
+	\ecvitem{\ecv{refConference\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to 
+	conference papers.}
+	%
+	\ecvitem{\ecv{refBookChapter\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{refFootNoteCounter}}, but now the command is meant creating a reference 
+	to book chapter papers.}
+	%
+	\ecvitem{\ecv{refReferredJournals\\Publications} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{refFootNoteCounter}}, but now the command is meant creating a 
+	reference to journal papers.}
+	%
+	\ecvitem{\ecv{refWorkshops} \texttt{[}\textit{key}\texttt{]}} 
+	{Same as {\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to 
+	workshop papers.}
+	%
+	\ecvitem{\ecv{refPosters} \texttt{[}\textit{key}\texttt{]}} {Same as 
+	{\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to poster 
+	papers.}
+	%
+	\ecvitem{\ecv{refResearch\\Projects} \texttt{[}\textit{key}\texttt{]}} {Same as 
+	{\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to research 
+	projects.}
+	%
+	\ecvitem{\ecv{refAwards} \texttt{[}\textit{key}\texttt{]}} {Same as 
+	{\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to awards.}
+	%
 \end{europecv}
 
 As an example, the following code inside the \texttt{europecv} environment:
@@ -539,6 +627,58 @@ If you have specified the \texttt{booktabs} class option, the spoken language ta
 
 Note that you should use tight page margins to make the table fit comfortably.
 
+As an example for the ``Research Activities'' section, the following code inside the 
+\texttt{europecv} environment:
+\begin{verbatim}
+\begin{europecv}
+	\section{Research Activities}
+	\ecvitem{}{\textsc{\textbf{Stability of piecewise-linear systems}}}
+	\ecvitem{}{Something related to the picewise-linear 
+	systems~\ecvrefReferredJournalsPublications[keyJournalPaper1].}
+	%
+	\section{Publications}
+	\ecvitem{}{\textsc{\textbf{Referred Journals}}}
+	\ecvitem{\ecvdisplayReferredJournalsPublications[keyJournalPaper1]}{Journal paper reference.}
+	\ecvitem{\ecvdisplayReferredJournalsPublications[keyJournalPaper2]}{Journal paper reference.}
+\end{europecv}
+\end{verbatim} 
+
+will produce something similar to the following:
+
+\ecvNoHorRule
+\ecvLeftColumnWidth{3.3cm}
+{
+	\fontfamily{phv}\selectfont
+	\begin{europecv}
+		\section{Research Activities}
+			\ecvitem{}{\textsc{\textbf{Stability of piecewise-linear systems}}}
+			\ecvitem{}{Something related to the picewise-linear 
+			systems~\ecvrefReferredJournalsPublications[keyJournalPaper1].}
+			%
+			\section{Publications}
+			\ecvitem{}{\textsc{\textbf{Referred Journals}}}
+			\ecvitem{\ecvdisplayReferredJournalsPublications[keyJournalPaper1]}{Journal paper 
+			reference.}
+			\ecvitem{\ecvdisplayReferredJournalsPublications[keyJournalPaper2]}{Journal paper 
+			reference.}
+	\end{europecv}
+}
+%\ecvNoHorRule
+%\ecvLeftColumnWidth{3.3cm}
+%{
+%	\fontfamily{phv}\selectfont
+%	\begin{europecv}
+%		\section{Research Activities}
+%		\ecvitem{}{\textsc{\textbf{Research activity in short}}
+%		\ecvitem{}{Research activity in long~\ecvrefReferredJournalsPublications[keyJournalPaper].}
+%		%
+%		\section{Publications}
+%		\ecvitem{}{\textsc{\textbf{Referred Journals}}
+%			\ecvitem{\ecvdisplayReferredJournalsPublications[keyJournalPaper]}{Journal paper 
+%			reference.}
+%	\end{europecv}
+%}
+
 \begin{europecv}
 	\section{Footer and Footnotes}
 	\ecvitem{\ecv{footnote}\texttt{\{}\textit{note}\texttt{\}}}{Puts a note in the footer of every page of the curriculum vit\ae.\footnote{Standard footnotes can also be used inside the \texttt{europecv} environment.} The note spans the right column width and it is justified. This command should appear in the preamble of your document.}
@@ -569,11 +709,15 @@ Some parameters can be set by using the following commands.
 	\ecvitem{\ecv{WithHorRule}}{Draws a horizontal rule at the beginning of the Europass~CV, which spans the first column. This is the default.}
 	\ecvitem{\ecv{NoHorRule}}{Does not draw the horizontal rule at the beginning of the Europass~CV. This part was typeset with \ecv{NoHorRule}.}
 	\ecvitem{\ecv{RuleWidth}\texttt{\{}\textit{width}\texttt{\}}}{Sets the thickness of the rules. The default is~\texttt{0.4pt}. This part has been typeset with \ecv{RuleWidth}\texttt{\{2pt\}}. The vertical rule can be omitted by setting this parameter to~\texttt{0pt}.}
-	\ecvitem{\ecv{ExtraRowHeight}\texttt{\{}\textit{height}\texttt{\}}}{Puts extra space between \emph{all\/} subsequent items in the \texttt{europecv} environment (including rows of the spoken language table). The default is~\texttt{0pt}. This part has been typeset with \ecv{ExtraRowHeight}\texttt{\{10pt\}}.}
+	\ecvitem{\ecv{ExtraRowHeight}\\\texttt{\{}\textit{height}\texttt{\}}}{Puts extra space between 
+	\emph{all\/} subsequent items in the \texttt{europecv} environment (including rows of the 
+	spoken language table). The default is~\texttt{0pt}. This part has been typeset with 
+	\ecv{ExtraRowHeight}\texttt{\{10pt\}}.}
 	\ecvitem{\ecv{ColSep}\texttt{\{}\textit{width}\texttt{\}}}{Sets the space between the vertical rule and the surrounding text. The default is~\texttt{12pt}. This part has been typeset with \ecv{ColSep}\texttt{\{20pt\}}.}
 	\ecvitem{\ecv{FlagWidth}\texttt{\{}\textit{width}\texttt{\}}}{Sets the size of the flag. The default is~\texttt{10mm}.}
 	\ecvitem{\ecv{LogoWidth}\texttt{\{}\textit{width}\texttt{\}}}{Sets the size of the Europass logo. The default is~\texttt{23mm}.}
-	\ecvitem{\ecv{LogoOffset}\texttt{\{}\textit{offset}\texttt{\}}}{Adjusts the vertical position of the Europass logo. The default is~\texttt{1cm}.}
+	\ecvitem{\ecv{LogoOffset}\\\texttt{\{}\textit{offset}\texttt{\}}}{Adjusts the vertical position 
+	of the Europass logo. The default is~\texttt{1cm}.}
 	
 \end{europecv}
 \ecvExtraRowHeight{0pt}
@@ -595,11 +739,18 @@ Some parameters can be set by using the following commands.
 \ecvLeftColumnWidth{5cm}
 \ecvWithHorRule
 
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
+
 \vspace{0.5cm}
 \textbf{\large{4\hspace{0.5cm}Bibliographies}}
 \vspace{0.25cm}
 
-The main weakness of this class is related to bibliographies. If you insert a bibliography inside the \verb|europecv| environment with a command like:
+The main weakness of this class is related to bibliographies (an alternative solution is presented 
+at page~\pageref{p:alternativeBibliogrphy}). If you insert a bibliography inside 
+the \verb|europecv| environment with a command like:
+
 \begin{quote}
 	\begin{verbatim}
 	\section{Additional Information}
@@ -608,9 +759,12 @@ The main weakness of this class is related to bibliographies. If you insert a bi
 	\bibliography{mypublications}}
 	\end{verbatim}
 \end{quote}
+
 the bibliography will flow out if it does not fit in the current page. The reason is that the \verb|europecv| environment is a \verb|longtable|, each~\ecv{item} corresponds to a row of the table, and a row cannot be split across pages. Therefore, you can safely put a bibliography using the \verb|\bibliography| command only outside the \verb|europecv| environment. Which may be or may not be what you want.
 
-Another possibility is to use the \textsf{bibentry} package, and put each \verb|\bibentry| command inside an \ecv{item} command:
+Another possibility is to use the \textsf{bibentry} package, and put each \verb|\bibentry| command 
+inside an \ecv{item} command:
+
 \begin{quote}
 	%\section{Additional Information}
 	\begin{verbatim}
@@ -620,7 +774,11 @@ Another possibility is to use the \textsf{bibentry} package, and put each \verb|
 	\ecvitem{}{\bibentry{pubN}}
 	\end{verbatim}
 \end{quote}
-The drawback of this solution is that you have to use a \verb|\bibentry| command for each bibliography item you want to appear. If you have written many publications, this can be a pain in the neck. Unfortunately, the only solution I know is to write a script to perform the task automatically.
+
+The drawback of this solution is that you have to use a \verb|\bibentry| command for each 
+bibliography item you want to appear. If you have written many publications, this can be a pain in 
+the neck. Unfortunately, the only solution I know is to write a script to perform the task 
+automatically.
 
 Finally, you can add references to your publications using the commands (and also defining new ones following the same rules) \texttt{\textbackslash}{\texttt{conferencePublications}}\texttt{[Name of the label]} and \texttt{\textbackslash}{\texttt{refconferencePublications}} \texttt{[Name of the label]}. Below the code that you have to insert in the preamble.
 

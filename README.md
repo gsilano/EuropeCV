@@ -17,6 +17,8 @@ Therefore, you can independently change the content of the translation files by 
 
 Conversely, the ```.cls``` file contains the heart of the code. You can use it to redefine the package by adding your functionality. In such case, please feel free to share your code with the community members that already use EuropeCV.
 
+> In case you want to make changes or fix bugs in Linux distributions, you can find `europecv.cls` under the `/usr/share/texlive/texmf-dist/tex/latex/europecv` path.
+
 # Pull request template
 
 Well, if you are reading this section it means that you are thinking of helping me to make EuropeCV big! :) Before helping me, developing your features or fixing a bug, please consider the few rules listed below:

@@ -301,6 +301,113 @@
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 
+
+%%%%%%% Counters
+%%%%%% FootNote counter for blfootnote
+\newcounter{FootNoteCounter}
+\setcounter{FootNoteCounter}{0}
+
+\newcommand{\displayFootNoteCounter}[1][]{%
+	\stepcounter{FootNoteCounter}%
+	\hypertarget{#1}{\textsuperscript{\theFootNoteCounter}}%
+}
+
+\newcommand{\refFootNoteCounter}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Conference publications -  the '%' symbol it is used to avoid undesired spaces
+\newcounter{ConferencePublications}
+\setcounter{ConferencePublications}{0}
+
+\newcommand{\displayConferencePublications}[1][]{%
+	\stepcounter{ConferencePublications}%
+	\hypertarget{#1}{[C\theConferencePublications]}%
+}
+
+\newcommand{\refConferencePublications}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Book Chapters publications - the '%' symbol it is used to avoid undesired spaces
+\newcounter{BookChapterPublications}
+\setcounter{BookChapterPublications}{0}
+
+\newcommand{\displayBookChapterPublications}[1][]{%
+	\stepcounter{BookChapterPublications}%
+	\hypertarget{#1}{[BC\theBookChapterPublications]}%
+}
+
+\newcommand{\refBookChapterPublications}[1][]{%
+	\myhyperlink{#1}%
+}
+
+
+%%%%%% ReferredJournals - the '%' symbol it is used to avoid undesired spaces
+\newcounter{ReferredJournalsPublications}
+\setcounter{ReferredJournalsPublications}{0}
+
+\newcommand{\displayReferredJournalsPublications}[1][]{%
+	\stepcounter{ReferredJournalsPublications}%
+	\hypertarget{#1}{[J\theReferredJournalsPublications]}%
+}
+
+\newcommand{\refReferredJournalsPublications}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Workshop - the '%' symbol it is used to avoid undesired spaces
+\newcounter{Workshops}
+\setcounter{Workshops}{0}
+
+\newcommand{\displayWorkshops}[1][]{%
+	\stepcounter{Workshops}%
+	\hypertarget{#1}{[W\theWorkshops]}%
+}
+
+\newcommand{\refWorkshopsPublications}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Posters - the '%' symbol it is used to avoid undesired spaces
+\newcounter{Posters}
+\setcounter{Posters}{0}
+
+\newcommand{\displayPosters}[1][]{%
+	\stepcounter{Posters}%
+	\hypertarget{#1}{[P\thePosters]}%
+}
+
+\newcommand{\refPosters}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Research Projects - the '%' symbol it is used to avoid undesired spaces
+\newcounter{ResearchProjects}
+\setcounter{ResearchProjects}{0}
+
+\newcommand{\displayResearchProjects}[1][]{%
+	\stepcounter{ResearchProjects}%
+	\hypertarget{#1}{[RP\theResearchProjects]}%
+}
+
+\newcommand{\refResearchProjects}[1][]{%
+	\myhyperlink{#1}%
+}
+
+%%%%%% Awards - the '%' symbol it is used to avoid undesired spaces
+\newcounter{Awards}
+\setcounter{Awards}{0}
+
+\newcommand{\displayAwards}[1][]{%
+	\stepcounter{Awards}%
+	\hypertarget{#1}{[A\theAwards]}%%
+}
+
+\newcommand{\refAwards}[1][]{%
+	\myhyperlink{#1}%
+}
+
 \ExecuteOptions{english,noflag,logo,hrule} % Default options
 
 \ProcessOptions\relax
@@ -339,6 +446,23 @@
 \ecvfootnote{}
 
 \AtBeginDocument{%
+
+\RequirePackage{etoolbox} %important for \AfterPreamble
+
+% To user hypertargets
+\RequirePackage{hyperref}%
+\let\oldhypertarget\hypertarget%
+\renewcommand{\hypertarget}[2]{%
+	\oldhypertarget{#1}{#2}%
+	\protected@write\@mainaux{}{%
+		\string\expandafter\string\gdef%
+		\string\csname\string\detokenize{#1}\string\endcsname{#2}%
+	}%
+}%
+\newcommand{\myhyperlink}[1]{%
+	\hyperlink{#1}{\csname #1\endcsname}%
+}%
+
 % Ensure that \ecv@leftcolwidth and \ecv@rightcolwidth
 % are correctly defined
 \ecvLeftColumnWidth{\ecv@leftcolwidth}

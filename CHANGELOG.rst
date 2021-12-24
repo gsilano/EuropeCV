@@ -2,8 +2,9 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-20XX.XX.XX
+2021.12.24
 ----------
+* Add ref and display commands for FootNote, Conference and Journal papers, Posters, Awards, Research Projects, Book Chapters and Workshop. This update mainly involves academic researchers
 * Files comply with the CTAN requirements
 * Update templates as required by CTAN
 * Contributors: Giuseppe Silano

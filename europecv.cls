@@ -7,7 +7,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[05/10/2021 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[24/12/2021 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -307,12 +307,12 @@
 \newcounter{FootNoteCounter}
 \setcounter{FootNoteCounter}{0}
 
-\newcommand{\displayFootNoteCounter}[1][]{%
+\newcommand{\ecvdisplayFootNoteCounter}[1][]{%
 	\stepcounter{FootNoteCounter}%
 	\hypertarget{#1}{\textsuperscript{\theFootNoteCounter}}%
 }
 
-\newcommand{\refFootNoteCounter}[1][]{%
+\newcommand{\ecvrefFootNoteCounter}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -320,12 +320,12 @@
 \newcounter{ConferencePublications}
 \setcounter{ConferencePublications}{0}
 
-\newcommand{\displayConferencePublications}[1][]{%
+\newcommand{\ecvdisplayConferencePublications}[1][]{%
 	\stepcounter{ConferencePublications}%
 	\hypertarget{#1}{[C\theConferencePublications]}%
 }
 
-\newcommand{\refConferencePublications}[1][]{%
+\newcommand{\ecvrefConferencePublications}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -333,12 +333,12 @@
 \newcounter{BookChapterPublications}
 \setcounter{BookChapterPublications}{0}
 
-\newcommand{\displayBookChapterPublications}[1][]{%
+\newcommand{\ecvdisplayBookChapterPublications}[1][]{%
 	\stepcounter{BookChapterPublications}%
 	\hypertarget{#1}{[BC\theBookChapterPublications]}%
 }
 
-\newcommand{\refBookChapterPublications}[1][]{%
+\newcommand{\ecvrefBookChapterPublications}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -347,12 +347,12 @@
 \newcounter{ReferredJournalsPublications}
 \setcounter{ReferredJournalsPublications}{0}
 
-\newcommand{\displayReferredJournalsPublications}[1][]{%
+\newcommand{\ecvdisplayReferredJournalsPublications}[1][]{%
 	\stepcounter{ReferredJournalsPublications}%
 	\hypertarget{#1}{[J\theReferredJournalsPublications]}%
 }
 
-\newcommand{\refReferredJournalsPublications}[1][]{%
+\newcommand{\ecvrefReferredJournalsPublications}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -360,12 +360,12 @@
 \newcounter{Workshops}
 \setcounter{Workshops}{0}
 
-\newcommand{\displayWorkshops}[1][]{%
+\newcommand{\ecvdisplayWorkshops}[1][]{%
 	\stepcounter{Workshops}%
 	\hypertarget{#1}{[W\theWorkshops]}%
 }
 
-\newcommand{\refWorkshopsPublications}[1][]{%
+\newcommand{\ecvrefWorkshopsPublications}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -373,12 +373,12 @@
 \newcounter{Posters}
 \setcounter{Posters}{0}
 
-\newcommand{\displayPosters}[1][]{%
+\newcommand{\ecvdisplayPosters}[1][]{%
 	\stepcounter{Posters}%
 	\hypertarget{#1}{[P\thePosters]}%
 }
 
-\newcommand{\refPosters}[1][]{%
+\newcommand{\ecvrefPosters}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -386,12 +386,12 @@
 \newcounter{ResearchProjects}
 \setcounter{ResearchProjects}{0}
 
-\newcommand{\displayResearchProjects}[1][]{%
+\newcommand{\ecvdisplayResearchProjects}[1][]{%
 	\stepcounter{ResearchProjects}%
 	\hypertarget{#1}{[RP\theResearchProjects]}%
 }
 
-\newcommand{\refResearchProjects}[1][]{%
+\newcommand{\ecvrefResearchProjects}[1][]{%
 	\myhyperlink{#1}%
 }
 
@@ -399,12 +399,12 @@
 \newcounter{Awards}
 \setcounter{Awards}{0}
 
-\newcommand{\displayAwards}[1][]{%
+\newcommand{\ecvdisplayAwards}[1][]{%
 	\stepcounter{Awards}%
 	\hypertarget{#1}{[A\theAwards]}%%
 }
 
-\newcommand{\refAwards}[1][]{%
+\newcommand{\ecvrefAwards}[1][]{%
 	\myhyperlink{#1}%
 }
 

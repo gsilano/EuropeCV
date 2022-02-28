@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % European curriculum vitae class
-% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano 
+% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano
 %(giuseppe.silano@fel.cvut.cz)
 % This material is subject to the LaTeX Project Public License, either version 1.3
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
@@ -260,7 +260,7 @@
 % Europass logo
 \DeclareOption{logo}{%
 \providecommand*\draweuropasslogo{%
-   \includegraphics[width=\ecv@logowidth]{europasslogo}}
+   \includegraphics[width=\ecv@logowidth]{europasslogo.eps}}
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 

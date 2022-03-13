@@ -2,6 +2,13 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2022.03.13
+----------
+* Fixed "europass.pdf not found" error on XeLaTeX
+* Improved Romanian translation
+* Minor fix in the documentation
+* Contributors: Alecu Ștefan-Iulian, Giuseppe Silano
+
 2021.12.24
 ----------
 * Add ref and display commands for FootNote, Conference and Journal papers, Posters, Awards, Research Projects, Book Chapters and Workshop. This update mainly involves academic researchers

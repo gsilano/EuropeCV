@@ -7,7 +7,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[28/02/2022 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[13/03/2022 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -160,6 +160,7 @@
   }%
 }
 \DeclareOption{romanian}{%
+  \usepackage{combelow}
   \AtEndOfPackage{%
     \InputIfFileExists{ecvro.def}{}{%
     \ClassWarningNoLine{europecv}{Romanian definition file 'ecvro.def' not found}}%

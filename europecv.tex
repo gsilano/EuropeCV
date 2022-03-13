@@ -5,6 +5,7 @@
 \usepackage{lmodern}
 %\usepackage{microtype}
 \usepackage{booktabs}
+\usepackage{combelow}
 
 \usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
 
@@ -51,7 +52,7 @@
     Faculty of Electrical Engineering\\
     Czech Technical University in Prague, Czech Republic\\
 }
-\date{February 28, 2022}
+\date{March 13, 2022}
 
 
 \begin{document}
@@ -204,7 +205,10 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\texttt{norwegian}}{Chooses Norwegian language.}
 	\ecvitem{\texttt{polish}}{Chooses Polish language. Note that this option does not work with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the preamble of your document).}
 	\ecvitem{\texttt{portuguese}}{Chooses Portuguese language.}
-	\ecvitem{\texttt{romanian}}{Chooses Romanian language.}
+	\ecvitem{\texttt{romanian}}{Chooses Romanian language. Romanians do not use the letters with 
+	cedillas (ş and ţ), but the versions with commas (ș and ț) (Latvians also use the same 
+	diacritic, no cedillas) and thus using the ``combelow''~\LaTeX~package the following commands 
+	can be used `\cb s` ($\backslash cb s$) and `\cb t` ($\backslash cb t$).}
 	\ecvitem{\texttt{serbian}}{Chooses Serbian language.}
 	\ecvitem{\texttt{slovak}}{Chooses Slovak language.}
 	\ecvitem{\texttt{slovenian}}{Chooses Slovenian language.}
@@ -921,7 +925,8 @@ respectively. Thanks to \textbf{JPSPLeite} for improving the Portuguese translat
 Tsolomitis} for his suggestions into the 2020.01.06 package release. Thanks to \textbf{
 Davide Peressoni} for the biber support (2020.10.26 package release). Thanks to \textbf{Nuno
 Fachada} for his help with the Portuguese translation (2021.02.05 package release). Thanks to
-\textbf{Pancho Horrillo} for his fix ($\#25$, 2021.05.09 package release).
+\textbf{Pancho Horrillo} for his fix ($\#25$, 2021.05.09 package release). Thanks to
+\textbf{Alecu Ștefan-Iulian} for his fix ($\#26$ and $\#27$, 2022.03.13 package release).
 
 %%% END SECTION ============================================================
 

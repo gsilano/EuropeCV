@@ -1,6 +1,6 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 28/02/2022
+% Translation completed on 13/03/2022
 \ProvidesFile{ecvro.def}[europecv Romanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}

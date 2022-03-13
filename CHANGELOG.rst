@@ -2,11 +2,12 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2022.02.28
+2022.03.13
 ----------
 * Fixed "europass.pdf not found" error on XeLaTeX
 * Improved Romanian translation
-* Contributors: Alecu Ștefan-Iulian
+* Minor fix in the documentation
+* Contributors: Alecu Ștefan-Iulian, Giuseppe Silano
 
 2021.12.24
 ----------

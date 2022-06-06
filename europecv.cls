@@ -418,8 +418,7 @@
 %% start of addition (with permission) by David Carlisle
 \ifx\Umathchar\@undefined
 %% encoding support for pdftex and classic TeX
-\RequirePackage{ucs}
-\RequirePackage[utf8x]{inputenc}
+\renewcommand\ecv@utf[1]{{#1}}
 \else
 %% do not use ucs/inputenc for lualatex or xelatex
 %% use UTF-8 input and load a suitable unicode font with fontspec
@@ -446,7 +445,7 @@
 \newcommand\ecvfootnote[1]{\def\ecv@rfoot{#1}}
 \ecvfootnote{}
 
-\AtBeginDocument{%
+\AddToHook{begindocument/before}{%
 
 \RequirePackage{etoolbox} %important for \AfterPreamble
 

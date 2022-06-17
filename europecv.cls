@@ -7,7 +7,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[13/03/2022 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[17/06/2022 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -418,8 +418,7 @@
 %% start of addition (with permission) by David Carlisle
 \ifx\Umathchar\@undefined
 %% encoding support for pdftex and classic TeX
-\RequirePackage{ucs}
-\RequirePackage[utf8x]{inputenc}
+\renewcommand\ecv@utf[1]{{#1}}
 \else
 %% do not use ucs/inputenc for lualatex or xelatex
 %% use UTF-8 input and load a suitable unicode font with fontspec

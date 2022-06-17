@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2022.06.17
+----------
+* Fixed compilation with upcoming LaTeX2e release by loading hyperref with `\AddToHook` instead of `\AtBeginDocument` and moving away from utf8x (#29). If the preamble of your .tex file has code such as `\usepackage[utf8x]{inputenc}`, it will no longer compile. Consider using "utf8" instead of "utf8x", although doing so may break compilation with older EuropeCV versions.
+* Contributors: David Carlisle, Ulrike Fischer, Giuseppe Silano
+
 2022.03.13
 ----------
 * Fixed "europass.pdf not found" error on XeLaTeX

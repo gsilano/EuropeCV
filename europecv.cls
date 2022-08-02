@@ -261,7 +261,7 @@
 % Europass logo
 \DeclareOption{logo}{%
 \providecommand*\draweuropasslogo{%
-   \includegraphics[width=\ecv@logowidth]{europasslogo.eps}}
+   \includegraphics[width=\ecv@logowidth]{europasslogo}}
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 

@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2022.08.03
+----------
+* europasslogo.pdf does not work with XeTeX #31 (#31)
+* Contributors: Michal Vlasak
+
 2022.06.17
 ----------
 * Fixed issue related to the `ucs` and `inputenc`  (with utf8x option) package (#29) 

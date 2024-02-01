@@ -1,10 +1,10 @@
 %!TEX encoding = UTF-8 Unicode
 %
-% Translation completed on 01/03/2020
+% Translation completed on 01/02/2024
 \ProvidesFile{ecves.def}[europecv Spanish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on personal}}
-\def\ecv@datekey{\ecv@utf{Actualizado a}}
+\def\ecv@datekey{\ecv@utf{Actualizado el\\}}
 \def\ecv@namekey{\ecv@utf{Nombre(s)~/ Apellido(s)}}
 \def\ecv@addresskey{\ecv@utf{Direcci\'on(es)}}
 \def\ecv@telkey{\ecv@utf{Tel\'efono(s)}}
@@ -20,7 +20,7 @@
 \def\ecv@homepagekey{\ecv@utf{Home page}}
 \def\ecv@nationalitykey{\ecv@utf{Nacionalidad(es)}}
 \def\ecv@birthkey{\ecv@utf{Fecha de nacimiento}}
-\def\ecv@genderkey{\ecv@utf{Sexo}}
+\def\ecv@genderkey{\ecv@utf{G\'enero}}
 % Footer
 \def\ecv@pagekey{\ecv@utf{P\'agina}}
 \def\ecv@cvofkey{\ecv@utf{Curriculum vit\ae\ de}}

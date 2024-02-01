@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2024.02.01
+----------
+* Improved Spanish translation #36 (#36)
+* Contributors: kaneraZh, Giuseppe Silano
+
 2022.08.03
 ----------
 * europasslogo.pdf does not work with XeTeX #31 (#31)
@@ -9,7 +14,7 @@ Changelog for package europecv
 
 2022.06.17
 ----------
-* Fixed issue related to the `ucs` and `inputenc`  (with utf8x option) package (#29) 
+* Fixed issue related to the `ucs` and `inputenc`  (with utf8x option) package (#29)
 * Contributors: David Carlisle, Ulrike Fischer, Giuseppe Silano
 
 2022.03.13

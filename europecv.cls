@@ -445,7 +445,7 @@
 \newcommand\ecvfootnote[1]{\def\ecv@rfoot{#1}}
 \ecvfootnote{}
 
-\AtBeginDocument{%
+\AddToHook{begindocument/before}{%
 
 \RequirePackage{etoolbox} %important for \AfterPreamble
 

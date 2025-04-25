@@ -572,7 +572,7 @@
 
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
 {\ifx\@empty\ecv@date\else
-	\large\par\textbf{\ecv@datekey \ecv@date}
+	\vspace{1em}\large\par\textbf{\ecv@datekey \ecv@date}
 \fi} & \tabularnewline
 & \tabularnewline
 \ifx\@empty\ecvdrawpicture\else

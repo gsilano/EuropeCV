@@ -2,6 +2,11 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2025.05.11
+----------
+* Fix issue related to clash onto the horizontal #40 (#40)
+* Contributors: Giuseppe Silano
+
 2024.02.01
 ----------
 * Improved Spanish translation #36 (#36)

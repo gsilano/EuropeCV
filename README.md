@@ -1,11 +1,17 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![License](assets/lppl-1.3c.svg)](https://spdx.org/licenses/LPPL-1.3c.html)
 
 # EuropeCV
 
 TeX code associated to the EuropeCV [CTAN repository](https://ctan.org/pkg/europecv).
+
+# Maintainer
+
+This project is maintained by **Giuseppe Silano**.  
+Feel free to reach out via email [@gsilano](https://giuseppesilano.net/index.html) for contributions, questions, or bug reports.  
+For CTAN-related issues, please follow the guidelines below.
 
 # Content of the package
 
@@ -30,3 +36,13 @@ Well, if you are reading this section it means that you are thinking of helping 
 3. In the head of each file, there is the date on which the last changes were made. Please, do not forget to update this information. The same procedure must be followed in the tex file ```europecv.tex``` (at the beginning of the file a date says when the file has been changed).
 
 In any case, please take a look at the [Contributing.md](https://github.com/gsilano/EuropeCV/blob/master/CONTRIBUTING.md) file.
+
+# CTAN contact
+
+All CTAN-related correspondence should be directed in English to ctan (at) ctan (dot) org, the common email address of all "CTAN people," rather than to an individual maintainer. This ensures (a) the whole team is informed and (b) you receive a quicker response.
+
+Emails must be in plain text only (HTML is filtered out). For Gmail, use "plain text mode" via the "more options" menu or switch to the "basic HTML view."
+
+Uploads must be done via the CTAN upload form—not by email.
+
+Please avoid sending large attachments to the CTAN address.

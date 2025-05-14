@@ -2,7 +2,7 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2025.05.13
+2025.05.14
 ----------
 * Fix hook error related to loading 'hyperref' package (#38)
 * Contributors: Matteo Ferrigato

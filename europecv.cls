@@ -7,7 +7,7 @@
 % See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
 % for the details of that license
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[08/03/2022 (Unicode TeX detection) European curriculum vitae class]
+\ProvidesClass{europecv}[14/05/2025 (Unicode TeX detection) European curriculum vitae class]
 
 % CV models and instructions:
 %   http://europass.cedefop.eu.int/htm/index.htm
@@ -445,7 +445,7 @@
 \newcommand\ecvfootnote[1]{\def\ecv@rfoot{#1}}
 \ecvfootnote{}
 
-\AtBeginDocument{%
+\AddToHook{begindocument/before}{%
 
 \RequirePackage{etoolbox} %important for \AfterPreamble
 
@@ -478,7 +478,7 @@
 \footnotesize\ecv@rfoot
 \end{minipage}}
 \renewcommand{\headrulewidth}{0pt}%
-} % End \AtBeginDocument
+} % End \AddToHook{begindocument/before}
 
 % Thanks to Roman Bertle for suggesting the following:
 \renewcommand{\labelitemi}{\normalfont\bfseries \textendash}

@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation finished, 01/03/2020
-\ProvidesFile{ecvda.def}[europecv Danish definitions]
+\ProvidesFile{ecvda.def}[2026/10/14 europecv Danish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personlige oplysninger}}
 \def\ecv@datekey{\ecv@utf{Opdateret til}}

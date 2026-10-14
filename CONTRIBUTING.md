@@ -3,7 +3,7 @@ Contributing
 
 👍🎉 Thanks a lot for considering contributing 🎉👍
 
-We welcome and encourage contribution. There is many way to contribute: you can
+We welcome and encourage contribution. There are many ways to contribute: you can
 write bug report, contribute code or documentation (take a look at the 
 [Wiki section](https://github.com/gsilano/EuropeCV/wiki)).
 
@@ -15,8 +15,9 @@ You can learn how from this *free* series [How to Contribute to an Open Source P
 
 When reporting issues the more information you can supply the better.
 
-If it is an issue with building the LaTeX package, indicate your environment like operating system and,
-version of MikTeX your are using.
+If it is an issue with building the LaTeX package, indicate your environment: operating system,
+TeX distribution (TeX Live, MiKTeX, ...) and its version, and the engine (pdfLaTeX, XeLaTeX, LuaLaTeX).
+A minimal example that reproduces the problem, and the `.log` file, help a lot.
 
 ## Improvements request and proposal
 
@@ -29,7 +30,7 @@ You can contribute by updating the package content or styling, code (.cls file),
 
 ### Contributing content or styling
 
-There is a couple of basic requirement for us to merge the pull request:
+There are a couple of basic requirements for us to merge the pull request:
  - The styling should maintain the compatibility with previous versions. For example, if you plan to 
  add a new number to the contact information, it should be optional and not mandatory allowing not to
  change anything to the other users of the package. 
@@ -37,16 +38,34 @@ There is a couple of basic requirement for us to merge the pull request:
 ### Contributing code
 
 If the change is big, typically if the change span to more than one file, consider starting an issue first to discuss the improvement.
-This will makes it much easier to make the change fit well into the package.
+This will make it much easier to make the change fit well into the package.
 
-There is some basic requirement for us to merge a pull request:
+There are some basic requirements for us to merge a pull request:
  - Describe the change (a bot will remind you in case you forget it)
- - Refer to any issues it effects
+ - Refer to any issues it affects
  - Separate one pull request per functionality: if you start writing "and" in the feature description consider if it could be 
  separated in two pull requests.
 
 In your code:
  - Make sure the coding style of your code follows the style of the file.
+ - Use Unix style line terminators (LF, `\n`) instead of DOS style ones (CRLF, `\r\n`).
+   This is required by CTAN.
+ - Report each change in the `CHANGELOG.rst` file, specifying who made the contribution.
+ - Update the date in the header of each file you changed (`\ProvidesClass` in
+   `europecv.cls`, `\ProvidesFile` in the `ecv*.def` files, `\date` in `europecv.tex`).
+ - Internal commands of the class must start with `\ecv@`, user commands with `\ecv`.
+ - Run `make check` (it requires a TeX Live installation, including `biber`) to make sure
+   that the documentation, the examples, the templates and all the language options still
+   compile. The same checks run automatically on GitHub for every pull request.
+
+### Adding or fixing a translation
+
+The translations are stored in the `ecv<code>.def` files (e.g., `ecvit.def` for Italian).
+These files must be saved with the UTF-8 encoding. Every key defined in `ecven.def`
+should also be defined in the new file: a missing key falls back to English. To add a new
+language, create the `.def` file and declare the corresponding option in `europecv.cls`
+with `\ecv@declarelanguage{<option>}{<code>}{<Language name>}`; then add the language to
+`tests/languages.sh`, to the documentation and to the README.
  
 ## Workflow
 

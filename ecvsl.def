@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvsl.def}[europecv Slovenian definitions]
+\ProvidesFile{ecvsl.def}[2026/10/14 europecv Slovenian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Osebni podatki}}
 \def\ecv@datekey{\ecv@utf{Posodobljeno na}}
@@ -12,7 +12,7 @@
 \def\ecv@mobilekey{\ecv@utf{Prenosni telefon}}
 \def\ecv@officekey{\ecv@utf{Telefaks}}
 \def\ecv@emailkey{\ecv@utf{E-po{\v s}ta}}
-def\ecv@officekey{\ecv@utf{Urad}}
+\def\ecv@officekey{\ecv@utf{Urad}}
 \def\ecv@professionalkey{\ecv@utf{Strokovni E-poštni naslov}}
 \def\ecv@skypekey{\ecv@utf{Skype}}
 \def\ecv@matrixriotkey{\ecv@utf{Matrix/Riot}}
@@ -41,8 +41,5 @@ def\ecv@officekey{\ecv@utf{Urad}}
 \def\ecv@cefindepkey{\ecv@utf{Samostojni uporabnik}}
 \def\ecv@cefprofkey{\ecv@utf{Usposobljeni uporabnik}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
-\Large\textbf{{\v z}\ecv@kern i\ecv@kern v\ecv@kern l\ecv@kern
-j\ecv@kern e\ecv@kern n\ecv@kern j\ecv@kern e\ecv@kern p\ecv@kern i\ecv@kern
-s}}}
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*{\ecvtitle}{\ecvbranding\ecv@utf{\Large\textbf{{\v z}\ecv@kern i\ecv@kern v\ecv@kern l\ecv@kern j\ecv@kern e\ecv@kern n\ecv@kern j\ecv@kern e\ecv@kern p\ecv@kern i\ecv@kern s}}}

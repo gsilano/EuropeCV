@@ -1,7 +1,15 @@
-% !TeX root = ./cv.tex
-\def\Umathchar{} %prevents europecv to load utf8x
+% Europass CV template with the bibliography managed by biblatex/biber.
+%
+% Compile with:
+%   pdflatex cv_template_en_biber
+%   biber --configfile europecv_biber.conf cv_template_en_biber
+%   pdflatex cv_template_en_biber
+%   pdflatex cv_template_en_biber
+%
+% The biber configuration file (europecv_biber.conf) adds the keyword
+% "thesis" to the entries of europecv_thesis.bib, used below to split
+% the bibliography into two lists.
 \documentclass[totpages,openbib,english,flagCMYK,notitle,nobranding,booktabs]{europecv}
-\usepackage[utf8]{inputenc}
 
 \usepackage[backend=biber,style=alphabetic,natbib=false,doi=true,sorting=ydnt,labelnumber,defernumbers=true]{biblatex}%,url=false
 \input{europecv_biber.tex}
@@ -61,7 +69,7 @@
 \ecvdateofbirth{25 April 1965}
 \ecvgender{Male}
 % \ecvdate{\today}
-\ecvpicture[width=3cm]{euopecv_photo}
+\ecvpicture[width=3cm]{europecv_photo}
 \ecvafterpicture{\ecvspace{-4cm}}
 %\ecvfootnote{For further details please take a look here: \url{http://europass.cedefop.eu.int}\\
 %\textcopyright~European Communities, 2003.}
@@ -283,8 +291,7 @@
 % \ecvitem[10pt]{\vspace{-0.25cm}\conferencePublications[ThirdPubLabel]}{Details related to the conference paper}
 
 \subpdfbookmark{Journal}{Journal}
-&\printbibliography[notkeyword=thesis,title=Conference]
-\\
+&\printbibliography[notkeyword=thesis,title=Journal]
 
 \subpdfbookmark{Thesis}{Thesis}
 &\printbibliography[keyword=thesis,title=Thesis,resetnumbers]

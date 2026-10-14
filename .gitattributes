@@ -1,10 +1,16 @@
-# Set the default behavior, in case people don't have core.autocrlf set. 
-* text = false 
-* text eol=lf
+# Normalise line endings: all text files use LF (Unix style), as
+# required for CTAN uploads.
+* text=auto eol=lf
 
-# Denote all files that are truly binary and should not be modified.
+# Files that are truly binary and must never be modified.
+*.pdf binary
 *.png binary
 *.jpg binary
- 
-.gitignore     export-ignore 
-.gitattributes export-ignore 
+*.eps binary
+
+# Not part of the CTAN distribution (see `git archive` / Makefile).
+.gitignore     export-ignore
+.gitattributes export-ignore
+.github        export-ignore
+Makefile       export-ignore
+tests          export-ignore

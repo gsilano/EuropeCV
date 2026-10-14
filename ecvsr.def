@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvsr.def}[europecv Serbian definitions]
+\ProvidesFile{ecvsr.def}[2026/10/14 europecv Serbian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Li{\v c}ni podaci}}
 \def\ecv@datekey{\ecv@utf{Ažurirano}}
@@ -40,8 +40,5 @@
 \def\ecv@cefindepkey{\ecv@utf{Samostalni korisnik}}
 \def\ecv@cefprofkey{\ecv@utf{Osposobljeni korisnik}}
 
-\renewcommand*{\ecvtitle}{\ecv@utf{\Large\textbf{E\ecv@kern v\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern s\ecv@kern k\ecv@kern i}\\[5pt]
-\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern
-i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern
-V\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}}
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern v\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern s\ecv@kern k\ecv@kern i}\\[5pt]}}
+\renewcommand*{\ecvtitle}{\ecvbranding\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern V\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}}

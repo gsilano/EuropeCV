@@ -1,11 +1,24 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvmt-utf8.def}[europecv Maltese definitions]
-\inputencoding{utf8x}
+\ProvidesFile{ecvmt.def}[2026/10/14 europecv Maltese definitions]
+% The letters h and H with stroke are not available in the standard
+% 8-bit font encodings: with pdfLaTeX they are taken from the maltese
+% package (\mh and \mH) if it is loaded, and drawn otherwise. Unicode
+% engines (XeLaTeX and LuaLaTeX) use the characters of the current font.
+\ifx\Umathchar\@undefined
+  \def\ecv@hstroke#1#2{{\leavevmode\setbox\z@\hbox{#1}%
+    \ooalign{#1\cr\hidewidth\raise#2\ht\z@\hbox{\vrule\@height.06\ht\z@
+      \@width.7\wd\z@}\hidewidth\cr}}}
+  \def\ecv@mh{\ifdefined\mh\mh\else\ecv@hstroke{h}{.72}\fi}
+  \def\ecv@mH{\ifdefined\mH\mH\else\ecv@hstroke{H}{.72}\fi}
+\else
+  \def\ecv@mh{ħ}
+  \def\ecv@mH{Ħ}
+\fi
 % Personal information
-\def\ecv@infosectionkey{\ecv@utf{Tagħrif personali}}
-def\ecv@datekey{\ecv@utf{Aġġornat għal}}
+\def\ecv@infosectionkey{\ecv@utf{Tag\ecv@mh{}rif personali}}
+\def\ecv@datekey{\ecv@utf{Aġġornat g\ecv@mh{}al}}
 \def\ecv@namekey{\ecv@utf{Isem (Ismijiet)~/ Kunjom(ijiet)}}
 \def\ecv@addresskey{\ecv@utf{L-indirizz}}
 \def\ecv@faxkey{\ecv@utf{Fax}}
@@ -30,13 +43,13 @@ def\ecv@datekey{\ecv@utf{Aġġornat għal}}
 \def\ecv@assesskey{\ecv@utf{Awto-assessjar}}
 \def\ecv@levelkey{\ecv@utf{Livell Ewropew}}
 \def\ecv@understandkey{\ecv@utf{Fehim tal-lingwa}}
-\def\ecv@speakkey{\ecv@utf{Taħdit mitkellma}}
+\def\ecv@speakkey{\ecv@utf{Ta\ecv@mh{}dit mitkellma}}
 \def\ecv@writekey{\ecv@utf{Lingwa miktuba}}
-\def\ecv@listenkey{\ecv@utf{Smigħ}}
+\def\ecv@listenkey{\ecv@utf{Smig\ecv@mh{}}}
 \def\ecv@readkey{\ecv@utf{Qari}}
 \def\ecv@interactkey{\ecv@utf{Komunikazzjoni Verbali}}
-\def\ecv@productkey{\ecv@utf{Ħila fil-komunikkazzjoni}}
-\def\ecv@langfooterkey{\ecv@utf{Qafas Ewropew ta’ Referenza Komuni għall-lingwi}}
+\def\ecv@productkey{\ecv@utf{\ecv@mH{}ila fil-komunikkazzjoni}}
+\def\ecv@langfooterkey{\ecv@utf{Qafas Ewropew ta’ Referenza Komuni g\ecv@mh{}all-lingwi}}
 \def\ecv@cefbasickey{\ecv@utf{Livell elementari}}
 \def\ecv@cefindepkey{\ecv@utf{Livell intermedju}}
 \def\ecv@cefprofkey{\ecv@utf{Livell avvanzat}}

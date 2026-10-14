@@ -1,432 +1,330 @@
 %!TEX encoding = UTF-8 Unicode
-%
-% European curriculum vitae class
-% Author: Nicola Vitacolonna (nicola.vitacolonna@uniud.it) and Giuseppe Silano
-%(giuseppe.silano@fel.cvut.cz)
-% This material is subject to the LaTeX Project Public License, either version 1.3
-% See  https://ctan.mirror.garr.it/mirrors/CTAN/help/Catalogue/licenses.lppl.html
-% for the details of that license
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{europecv}[14/05/2025 (Unicode TeX detection) European curriculum vitae class]
+%%
+%% europecv.cls -- An unofficial LaTeX class for European curricula vitae
+%%
+%% Copyright (C) Nicola Vitacolonna (original author)
+%% Copyright (C) 2018-2026 Giuseppe Silano and the EuropeCV contributors
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   https://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% The Current Maintainer of this work is Giuseppe Silano.
+%%
+%% This work consists of the files europecv.cls, ecv*.def and
+%% europecv.tex, together with the images, examples and templates
+%% listed in the README.md file.
+%%
+%% Development: https://github.com/gsilano/EuropeCV
+%% CTAN:        https://ctan.org/pkg/europecv
+%%
+\NeedsTeXFormat{LaTeX2e}[2020/10/01]
+\ProvidesClass{europecv}[2026/10/14 v2026.10.14 European curriculum vitae class]
 
-% CV models and instructions:
-%   http://europass.cedefop.eu.int/htm/index.htm
-% Recommendations:
-%   http://europa.eu.int/scadplus/leg/en/cha/c11057.htm
+% Europass CV models and instructions:
+%   https://europass.europa.eu/
+% Common European Framework of Reference for Languages (CEFR):
+%   https://www.coe.int/en/web/common-european-framework-reference-languages
 
-% Additional code to detect xetex and luatex added (with permission)
-% by David Carlisle
-% See comment below.
+% Wrapper used by the language definition files (ecv*.def), which are
+% always UTF-8 encoded. With 8-bit engines, the text is locally read as
+% UTF-8 even when the document uses another input encoding (e.g., latin1).
+% Unicode engines (XeTeX and LuaTeX) need no special treatment.
+% The detection of Unicode engines was originally contributed by
+% David Carlisle.
+\ifx\Umathchar\@undefined
+  \def\ecv@str@utfviii{utf8}
+  \def\ecv@str@utfviiix{utf8x}
+  \newcommand\ecv@utf[1]{{%
+    \ifx\inputencodingname\@undefined\else
+      \edef\@tempa{\inputencodingname}%
+      \ifx\@tempa\ecv@str@utfviii\else
+        \ifx\@tempa\ecv@str@utfviiix\else
+          \inputencoding{utf8}%
+        \fi
+      \fi
+    \fi
+    #1}}
+\else
+  \newcommand\ecv@utf[1]{{#1}}
+\fi
+\newcommand{\ecv@upshape}[1]{\textup{#1}}
 
-\newcommand\ecv@utf[1]{{\inputencoding{utf8x}#1}}
-\newcommand{\ecv@upshape}[1]{\upshape{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Language options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ecv@declarelanguage{<option>}{<def file suffix>}{<language name>}
+% loads ecv<suffix>.def at the end of the class.
+\newcommand*\ecv@declarelanguage[3]{%
+  \DeclareOption{#1}{%
+    \AtEndOfClass{%
+      \InputIfFileExists{ecv#2.def}{}{%
+        \ClassWarningNoLine{europecv}%
+          {#3 definition file `ecv#2.def' not found}}%
+    }%
+  }%
+}
 
-% Set language
+% English is always loaded first (see \ExecuteOptions below): it provides
+% the fallback for any key that a translation does not define.
 \DeclareOption{english}{%
-  \AtEndOfPackage{%
+  \AtEndOfClass{%
     \InputIfFileExists{ecven.def}{}{%
-    \ClassError{europecv}{English definition file 'ecven.def' not found}%
-     {The file should be inside the europecv folder.\MessageBreak
-    Try to re-install the europecv class.}}%
+      \ClassError{europecv}{English definition file `ecven.def' not found}%
+      {The file should be inside the europecv folder.\MessageBreak
+       Try to re-install the europecv class.}}%
   }%
 }
-\DeclareOption{italian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvit.def}{}{%
-    \ClassWarningNoLine{europecv}{Italian definition file 'ecvit.def' not found}}%
-  }%
-}
-\DeclareOption{spanish}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecves.def}{}{%
-    \ClassWarningNoLine{europecv}{Spanish definition file 'ecves.def' not found}}%
-  }%
-}
-\DeclareOption{french}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvfr.def}{}{%
-    \ClassWarningNoLine{europecv}{French definition file 'ecvfr.def' not found}}%
-  }%
-}
-\DeclareOption{danish}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvda.def}{}{%
-    \ClassWarningNoLine{europecv}{Danish definition file 'ecvda.def' not found}}%
-  }%
-}
-\DeclareOption{german}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvde.def}{}{%
-    \ClassWarningNoLine{europecv}{German definition file 'ecvde.def' not found}}%
-  }%
-}
-\DeclareOption{finnish}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvfi.def}{}{%
-    \ClassWarningNoLine{europecv}{Finnish definition file 'ecvfi.def' not found}}%
-  }%
-}
-\DeclareOption{portuges}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvpt.def}{}{%
-    \ClassWarningNoLine{europecv}{Portuguese definition file 'ecvpt.def' not found}}%
-  }%
-}
-\DeclareOption{portuguese}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvpt.def}{}{%
-    \ClassWarningNoLine{europecv}{Portuguese definition file 'ecvpt.def' not found}}%
-  }%
-}
-\DeclareOption{swedish}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvsv.def}{}{%
-    \ClassWarningNoLine{europecv}{Swedish definition file 'ecvsv.def' not found}}%
-  }%
-}
-\DeclareOption{norwegian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvno.def}{}{%
-    \ClassWarningNoLine{europecv}{Norwegian definition file 'ecvno.def' not found}}%
-  }%
-}
-\DeclareOption{dutch}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvnl.def}{}{%
-    \ClassWarningNoLine{europecv}{Dutch definition file 'ecvnl.def' not found}}%
-  }%
-}
-\DeclareOption{catalan}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvca.def}{}{%
-    \ClassWarningNoLine{europecv}{Catalan definition file 'ecvca.def' not found}}%
-  }%
-}
-\DeclareOption{polish}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvpl.def}{}{%
-    \ClassWarningNoLine{europecv}{Polish definition file 'ecvpl.def' not found}}%
-  }%
-}
+\ecv@declarelanguage{italian}{it}{Italian}
+\ecv@declarelanguage{spanish}{es}{Spanish}
+\ecv@declarelanguage{french}{fr}{French}
+\ecv@declarelanguage{danish}{da}{Danish}
+\ecv@declarelanguage{german}{de}{German}
+\ecv@declarelanguage{finnish}{fi}{Finnish}
+\ecv@declarelanguage{portuges}{pt}{Portuguese}
+\ecv@declarelanguage{portuguese}{pt}{Portuguese}
+\ecv@declarelanguage{swedish}{sv}{Swedish}
+\ecv@declarelanguage{norwegian}{no}{Norwegian}
+\ecv@declarelanguage{dutch}{nl}{Dutch}
+\ecv@declarelanguage{catalan}{ca}{Catalan}
+\ecv@declarelanguage{polish}{pl}{Polish}
 \DeclareOption{hungarian}{%
-  \AtEndOfPackage{%
+  \AtEndOfClass{%
     \InputIfFileExists{ecvhu.def}{}{%
-    \ClassWarningNoLine{europecv}{Hungarian definition file 'ecvhu.def' not found}}%
-    \ecvpage{\thepage\ifx\@empty\ecv@totpages.\else\ecv@totpages\fi~\ecv@pagekey}
+      \ClassWarningNoLine{europecv}%
+        {Hungarian definition file `ecvhu.def' not found}}%
+    % Hungarian puts the page number before the word "page"
+    \ecvpage{\thepage\ifx\@empty\ecv@totpages.\else\ecv@totpages\fi~\ecv@pagekey}%
     \def\ecv@lfoot{%
-  \footnotesize\textrm{\ecv@page~- \textrm{\ecv@footername} \ecv@cvofkey}}%
+      \footnotesize\textrm{\ecv@page~- \textrm{\ecv@footername} \ecv@cvofkey}}%
   }%
 }
-\DeclareOption{estonian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvet.def}{}{%
-    \ClassWarningNoLine{europecv}{Estonian definition file 'ecvet.def' not found}}%
-  }%
-}
-\DeclareOption{icelandic}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvis.def}{}{%
-    \ClassWarningNoLine{europecv}{Icelandic definition file 'ecvis.def' not found}}%
-  }%
-}
-\DeclareOption{lithuanian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvlt.def}{}{%
-    \ClassWarningNoLine{europecv}{Lithuanian definition file 'ecvlt.def' not found}}%
-  }%
-}
-\DeclareOption{czech}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvcs.def}{}{%
-    \ClassWarningNoLine{europecv}{Czech definition file 'ecvcs.def' not found}}%
-  }%
-}
-\DeclareOption{slovak}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvsk.def}{}{%
-    \ClassWarningNoLine{europecv}{Slovak definition file 'ecvsk.def' not found}}%
-  }%
-}
-\DeclareOption{latvian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvlv.def}{}{%
-    \ClassWarningNoLine{europecv}{Latvian definition file 'ecvlv.def' not found}}%
-  }%
-}
-\DeclareOption{slovenian}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvsl.def}{}{%
-    \ClassWarningNoLine{europecv}{Slovenian definition file 'ecvsl.def' not found}}%
-  }%
-}
+\ecv@declarelanguage{estonian}{et}{Estonian}
+\ecv@declarelanguage{icelandic}{is}{Icelandic}
+\ecv@declarelanguage{lithuanian}{lt}{Lithuanian}
+\ecv@declarelanguage{czech}{cs}{Czech}
+\ecv@declarelanguage{slovak}{sk}{Slovak}
+\ecv@declarelanguage{latvian}{lv}{Latvian}
+\ecv@declarelanguage{slovenian}{sl}{Slovenian}
 \DeclareOption{romanian}{%
-  \usepackage{combelow}
-  \AtEndOfPackage{%
+  % Provides \cb for comma-below letters (s and t)
+  \AtEndOfClass{\RequirePackage{combelow}}%
+  \AtEndOfClass{%
     \InputIfFileExists{ecvro.def}{}{%
-    \ClassWarningNoLine{europecv}{Romanian definition file 'ecvro.def' not found}}%
+      \ClassWarningNoLine{europecv}%
+        {Romanian definition file `ecvro.def' not found}}%
   }%
 }
-\DeclareOption{maltese}{%
-  \AtEndOfPackage{%
-    \InputIfFileExists{ecvmt.def}{}{%
-    \ClassWarningNoLine{europecv}{Maltese definition file 'ecvmt.def' not found}}%
-  }%
-}
-\DeclareOption{bulgarian}{%
-  \AtEndOfPackage{%
-      \InputIfFileExists{ecvbg.def}{}{%
-      \ClassWarningNoLine{europecv}{Bulgarian definition file 'ecvbg.def' not found}}%
-  }%
-}
-\DeclareOption{greek}{%
-  \AtEndOfPackage{%
-     \InputIfFileExists{ecvgr.def}{}{%
-    \ClassWarningNoLine{europecv}{Greek definition file 'ecvgr.def' not found}}%
-  }%
-}
-\DeclareOption{galician}{%
-  \AtEndOfPackage{%
-     \InputIfFileExists{ecvgl.def}{}{%
-    \ClassWarningNoLine{europecv}{Galician definition file 'ecvgl.def' not found}}%
-  }%
-}
-\DeclareOption{serbian}{%
-  \AtEndOfPackage{%
-     \InputIfFileExists{ecvsr.def}{}{%
-    \ClassWarningNoLine{europecv}{Serbian definition file 'ecvsr.def' not found}}%
-  }%
-}
+\ecv@declarelanguage{maltese}{mt}{Maltese}
+\ecv@declarelanguage{bulgarian}{bg}{Bulgarian}
+\ecv@declarelanguage{greek}{gr}{Greek}
+\ecv@declarelanguage{galician}{gl}{Galician}
+\ecv@declarelanguage{serbian}{sr}{Serbian}
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Input encodings
-\DeclareOption{ascii}{\AtEndOfClass{\inputencoding{ascii}}}
-\DeclareOption{latin1}{\AtEndOfClass{\inputencoding{latin1}}}
-\DeclareOption{latin2}{\AtEndOfClass{\inputencoding{latin2}}}
-\DeclareOption{latin3}{\AtEndOfClass{\inputencoding{latin3}}}
-\DeclareOption{latin4}{\AtEndOfClass{\inputencoding{latin4}}}
-\DeclareOption{latin5}{\AtEndOfClass{\inputencoding{latin5}}}
-\DeclareOption{latin9}{\AtEndOfClass{\inputencoding{latin9}}}
-\DeclareOption{latin10}{\AtEndOfClass{\inputencoding{latin10}}}
-\DeclareOption{decmulti}{\AtEndOfClass{\inputencoding{decmulti}}}
-\DeclareOption{cp850}{\AtEndOfClass{\inputencoding{cp850}}}
-\DeclareOption{cp852}{\AtEndOfClass{\inputencoding{cp852}}}
-\DeclareOption{cp858}{\AtEndOfClass{\inputencoding{cp858}}}
-\DeclareOption{cp437}{\AtEndOfClass{\inputencoding{cp437}}}
-\DeclareOption{cp437de}{\AtEndOfClass{\inputencoding{cp437de}}}
-\DeclareOption{cp865}{\AtEndOfClass{\inputencoding{cp865}}}
-\DeclareOption{applemac}{\AtEndOfClass{\inputencoding{applemac}}}
-\DeclareOption{next}{\AtEndOfClass{\inputencoding{next}}}
-\DeclareOption{cp1250}{\AtEndOfClass{\inputencoding{cp1250}}}
-\DeclareOption{cp1252}{\AtEndOfClass{\inputencoding{cp1252}}}
-\DeclareOption{cp1257}{\AtEndOfClass{\inputencoding{cp1257}}}
-\DeclareOption{ansinew}{\AtEndOfClass{\inputencoding{ansinew}}}
-\DeclareOption{utf8}{\AtEndOfClass{\inputencoding{utf8x}}}
-\DeclareOption{utf8x}{\AtEndOfClass{\inputencoding{utf8x}}}
-\DeclareOption{koi8-r}{\AtEndOfClass{\inputencoding{koi8-r}}}
-\DeclareOption{koi8-ru}{\AtEndOfClass{\inputencoding{koi8-ru}}}
-\DeclareOption{koi8-u}{\AtEndOfClass{\inputencoding{koi8-u}}}
-\DeclareOption{cp1251}{\AtEndOfClass{\inputencoding{cp1251}}}
-\DeclareOption{cp855}{\AtEndOfClass{\inputencoding{cp855}}}
-\DeclareOption{cp866}{\AtEndOfClass{\inputencoding{cp866}}}
-\DeclareOption{maccyr}{\AtEndOfClass{\inputencoding{maccyr}}}
-\DeclareOption{macukr}{\AtEndOfClass{\inputencoding{macukr}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Each option loads the inputenc package with the given encoding.
+% UTF-8 is the LaTeX default, so utf8 (and the obsolete utf8x, which is
+% mapped to utf8) is effectively a no-op with pdfLaTeX. Unicode engines
+% (XeLaTeX, LuaLaTeX) always read UTF-8 and ignore these options.
+\newcommand*\ecv@inputenc[1]{%
+  \ifx\Umathchar\@undefined
+    \AtEndOfClass{\RequirePackage[#1]{inputenc}}%
+  \else
+    \ClassWarningNoLine{europecv}{Option `#1' ignored: Unicode engines
+      always\MessageBreak read UTF-8 input}%
+  \fi
+}
+\newcommand*\ecv@declareinputenc[1]{%
+  \DeclareOption{#1}{\ecv@inputenc{#1}}%
+}
+\ecv@declareinputenc{ascii}
+\ecv@declareinputenc{latin1}
+\ecv@declareinputenc{latin2}
+\ecv@declareinputenc{latin3}
+\ecv@declareinputenc{latin4}
+\ecv@declareinputenc{latin5}
+\ecv@declareinputenc{latin9}
+\ecv@declareinputenc{latin10}
+\ecv@declareinputenc{decmulti}
+\ecv@declareinputenc{cp850}
+\ecv@declareinputenc{cp852}
+\ecv@declareinputenc{cp858}
+\ecv@declareinputenc{cp437}
+\ecv@declareinputenc{cp437de}
+\ecv@declareinputenc{cp865}
+\ecv@declareinputenc{applemac}
+\ecv@declareinputenc{next}
+\ecv@declareinputenc{cp1250}
+\ecv@declareinputenc{cp1252}
+\ecv@declareinputenc{cp1257}
+\ecv@declareinputenc{ansinew}
+\ecv@declareinputenc{utf8}
+\DeclareOption{utf8x}{\ecv@inputenc{utf8}}
+\ecv@declareinputenc{koi8-r}
+\ecv@declareinputenc{koi8-ru}
+\ecv@declareinputenc{koi8-u}
+\ecv@declareinputenc{cp1251}
+\ecv@declareinputenc{cp855}
+\ecv@declareinputenc{cp866}
+\ecv@declareinputenc{maccyr}
+\ecv@declareinputenc{macukr}
 
-% Set font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareOption{helvetica}{%
-  \renewcommand{\rmdefault}{phv}
-  \renewcommand{\sfdefault}{phv}
+  \renewcommand{\rmdefault}{phv}%
+  \renewcommand{\sfdefault}{phv}%
 }
 \DeclareOption{arial}{%
-  \renewcommand{\rmdefault}{ma1} % (this font is NOT installed by default!)
-  \renewcommand{\sfdefault}{ma1}
+  \renewcommand{\rmdefault}{ma1}% (this font is NOT installed by default!)
+  \renewcommand{\sfdefault}{ma1}%
 }
-\DeclareOption{narrow}{
-  \renewcommand{\seriesdefault}{c} % Narrow
-  \renewcommand{\bfdefault}{bc}  % Boldface narrow
+\DeclareOption{narrow}{%
+  \renewcommand{\seriesdefault}{c}% Narrow
+  \renewcommand{\bfdefault}{bc}%    Boldface narrow
 }
-% No title
-% This must come *after* language definitions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title, branding, logo and flag
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% No title. This must come *after* the language definitions.
 \DeclareOption{notitle}{%
-  \AtEndOfPackage{\renewcommand*\ecvtitle{}}%
+  \AtEndOfClass{\renewcommand*\ecvtitle{}}%
 }
 
-% The nobranding function was created by Marc-Andre Hermanns
-
-% No branding (i.e., "Europass" logotype)
+% No branding (i.e., no "Europass" text in the title).
+% The nobranding option was contributed by Marc-Andre Hermanns.
 \DeclareOption{nobranding}{%
-  \AtEndOfPackage{\renewcommand*\ecvbranding{}}%
+  \AtEndOfClass{\renewcommand*\ecvbranding{}}%
 }
 
 % Europass logo
 \DeclareOption{logo}{%
-\providecommand*\draweuropasslogo{%
-   \includegraphics[width=\ecv@logowidth]{europasslogo}}
+  \providecommand*\draweuropasslogo{%
+    \includegraphics[width=\ecv@logowidth]{europasslogo}}%
 }
 \DeclareOption{nologo}{\renewcommand*\draweuropasslogo{}}
 
-% Flag pictures of the EC can be found at
-%   http://europa.eu.int/abc/symbols/emblem/index_en.htm
+% Flags of the European Union
 \DeclareOption{noflag}{\providecommand*\draweuropeflag{}}
 \DeclareOption{flagWB}{%
   \renewcommand*\draweuropeflag{%
-    \includegraphics[width=\ecv@flagwidth]{EuropeFlagWB}}
+    \includegraphics[width=\ecv@flagwidth]{EuropeFlagWB}}%
 }
 \DeclareOption{flagBW}{%
   \renewcommand*\draweuropeflag{%
-    \includegraphics[width=\ecv@flagwidth]{EuropeFlagBW}}
+    \includegraphics[width=\ecv@flagwidth]{EuropeFlagBW}}%
 }
 \DeclareOption{flagCMYK}{%
   \renewcommand*\draweuropeflag{%
-    \includegraphics[width=\ecv@flagwidth]{EuropeFlagCMYK}}
+    \includegraphics[width=\ecv@flagwidth]{EuropeFlagCMYK}}%
 }
 \DeclareOption{flagBlueCMYK}{%
- \renewcommand*\draweuropeflag{%
-   \includegraphics[width=\ecv@flagwidth]{EuropeFlagBlueCMYK}}
+  \renewcommand*\draweuropeflag{%
+    \includegraphics[width=\ecv@flagwidth]{EuropeFlagBlueCMYK}}%
 }
 
-% Page numbering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page numbering and tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareOption{totpages}{%
-  \AtEndOfPackage{\RequirePackage{totpages}%
-  \def\ecv@totpages{~/~\ref{TotPages}}
-  %\ecvpage{\ecv@pagekey~\thepage~/~\ref{TotPages}}%
+  \AtEndOfClass{%
+    \RequirePackage{totpages}%
+    \def\ecv@totpages{~/~\ref{TotPages}}%
   }%
 }
 
 \DeclareOption{booktabs}{%
-  \AtEndOfPackage{\RequirePackage{booktabs}}
-  \def\ecv@booktabs{}
+  \AtEndOfClass{\RequirePackage{booktabs}}%
+  \def\ecv@booktabs{}%
 }
-% Pass all other options (a4paper, 10pt, draft, openbib, etc...) to article
+
+% Pass all other options (a4paper, 10pt, draft, openbib, etc.) to article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 
-
-%%%%%%% Counters
-%%%%%% FootNote counter for blfootnote
-\newcounter{FootNoteCounter}
-\setcounter{FootNoteCounter}{0}
-
-\newcommand{\ecvdisplayFootNoteCounter}[1][]{%
-	\stepcounter{FootNoteCounter}%
-	\hypertarget{#1}{\textsuperscript{\theFootNoteCounter}}%
-}
-
-\newcommand{\ecvrefFootNoteCounter}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Conference publications -  the '%' symbol it is used to avoid undesired spaces
-\newcounter{ConferencePublications}
-\setcounter{ConferencePublications}{0}
-
-\newcommand{\ecvdisplayConferencePublications}[1][]{%
-	\stepcounter{ConferencePublications}%
-	\hypertarget{#1}{[C\theConferencePublications]}%
-}
-
-\newcommand{\ecvrefConferencePublications}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Book Chapters publications - the '%' symbol it is used to avoid undesired spaces
-\newcounter{BookChapterPublications}
-\setcounter{BookChapterPublications}{0}
-
-\newcommand{\ecvdisplayBookChapterPublications}[1][]{%
-	\stepcounter{BookChapterPublications}%
-	\hypertarget{#1}{[BC\theBookChapterPublications]}%
-}
-
-\newcommand{\ecvrefBookChapterPublications}[1][]{%
-	\myhyperlink{#1}%
-}
-
-
-%%%%%% ReferredJournals - the '%' symbol it is used to avoid undesired spaces
-\newcounter{ReferredJournalsPublications}
-\setcounter{ReferredJournalsPublications}{0}
-
-\newcommand{\ecvdisplayReferredJournalsPublications}[1][]{%
-	\stepcounter{ReferredJournalsPublications}%
-	\hypertarget{#1}{[J\theReferredJournalsPublications]}%
-}
-
-\newcommand{\ecvrefReferredJournalsPublications}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Workshop - the '%' symbol it is used to avoid undesired spaces
-\newcounter{Workshops}
-\setcounter{Workshops}{0}
-
-\newcommand{\ecvdisplayWorkshops}[1][]{%
-	\stepcounter{Workshops}%
-	\hypertarget{#1}{[W\theWorkshops]}%
-}
-
-\newcommand{\ecvrefWorkshopsPublications}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Posters - the '%' symbol it is used to avoid undesired spaces
-\newcounter{Posters}
-\setcounter{Posters}{0}
-
-\newcommand{\ecvdisplayPosters}[1][]{%
-	\stepcounter{Posters}%
-	\hypertarget{#1}{[P\thePosters]}%
-}
-
-\newcommand{\ecvrefPosters}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Research Projects - the '%' symbol it is used to avoid undesired spaces
-\newcounter{ResearchProjects}
-\setcounter{ResearchProjects}{0}
-
-\newcommand{\ecvdisplayResearchProjects}[1][]{%
-	\stepcounter{ResearchProjects}%
-	\hypertarget{#1}{[RP\theResearchProjects]}%
-}
-
-\newcommand{\ecvrefResearchProjects}[1][]{%
-	\myhyperlink{#1}%
-}
-
-%%%%%% Awards - the '%' symbol it is used to avoid undesired spaces
-\newcounter{Awards}
-\setcounter{Awards}{0}
-
-\newcommand{\ecvdisplayAwards}[1][]{%
-	\stepcounter{Awards}%
-	\hypertarget{#1}{[A\theAwards]}%%
-}
-
-\newcommand{\ecvrefAwards}[1][]{%
-	\myhyperlink{#1}%
-}
-
-\ExecuteOptions{english,noflag,logo,hrule} % Default options
+\ExecuteOptions{english,noflag,logo} % Default options
 
 \ProcessOptions\relax
 
 \LoadClass{article}
 
-%% start of addition (with permission) by David Carlisle
-\ifx\Umathchar\@undefined
-%% encoding support for pdftex and classic TeX
-\renewcommand\ecv@utf[1]{{#1}}
-\else
-%% do not use ucs/inputenc for lualatex or xelatex
-%% use UTF-8 input and load a suitable unicode font with fontspec
-%% or for lualatex use \usepackage[utf8]{luainputenc}
-\renewcommand\ecv@utf[1]{{#1}}
-\fi
-%% end of addition by David Carlisle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cross-referenced numbered entries (publications, projects, awards...)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ecv@settarget{<key>}{<text>} typesets <text>, makes it the target of
+% a hyperlink named <key>, and records <text> in the .aux file so that
+% \ecv@reflink{<key>} can print it (as a link) anywhere in the document.
+% The recorded text is stored in \ecv@ref@<key>, so that any key can be
+% used without the risk of overwriting existing commands.
+\newcommand*\ecv@setref[2]{\global\@namedef{ecv@ref@#1}{#2}}
+\newcommand\ecv@settarget[2]{%
+  \hypertarget{#1}{#2}%
+  \protected@write\@auxout{}{\string\ecv@setref{#1}{#2}}%
+}
+\newcommand*\ecv@reflink[1]{%
+  \@ifundefined{ecv@ref@#1}{%
+    \textbf{??}%
+    \G@refundefinedtrue
+    \ClassWarning{europecv}{Reference `#1' on page \thepage\space
+      undefined}%
+  }{%
+    \hyperlink{#1}{\@nameuse{ecv@ref@#1}}%
+  }%
+}
+% \myhyperlink is kept for backward compatibility with older versions of
+% the class (it is defined at \begin{document} with \providecommand, so a
+% user definition made in the preamble takes precedence)
+\AddToHook{begindocument/before}{\providecommand*\myhyperlink[1]{\ecv@reflink{#1}}}
 
+% \ecvNewReferenceType{<Name>}{<prefix>} defines the counter <Name> and
+% the commands \ecvdisplay<Name>[<key>] and \ecvref<Name>[<key>].
+% \ecvdisplay<Name> steps the counter and prints [<prefix><number>];
+% \ecvref<Name> prints a link to the entry labelled <key>.
+\newcommand*\ecvNewReferenceType[2]{%
+  \newcounter{#1}%
+  \expandafter\newcommand\csname ecvdisplay#1\endcsname[1][]{%
+    \stepcounter{#1}%
+    \ecv@settarget{##1}{[#2\csname the#1\endcsname]}%
+  }%
+  \expandafter\newcommand\csname ecvref#1\endcsname[1][]{%
+    \ecv@reflink{##1}%
+  }%
+}
+\@onlypreamble\ecvNewReferenceType
+
+\ecvNewReferenceType{ConferencePublications}{C}
+\ecvNewReferenceType{BookChapterPublications}{BC}
+\ecvNewReferenceType{ReferredJournalsPublications}{J}
+\ecvNewReferenceType{Workshops}{W}
+\ecvNewReferenceType{Posters}{P}
+\ecvNewReferenceType{ResearchProjects}{RP}
+\ecvNewReferenceType{Awards}{A}
+% Old name, kept for backward compatibility
+\let\ecvrefWorkshopsPublications\ecvrefWorkshops
+
+% Footnote-like references are typeset as a superscript number
+\newcounter{FootNoteCounter}
+\newcommand{\ecvdisplayFootNoteCounter}[1][]{%
+  \stepcounter{FootNoteCounter}%
+  \ecv@settarget{#1}{\textsuperscript{\theFootNoteCounter}}%
+}
+\newcommand{\ecvrefFootNoteCounter}[1][]{%
+  \ecv@reflink{#1}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Required packages and page layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{array}
 \RequirePackage{longtable}
 \RequirePackage{fancyhdr} % For page numbering
@@ -446,39 +344,35 @@
 \ecvfootnote{}
 
 \AddToHook{begindocument/before}{%
-
-\RequirePackage{etoolbox} %important for \AfterPreamble
-
-% To user hypertargets
-\RequirePackage{hyperref}%
-\let\oldhypertarget\hypertarget%
-\renewcommand{\hypertarget}[2]{%
-	\oldhypertarget{#1}{#2}%
-	\protected@write\@mainaux{}{%
-		\string\expandafter\string\gdef%
-		\string\csname\string\detokenize{#1}\string\endcsname{#2}%
-	}%
-}%
-\newcommand{\myhyperlink}[1]{%
-	\hyperlink{#1}{\csname #1\endcsname}%
-}%
-
-% Ensure that \ecv@leftcolwidth and \ecv@rightcolwidth
-% are correctly defined
-\ecvLeftColumnWidth{\ecv@leftcolwidth}
-% Set layout
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\fancyfoot[L]{\begin{minipage}{\ecv@leftcolwidth}
-\begin{flushright}\footnotesize\ecv@lfoot\end{flushright}%
-\end{minipage}
-}
-\fancyfoot[R]{\begin{minipage}{\ecv@rightcolwidth}
-\footnotesize\ecv@rfoot
-\end{minipage}}
-\renewcommand{\headrulewidth}{0pt}%
+  % graphicx is needed to draw the logo, the flags and the picture
+  \@ifpackageloaded{graphicx}{}{\RequirePackage{graphicx}}%
+  % Loaded by previous versions of the class: kept for compatibility
+  \RequirePackage{etoolbox}%
+  % hyperref is needed by the cross-referencing commands
+  \RequirePackage{hyperref}%
+  % Ensure that \ecv@leftcolwidth and \ecv@rightcolwidth
+  % are correctly defined
+  \ecvLeftColumnWidth{\ecv@leftcolwidth}%
+  % Set layout
+  \pagestyle{fancy}%
+  \fancyhead{}%
+  \fancyfoot{}%
+  \fancyfoot[L]{\begin{minipage}{\ecv@leftcolwidth}%
+    \begin{flushright}\footnotesize\ecv@lfoot\end{flushright}%
+    \end{minipage}}%
+  \fancyfoot[R]{\begin{minipage}{\ecv@rightcolwidth}%
+    \footnotesize\ecv@rfoot
+    \end{minipage}}%
+  \renewcommand{\headrulewidth}{0pt}%
 } % End \AddToHook{begindocument/before}
+
+% Make sure that the .aux file can still be read if the class is
+% changed after a compilation
+\AddToHook{begindocument}{%
+  \if@filesw
+    \immediate\write\@mainaux{\string\providecommand\string\ecv@setref[2]{}}%
+  \fi
+}
 
 % Thanks to Roman Bertle for suggesting the following:
 \renewcommand{\labelitemi}{\normalfont\bfseries \textendash}
@@ -699,22 +593,12 @@
 \newcommand*\ecvlanguagefooter[2][0pt]{\ecvitem[#1]{}{\quad\footnotesize{${}^{\mbox{\tiny#2}}$\textit{\ecv@langfooterkey}}}}
 
 % See the Common European Framework of Reference for Languages:
-% http://www.coe.int/T/E/Cultural_Co-operation/education/Languages/Language_Policy/Common_Framework_of_Reference/default.asp
-\ifx\ecv@booktabs\undefined % Use table conforming to EU model
-  \newcommand*\ecvCEF[2]{%
-  %\setlength\tabcolsep{1mm}
+% https://www.coe.int/en/web/common-european-framework-reference-languages
+\newcommand*\ecvCEF[2]{%
   \begin{tabular}{@{}>{\footnotesize}p{.2\ecv@langparwidth}@{\hspace{1mm}}>{\footnotesize\centering}p{.74\ecv@langparwidth}@{}}
 #1 & #2\tabularnewline
-  \end{tabular}
-  }
-\else
-  \newcommand*\ecvCEF[2]{%
-  %\setlength\tabcolsep{1mm}
-  \begin{tabular}{@{}>{\footnotesize}p{.2\ecv@langparwidth}@{\hspace{1mm}}>{\footnotesize\centering}p{.74\ecv@langparwidth}@{}}
-#1 & #2\tabularnewline
-  \end{tabular}
-  }
-\fi
+  \end{tabular}%
+}
 
 \newcommand*\ecvAOne{\ecvCEF{A1}{\ecv@cefbasickey}}
 \newcommand*\ecvATwo{\ecvCEF{A2}{\ecv@cefbasickey}}
@@ -801,7 +685,11 @@
 }
 {\end{longtable}}
 
-\renewcommand{\section}[2][10pt]{%
+% \section[<vspace>]{<title>} starts a new section of the CV.
+% The starred form is accepted (and behaves the same) for compatibility
+% with code written for the standard classes.
+\renewcommand{\section}{\@ifstar{\ecv@section}{\ecv@section}}
+\newcommand{\ecv@section}[2][10pt]{%
   {\large{\par\textbf{#2}}}\vspace{#1} & \tabularnewline\nopagebreak
 }
 

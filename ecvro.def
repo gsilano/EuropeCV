@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 13/03/2022
-\ProvidesFile{ecvro.def}[europecv Romanian definitions]
+\ProvidesFile{ecvro.def}[2026/10/14 europecv Romanian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa{\c t}ii personale}}
 \def\ecv@datekey{\ecv@utf{Actualizat la}}
@@ -40,5 +40,5 @@
 \def\ecv@cefindepkey{\ecv@utf{Utilizator independent}}
 \def\ecv@cefprofkey{\ecv@utf{Utilizator experimentat}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}\\[5pt]
-\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+\renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
+\renewcommand*{\ecvtitle}{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}\ecvbranding}

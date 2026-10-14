@@ -4,7 +4,7 @@
 \ProvidesFile{ecvfr.def}[europecv French definitions]
 % Informations personnelles
 \def\ecv@infosectionkey{\ecv@utf{Informations personnelles}}
-\def\ecv@datekey{\ecv@utf{Mis à jour pour}}
+\def\ecv@datekey{\ecv@utf{Mis à jour le }}
 \def\ecv@namekey{\ecv@utf{Pr\'enom(s)/ Nom(s)}}
 \def\ecv@addresskey{\ecv@utf{Adresse(s)}}
 \def\ecv@telkey{\ecv@utf{T\'el\'ephone(s)}}

@@ -5,6 +5,7 @@
 #   make templates  build the templates
 #   make check      build everything and run the language smoke test
 #   make ctan       create build/europecv.zip, ready for the CTAN upload
+#   make ctancheck  create the CTAN archive and check it against the CTAN rules
 #   make clean      remove auxiliary files
 #
 # The CTAN archive is created from the files committed to git
@@ -16,7 +17,7 @@ LATEX    = pdflatex -interaction=nonstopmode -halt-on-error
 EXAMPLES = minimal europass-cv bulgarian-utf8 bulgarian-koi8-r greek-utf8
 TEMPLATES = cv_template_en cv_template_academic_en
 
-.PHONY: all doc examples templates check ctan clean
+.PHONY: all doc examples templates check ctan ctancheck clean
 
 all: doc
 
@@ -50,6 +51,10 @@ ctan:
 	git archive --format=tar --prefix=$(PKG)/ HEAD | tar -x -C build
 	cd build && zip -q -r $(PKG).zip $(PKG)
 	@echo "Created build/$(PKG).zip"
+
+ctancheck: ctan
+	sh tests/version.sh
+	sh tests/ctan-files.sh
 
 clean:
 	for d in . examples templates; do \

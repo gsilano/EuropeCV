@@ -123,6 +123,18 @@ Before a release, update the date and version in `europecv.cls`
 (`\ProvidesClass`), in the `ecv*.def` files that changed (`\ProvidesFile`), in
 `europecv.tex` (`\date`), in this file and in `CHANGELOG.rst`, then rebuild
 `europecv.pdf`.
+`make ctancheck` verifies that all these
+versions agree and that the CTAN archive follows the CTAN rules.
+
+The GitHub workflows in `.github/workflows` run automatically:
+
+- `build.yml` compiles the documentation, the examples, the templates and all
+  the language options on every push and pull request;
+- `ctan.yml` builds and checks the CTAN archive (including CTAN's `pkgcheck`);
+  pushing a tag named after the version (e.g. `v2026.10.14`) also creates a
+  GitHub release with `europecv.zip` attached, ready for the CTAN upload;
+- `links.yml` looks for dead links in the documentation once a month;
+- `stale.yml` and `welcome.yml` manage stale issues and greet new contributors.
 
 ### CTAN contact
 

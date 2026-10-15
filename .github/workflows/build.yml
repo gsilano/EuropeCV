@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: texlive/texlive:latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build documentation, examples and templates, and test all languages
         run: make check
       - name: Upload PDFs

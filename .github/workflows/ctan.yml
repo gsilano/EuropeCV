@@ -1,0 +1,66 @@
+name: CTAN package
+
+# Builds the archive to upload to CTAN and checks it against the CTAN
+# rules. When a tag such as v2026.10.14 is pushed, the archive is also
+# attached to a GitHub release, ready for https://ctan.org/upload.
+
+on:
+  push:
+    branches: ['**']
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Install tools
+        run: apt-get update && apt-get install -y --no-install-recommends git zip unzip
+
+      - uses: actions/checkout@v4
+
+      - name: Trust the workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Check version information
+        env:
+          TAG: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || '' }}
+        run: sh tests/version.sh $TAG
+
+      - name: Create the CTAN archive
+        run: make ctan
+
+      - name: Check the archive content
+        run: sh tests/ctan-files.sh
+
+      - name: Run pkgcheck (CTAN's own package checker)
+        # Informative only: pkgcheck can report issues that CTAN accepts.
+        continue-on-error: true
+        run: pkgcheck -d build/europecv
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: europecv-ctan
+          path: build/europecv.zip
+
+  release:
+    needs: package
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: europecv-ctan
+
+      - name: Create the GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: europecv.zip
+          generate_release_notes: true

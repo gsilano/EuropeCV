@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvde.def}[europecv German definitions]
+\ProvidesFile{ecvde.def}[2026/10/14 europecv German definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Angaben zur Person}}
 \def\ecv@datekey{\ecv@utf{Aktualisiert am}}

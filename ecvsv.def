@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation completed, 01/03/2020
-\ProvidesFile{ecvsv.def}[europecv Swedish definitions]
+\ProvidesFile{ecvsv.def}[2026/10/14 europecv Swedish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Personuppgifter}}
 \def\ecv@datekey{\ecv@utf{Uppdaterad till}}
@@ -40,8 +40,5 @@
 \def\ecv@cefindepkey{\ecv@utf{Den sj\"alvst\"andige spr\aa kanv\"andaren}}
 \def\ecv@cefprofkey{\ecv@utf{Den avancerade spr\aa kanv\"andaren}}
 
-\renewcommand*\ecvtitle{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
-r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]
-\Large\textbf{m\ecv@kern e\ecv@kern r\ecv@kern i\ecv@kern
-t\ecv@kern f\ecv@kern {\"o}\ecv@kern r\ecv@kern t\ecv@kern e\ecv@kern c\ecv@kern
-k\ecv@kern n\ecv@kern i\ecv@kern n\ecv@kern g\ecv@kern e\ecv@kern n\ecv@kern}}}
+\renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}
+\renewcommand*{\ecvtitle}{\ecvbranding\ecv@utf{\Large\textbf{m\ecv@kern e\ecv@kern r\ecv@kern i\ecv@kern t\ecv@kern f\ecv@kern {\"o}\ecv@kern r\ecv@kern t\ecv@kern e\ecv@kern c\ecv@kern k\ecv@kern n\ecv@kern i\ecv@kern n\ecv@kern g\ecv@kern e\ecv@kern n}}}

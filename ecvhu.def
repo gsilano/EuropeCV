@@ -1,7 +1,7 @@
 %!TEX encoding = UTF-8 Unicode
 %
 % Translation finished, 01/03/2020
-\ProvidesFile{ecvhu.def}[europecv Hungarian definitions]
+\ProvidesFile{ecvhu.def}[2026/10/14 europecv Hungarian definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Szem\'elyi adatok}}
 \def\ecv@namekey{\ecv@utf{Név~/ Vezetéknév}}

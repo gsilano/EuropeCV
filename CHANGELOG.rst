@@ -2,6 +2,24 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2026.10.14
+----------
+* Fix the input encoding options (latin1, cp1250, koi8-r, ...), which failed with "Undefined control sequence \inputencoding": they now load the inputenc package. The obsolete utf8x option is now the same as utf8 (the ucs package is no longer needed)
+* Fix the dutch, slovenian and maltese options, which stopped the compilation because of typos in ecvnl.def, ecvsl.def and ecvmt.def
+* Maltese: the letters h and H with stroke now work with pdfLaTeX (they are taken from the maltese package if loaded, and drawn otherwise); updated the Maltese example for XeLaTeX/LuaLaTeX
+* Fix the nobranding option for Portuguese, Romanian, Serbian, Slovak, Slovenian and Swedish, whose titles always contained the "Europass" text
+* The cross-referencing commands (\ecvdisplay..., \ecvref...) no longer redefine \hypertarget and no longer risk overwriting existing commands when a key such as "par" is used. A reference to an undefined key is now printed as ?? with a warning
+* New command \ecvNewReferenceType to define new kinds of numbered entries; new command \ecvrefWorkshops, as described in the documentation (\ecvrefWorkshopsPublications is kept for compatibility)
+* \section* is accepted inside the europecv environment
+* The parentheses of the CEF footer are now really upright (\textup instead of \upshape)
+* The graphicx package is loaded automatically if needed (logo, flags, picture)
+* Romanian: combelow is loaded with \RequirePackage at the end of the class
+* Proper LPPL and maintenance status headers, dates in \ProvidesClass/\ProvidesFile in the standard format (yyyy/mm/dd)
+* Fix the biber template (renamed to cv_template_en_biber.tex, missing photo, configuration file not matching the bib file names)
+* Removed generated files (*-eps-converted-to.pdf) from the package; added a Makefile to build the documentation and the CTAN archive, a smoke test for all languages and a GitHub workflow
+* Updated documentation: dead links, dependencies, encodings, Maltese, typos; rewritten README for CTAN
+* Contributors: Giuseppe Silano
+
 2025.05.14
 ----------
 * Fix hook error related to loading 'hyperref' package (#38)

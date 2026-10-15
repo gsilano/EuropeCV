@@ -39,6 +39,8 @@
 
 \newcommand{\ecv}[1]{\texttt{\textbackslash ecv#1}}
 
+\ecvNewReferenceType{Talks}{T}
+
 
 \title{\textsf{europecv}: an unofficial class\\
 	for European curricula}
@@ -54,7 +56,7 @@
     Faculty of Electrical Engineering\\
     Czech Technical University in Prague, Czech Republic\\
 }
-\date{May 14, 2025}
+\date{Version 2026.10.14 -- October 14, 2026}
 
 
 \begin{document}
@@ -91,14 +93,14 @@ contributors list (at the end of the manual).
 
 This class is an unofficial \LaTeX\ implementation of the standard model for curricula vit\ae\ (the
 \emph{Europass~CV\/}) as recommended by the European
-Commission\footnote{\url{http://europa.eu.int/scadplus/leg/en/cha/c11057.htm}.}. The Europass~CV
+Commission\footnote{\url{https://europass.europa.eu/}.}. The Europass~CV
 replaces the European CV, launched in~2002.
 
 The Europass~CV defines both the content and the layout of a curriculum vit\ae. The
 \textsf{europecv} class provides support for the latter, and for the former as far as personal
 information and spoken languages are concerned. If you want to know how the content of a
 Europass~CV must be structured you must read the documentation provided by the Europass
-website\footnote{\url{http://europass.cedefop.eu.int/htm/index.htm}.}.
+website\footnote{\url{https://europass.europa.eu/en/create-europass-cv}.}.
 
 This class tries to be as close as possible to the standard model without sacrificing flexibility.
 Although it is primarily intended for users of the European Union, the class can be used for any
@@ -113,7 +115,6 @@ A minimal (empty) curriculum vit\ae, quite similar to the official one, can be o
 \begin{quote}
 	\begin{verbatim}
 	\documentclass[helvetica,narrow]{europecv}
-	\usepackage{graphicx} % Required to draw the logo
 	\begin{document}
 	\begin{europecv}
 	\end{europecv}
@@ -154,11 +155,12 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 
 \begin{europecv}
 	\section{Input encoding}
-	\ecvitem[10pt]{\textbf{Important!}}{The default input encoding for the \textsf{europecv} class is UTF-8. If you have a Unicode capable text editor, you should be able to directly type text with accents, diacritics and so on (i.e., no need to use \LaTeX\ commands for special characters). In order for this to work, you must ensure that your document is saved using the UTF-8 text encoding. As an alternative, you may specify a different input encoding for your document (see options below). Please note that the \textsf{ucs} and \textsf{inputenc} packages are needed no matter which encoding you use (see Section~\ref{sec:dependencies}).}
-	\ecvitem{\texttt{utf8}}{Chooses UTF-8 input encoding. This is the default.}
+	\ecvitem[10pt]{\textbf{Important!}}{The default input encoding for the \textsf{europecv} class is UTF-8. If you have a Unicode capable text editor, you should be able to directly type text with accents, diacritics and so on (i.e., no need to use \LaTeX\ commands for special characters). In order for this to work, you must ensure that your document is saved using the UTF-8 text encoding. As an alternative, you may specify a different input encoding for your document (see options below). With Xe\LaTeX\ and Lua\LaTeX\ the input is always read as UTF-8 and the encoding options are ignored (a warning is issued).}
+	\ecvitem{\texttt{utf8}}{Chooses UTF-8 input encoding. This is the default, so the option is not needed with any recent \LaTeX\ distribution.}
+	\ecvitem{\texttt{utf8x}}{\textbf{Obsolete.} Kept for backward compatibility: it is now the same as~\texttt{utf8}. The \textsf{ucs} package is no longer needed.}
 	\ecvitem[15pt]{Other options}{The other available input encodings are: \texttt{ansinew}, \texttt{applemac}, \texttt{ascii}, \texttt{cp850}, \texttt{cp852}, \texttt{cp858}, \texttt{cp437}, \texttt{cp437de}, \texttt{cp865}, \texttt{cp866}, \texttt{cp1250}, \texttt{cp1251}, \texttt{cp1252}, \texttt{cp1257}, \texttt{decmulti}, \texttt{koi8-r}, \texttt{koi8-ru}, \texttt{koi8-u}, \texttt{latin1}, \texttt{latin2}, \texttt{latin3}, \texttt{latin4}, \texttt{latin5}, \texttt{latin9}, \texttt{latin10},   \texttt{maccyr}, \texttt{macukr}, \texttt{next}.}
 	\ecvitem{Notes}{Any of the above options causes the \textsf{inputenc} package to be loaded with
-	the specified encoding so that you do not have to load that package in your document.}
+	the specified encoding so that you do not have to load that package in your document. The language definition files are always read as UTF-8, whatever input encoding you choose for your document.}
 
 	\section{Font options}
 	\ecvitem{\texttt{helvetica}}{Uses Helvetica as the default font.}
@@ -202,14 +204,14 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate
 	font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the
 	preamble of your document).}
-	\ecvitem{\texttt{maltese}}{Chooses Maltese language. You should use the \texttt{T4} font encoding (put \texttt{\textbackslash usepackage[T4]\{fontenc\}} font encoding (put \texttt{\textbackslash usepackage[T4]\{fontenc\}} in the preamble of your document), or include the \textsf{maltese} package and use the commands \texttt{\textbackslash mh},  \texttt{\textbackslash mH} and so on, for~\/mh, \/mH\ etc\ldots See the \textsf{examples}.}
+	\ecvitem{\texttt{maltese}}{Chooses Maltese language. The simplest solution is to compile your document with Xe\LaTeX\ or Lua\LaTeX. With pdf\LaTeX, the letters \emph{h} and \emph{H} with stroke, which are not available in the standard font encodings, are taken from the \textsf{maltese} package if it is loaded, and drawn by the class otherwise: in your own text you can use the commands \texttt{\textbackslash mh}, \texttt{\textbackslash mH} and so on provided by the \textsf{maltese} package. See the \textsf{examples}.}
 	\ecvitem{\texttt{norwegian}}{Chooses Norwegian language.}
 	\ecvitem{\texttt{polish}}{Chooses Polish language. Note that this option does not work with the~\texttt{OT1} font encoding. Use the \textsf{fontenc} package to select an alternate font encoding, such as~\texttt{T1} (\texttt{\textbackslash usepackage[T1]\{fontenc\}} in the preamble of your document).}
 	\ecvitem{\texttt{portuguese}}{Chooses Portuguese language.}
 	\ecvitem{\texttt{romanian}}{Chooses Romanian language. Romanians do not use the letters with 
 	cedillas (ş and ţ), but the versions with commas (ș and ț) (Latvians also use the same 
-	diacritic, no cedillas) and thus using the ``combelow''~\LaTeX~package the following commands 
-	can be used `\cb s` ($\backslash cb s$) and `\cb t` ($\backslash cb t$).}
+	diacritic, no cedillas). With this option the \textsf{combelow} package is loaded automatically, so
+	the commands \texttt{\textbackslash cb s} (\cb s) and \texttt{\textbackslash cb t} (\cb t) can be used.}
 	\ecvitem{\texttt{serbian}}{Chooses Serbian language.}
 	\ecvitem{\texttt{slovak}}{Chooses Slovak language.}
 	\ecvitem{\texttt{slovenian}}{Chooses Slovenian language.}
@@ -245,12 +247,12 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	\ecvitem{\texttt{flagBW}}{Draws the following: \includegraphics[width=10mm]{EuropeFlagBW}  after the title.}
 	\ecvitem{\texttt{flagCMYK}}{Draws the following: \includegraphics[width=10mm]{EuropeFlagCMYK}  after the title.}
 	\ecvitem[15pt]{\texttt{flagBlueCMYK}}{Draws the following: \includegraphics[width=10mm]{EuropeFlagBlueCMYK}  after the title.}
-	\ecvitem{Notes}{The \textsf{graphicx} package must be included in your document for the flag to be drawn. The official model of the Europass~CV does not use any flag.}
+	\ecvitem{Notes}{The \textsf{graphicx} package, needed to draw the flag, is loaded automatically by the class. The official model of the Europass~CV does not use any flag.}
 
 	\section{Logo options}
 	\ecvitem{\texttt{logo}}{Draws the Europass logo: \includegraphics[width=10mm]{europasslogo} at the beginning of the Europass~CV. This is the default.}
 	\ecvitem[15pt]{\texttt{nologo}}{Does not draw the Europass logo.}
-	\ecvitem{Notes}{The \textsf{graphicx} package must be included in your document for the Europass logo to be drawn.}
+	\ecvitem{Notes}{The \textsf{graphicx} package, needed to draw the Europass logo, is loaded automatically by the class.}
 
 	\section{Title option}
 	\ecvitem[15pt]{\texttt{notitle}}{Omits the title (``Europass Curriculum Vit\ae'') at the
@@ -286,11 +288,11 @@ The following options can be used with the \texttt{\textbackslash documentclass}
 	enter the current date use the \texttt{$\setminus$}\texttt{today} command.}
 	\ecvitem{\ecv{name}\texttt{\{}\textit{name, surname}\texttt{\}}}{Sets your name to \emph{name},
 	and your surname to \emph{surname}.}
-	\ecvitem{\ecv{footername}\texttt{\{}\textit{name}\texttt{\}}}{Sets your name as it appears in the footer. By default, the name in the footer is the same as the one specified with \ecv{name}. Use \ecv{footername} is you want it to be different (for example, if you want to exchange the order of first name and last name).}
+	\ecvitem{\ecv{footername}\texttt{\{}\textit{name}\texttt{\}}}{Sets your name as it appears in the footer. By default, the name in the footer is the same as the one specified with \ecv{name}. Use \ecv{footername} if you want it to be different (for example, if you want to exchange the order of first name and last name).}
 	\ecvitem{\ecv{firstname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
 	\ecvitem{\ecv{lastname}\texttt{\{}\textit{name}\texttt{\}}}{\textbf{Deprecated.} Use \ecv{name} and \ecv{footername} instead.}
 	\ecvitem{\ecv{address}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\
-	\texttt{\{}\textit{address}\texttt{\}}}{Sets the addressr to \emph{address} and, optionally,
+	\texttt{\{}\textit{address}\texttt{\}}}{Sets the address to \emph{address} and, optionally,
 	the mobile and the office addresses to~\emph{mobile} and to~\emph{office}, respectively.}
 	\ecvitem{\ecv{fax}\texttt{\{}\textit{fax}\texttt{\}}}{Sets the fax number to \emph{fax}. If you do not have any fax number, you can leave it empty.}
 	\ecvitem{\ecv{telephone}\texttt{[}\textit{mobile}\texttt{]}\texttt{[}\textit{office}\texttt{]}\\
@@ -495,7 +497,7 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 	\ecvitem{\ecv{COne}}{Predefined level description: proficient user~(C1).}
 	\ecvitem{\ecv{CTwo}}{Predefined level description: proficient user~(C2).}
 	%
-	\section{Research Activities}\label{p:alternativeBibliogrphy}
+	\section{Research Activities}\label{p:alternativeBibliography}
 	%
 	\ecvitem{\ecv{displayFootNote\\Counter} \texttt{[}\textit{key}\texttt{]}}
 	{As for the `$\backslash$label` command in \LaTeX. The command creates a cross link between the
@@ -561,6 +563,18 @@ Note that if your personal data (e.g., your address) is long enough, then some t
 	%
 	\ecvitem{\ecv{refAwards} \texttt{[}\textit{key}\texttt{]}} {Same as
 	{\ecv{refFootNoteCounter}}, but now the command is meant creating a reference to awards.}
+	%
+	\ecvitem{\ecv{NewReference\\Type}\texttt{\{}\textit{Name}\texttt{\}\{}\textit{prefix}\texttt{\}}}
+	{Defines a new kind of numbered entry: it creates the counter \textit{Name} and the commands
+	\ecv{display}\textit{Name}\texttt{[}\textit{key}\texttt{]}, which prints
+	\texttt{[}\textit{prefix}\textit{number}\texttt{]}, and \ecv{ref}\textit{Name}\texttt{[}\textit{key}\texttt{]}.
+	For example, \ecv{NewReferenceType}\texttt{\{Talks\}\{T\}} defines \ecv{displayTalks} and
+	\ecv{refTalks}, that produce the labels [T1], [T2], \ldots. It can be used only in the preamble.}
+	%
+	\ecvitem[15pt]{Notes}{The keys must be unique in the whole document. A reference to an
+	undefined key is printed as \textbf{??} and a warning is issued: as for the standard \LaTeX\
+	cross-references, the document must be compiled twice to get the references right. The
+	\textsf{hyperref} package is loaded automatically by the class.}
 	%
 \end{europecv}
 
@@ -638,7 +652,7 @@ As an example for the ``Research Activities'' section, the following code inside
 \begin{europecv}
 	\section{Research Activities}
 	\ecvitem{}{\textsc{\textbf{Stability of piecewise-linear systems}}}
-	\ecvitem{}{Something related to the picewise-linear
+	\ecvitem{}{Something related to the piecewise-linear
 	systems~\ecvrefReferredJournalsPublications[keyJournalPaper1].}
 	%
 	\section{Publications}
@@ -657,7 +671,7 @@ will produce something similar to the following:
 	\begin{europecv}
 		\section{Research Activities}
 			\ecvitem{}{\textsc{\textbf{Stability of piecewise-linear systems}}}
-			\ecvitem{}{Something related to the picewise-linear
+			\ecvitem{}{Something related to the piecewise-linear
 			systems~\ecvrefReferredJournalsPublications[keyJournalPaper1].}
 			%
 			\section{Publications}
@@ -753,7 +767,7 @@ Some parameters can be set by using the following commands.
 \vspace{0.25cm}
 
 The main weakness of this class is related to bibliographies (an alternative solution is presented
-at page~\pageref{p:alternativeBibliogrphy}). If you insert a bibliography inside
+at page~\pageref{p:alternativeBibliography}). If you insert a bibliography inside
 the \verb|europecv| environment with a command like:
 
 \begin{quote}
@@ -785,74 +799,36 @@ bibliography item you want to appear. If you have written many publications, thi
 the neck. Unfortunately, the only solution I know is to write a script to perform the task
 automatically.
 
-Finally, you can add references to your publications using the commands (and also defining new ones following the same rules) \texttt{\textbackslash}{\texttt{conferencePublications}}\texttt{[Name of the label]} and \texttt{\textbackslash}{\texttt{refconferencePublications}} \texttt{[Name of the label]}. Below the code that you have to insert in the preamble.
+A third possibility is to use \textsf{biblatex} with the \textsf{biber} back end: the template
+\texttt{cv\_template\_en\_biber.tex}, in the \textsf{templates} folder, shows how to typeset the
+bibliography inside the \texttt{europecv} environment so that each entry is a row of the table.
+Instructions on how to compile it are given at the beginning of the file.
+
+Finally, if you prefer to write the list of your publications by hand, you can number them and refer
+to them in the text with the commands presented in the ``Research Activities'' section
+(p.~\pageref{p:alternativeBibliography}). If you need a kind of entry not provided by the class, you
+can define it in the preamble with \ecv{NewReferenceType}. For example:
 
 \begin{quote}
 	\begin{verbatim}
-	\makeatletter
-	\let\oldhypertarget\hypertarget
-	\renewcommand{\hypertarget}[2]{%
-		\oldhypertarget{#1}{#2}%
-		\protected@write\@mainaux{}{%
-			\string\expandafter\string\gdef
-			\string\csname\string\detokenize{#1}\string\endcsname{#2}%
-		}%
-	}
-	\newcommand{\myhyperlink}[1]{%
-		\hyperlink{#1}{\csname #1\endcsname}%
-	}
-	\makeatother
-
-	% The counters. They have to be defined for each publication (journal papers, books, and so on).
-	\newcounter{ConferencePapers} %For the conference papers
-	\setcounter{ConferencePapers}{0}
-
-	\newcounter{JournalPapers} %For the journal papers
-	\setcounter{JournalPapers}{0}
-
-	% These commands have to be ridefined for each publication type (journal, paper, etc.)
-	\newcommand{\conferencePublications}[1][]{
-		\stepcounter{ConferencePapers}
-		\hypertarget{#1}{[C\theConferencePapers]} %C is the indexing of your conference papers
-	}
-
-	\newcommand{\juournalPublications}[1][]{
-	\stepcounter{ConferencePapers}
-	\hypertarget{#1}{[J\theJuournalPapers]}  %J is the indexing of your jounal papers
-	}
-
-	\newcommand{\refconferencesPublications}[1][]{
-		\myhyperlink{#1}
-	}
-
-	\newcommand{\refjournalPublications}[1][]{
-	\myhyperlink{#1}
-	}
-\end{verbatim}
+	\ecvNewReferenceType{Talks}{T} % in the preamble
+	[...]
+	\ecvitem{}{As discussed in my talk~\ecvrefTalks[Talk2020].}
+	[...]
+	\ecvitem{\ecvdisplayTalks[Talk2020]}{Details related to the talk}
+	\end{verbatim}
 \end{quote}
 
-In such a way, you can refer your publications into the text as reported below and in the ``\texttt{cv\_template\_academic\_en}''.
+\noindent produces:
 
 \begin{europecv}
-\pdfbookmark{Research activities}{Research activities}
-\section{Research activities}
-
-\ecvitem{}{\textbf{Stability of piecewise-linear systems}}
-\ecvitem{}{Something related to the picewise-linear systems \hyperlink{FirstPubLabel}{[C1]}, \hyperlink{SecondPubLabel}{[C2]} ad \hyperlink{ThirdPubLabel}{[C3]}.}
-
-\pdfbookmark{Publications}{Publications}
-\section{Publications}
-
-\subpdfbookmark{Refereed conference proceedings}{Refereed conference proceedings}
-\ecvitem{}{\textbf{Refereed conference proceedings}}
-
-\ecvitem[10pt]{[C1]\vspace{-0.25cm}\label{FirstPubLabel}}{Details related to the conference paper}
-
-\ecvitem[10pt]{[C2]\vspace{-0.25cm}\label{SecondPubLabel}}{Details related to the conference paper}
-
-\ecvitem[10pt]{[C3]\vspace{-0.25cm}\label{ThirdPubLabel}}{Details related to the conference paper}
-
+	\section{Research activities}
+	\ecvitem{}{As discussed in my talk~\ecvrefTalks[Talk2020].}
+	\section{Talks}
+	\ecvitem{\ecvdisplayTalks[Talk2020]}{Details related to the talk}
 \end{europecv}
+
+A complete example can be found in the \texttt{cv\_template\_academic\_en} template.
 
 %%% END SECTION ============================================================
 
@@ -862,7 +838,9 @@ In such a way, you can refer your publications into the text as reported below a
 \textbf{\large{5\hspace{0.5cm}\setword{Dependencies}{sec:dependencies}}}
 \vspace{0.25cm}
 
-The \textsf{europecv} class is built upon the \textsf{article} class, so you can use all standard \textsf{article} options, such as \verb|12pt|, \verb|draft|, \verb|a4paper|, and so on. It requires the \textsf{array}, \textsf{longtable}, \textsf{fancyhdr}, \textsf{ucs} and~\textsf{inputenc} packages, which should be available by default on any decent \LaTeX\ distribution.
+The \textsf{europecv} class is built upon the \textsf{article} class, so you can use all standard \textsf{article} options, such as \verb|12pt|, \verb|draft|, \verb|a4paper|, and so on. It requires a \LaTeX\ kernel released on 2020/10/01 or later, and it loads the \textsf{array}, \textsf{longtable}, \textsf{fancyhdr}, \textsf{etoolbox}, \textsf{graphicx} and~\textsf{hyperref} packages. Depending on the class options, it also loads \textsf{inputenc} (input encoding options), \textsf{totpages} (\texttt{totpages}), \textsf{booktabs} (\texttt{booktabs}) and \textsf{combelow} (\texttt{romanian}). All of them are part of any decent \TeX\ distribution, such as \TeX~Live and MiK\TeX.
+
+The class can be used with pdf\LaTeX, Xe\LaTeX\ and Lua\LaTeX. With Xe\LaTeX\ and Lua\LaTeX\ you may want to load the \textsf{fontspec} package to choose a Unicode font.
 
 %%% END SECTION ============================================================
 
@@ -925,7 +903,7 @@ respectively. Thanks to \textbf{JPSPLeite} for improving the Portuguese translat
 Tsolomitis} for his suggestions into the 2020.01.06 package release. Thanks to \textbf{
 Davide Peressoni} for the biber support into the 2020.10.26 package release. Thanks to 
 \textbf{Nuno Fachada} for his help with the Portuguese translation into the 2021.02.05 package release. Thanks to \textbf{Pancho Horrillo} for his fix $\#25$ into the 2021.05.09 package release. Thanks to \textbf{Alecu Ștefan-Iulian} for his fix $\#26$ and $\#27$, into the 2022.03.13 package 
-release. Thanks to \textbf{Scott Kostyshak} for his fix $\#29$ and $\#30$, into the 2022.06.17 package release. Thanks to \textbf{Michal Vlasak} for his fix $\#31$ into the 2022.08.03 package release. Thanks to \textbf{kaneraZh} for his fix $\#36$ into the 2024.02.01 package release. Thanks to \textbf{matteofg} for his fix $\#29$, $\#29$ and $\#38$  into the 2025.05.13 package release
+release. Thanks to \textbf{Scott Kostyshak} for his fix $\#29$ and $\#30$, into the 2022.06.17 package release. Thanks to \textbf{Michal Vlasak} for his fix $\#31$ into the 2022.08.03 package release. Thanks to \textbf{kaneraZh} for his fix $\#36$ into the 2024.02.01 package release. Thanks to \textbf{Matteo Ferrigato} for his fix $\#38$ into the 2025.05.14 package release.
 
 %%% END SECTION ============================================================
 
@@ -939,7 +917,7 @@ I was not involved in any way in the development of the Europass~CV, as I was no
 
 I am not a \TeX pert or a typographer, so I may have introduced typographical mistakes myself, and the class may contain bugs. Please let me know of anything wrong, but use at your own risk.
 
-The flags have been downloaded from \url{http://europa.eu.int/abc/symbols/emblem/index_en.htm}. The vector image of the logo (in \texttt{eps} and~\texttt{pdf} format) is an unofficial version that was kindly provided by Jo\~ao Ventura. As far as I can understand, distributing those files within this class does not violate any license or copyright.
+The flags have been downloaded from the website of the European Union (see \url{https://european-union.europa.eu/principles-countries-history/symbols/european-flag_en}). The vector image of the logo (in \texttt{eps} and~\texttt{pdf} format) is an unofficial version that was kindly provided by Jo\~ao Ventura. As far as I can understand, distributing those files within this class does not violate any license or copyright.
 
 %%% END SECTION ============================================================
 
@@ -949,7 +927,9 @@ The flags have been downloaded from \url{http://europa.eu.int/abc/symbols/emblem
 \textbf{\large{9\hspace{0.5cm}License}}
 \vspace{0.5cm}
 
-All files in this package may be distributed under the terms of the \LaTeX\ Project Public License. See \url{https://www.latex-project.org/lppl/} for the details of that license.
+This work may be distributed and/or modified under the conditions of the \LaTeX\ Project Public License, either version~1.3c of this license or (at your option) any later version. The latest version of this license is in \url{https://www.latex-project.org/lppl.txt} and version~1.3c or later is part of all distributions of \LaTeX\ version 2008 or later.
+
+This work has the LPPL maintenance status ``maintained''. The Current Maintainer of this work is Giuseppe Silano. Bug reports and contributions are welcome on \url{https://github.com/gsilano/EuropeCV}.
 
 %%% END SECTION ============================================================
 
@@ -961,7 +941,7 @@ All files in this package may be distributed under the terms of the \LaTeX\ Proj
 \textbf{\large{10\hspace{0.5cm}\setword{Language self-assessment}{sec:selfassess}}}
 \vspace{0.5cm}
 
-The following is a short description of the different levels of language assessment as defined by the \emph{Common European Framework of Reference for Languages}. See \url{http://www.coe.int/T/E/Cultural_Co-operation/education/Languages/Language_Policy/Common_Framework_of_Reference/} for more details.
+The following is a short description of the different levels of language assessment as defined by the \emph{Common European Framework of Reference for Languages}. See \url{https://www.coe.int/en/web/common-european-framework-reference-languages} for more details.
 
 \subsection*{Understanding}
 \subsubsection*{Listening}

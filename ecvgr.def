@@ -4,7 +4,7 @@
 % [english,greek] (at least) for \foreignlanguage
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvgr.def}[europecv Greek definitions]
+\ProvidesFile{ecvgr.def}[2026/10/14 europecv Greek definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{\foreignlanguage{greek}{Προσωπικές πληροφορίες}}}
 \def\ecv@datekey{\ecv@utf{\foreignlanguage{greek}{Επώνυμο (-α)~/ Όνομα (-τα)}}}

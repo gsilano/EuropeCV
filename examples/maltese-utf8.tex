@@ -1,11 +1,12 @@
+%!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 %
-% Example of Maltese input (not tested)
+% Example of Maltese input (compile with XeLaTeX or LuaLaTeX)
 %
-\documentclass[a4paper,maltese,utf8,helvetica,narrow]{europecv}
-\usepackage[T4]{fontenc}
-\usepackage[maltese]{babel}
-\usepackage{graphicx}
+\documentclass[a4paper,maltese]{europecv}
+\usepackage{fontspec} % Latin Modern by default: it provides all Maltese letters
+\usepackage{babel}
+\babelprovide[import,main]{maltese}
 
 \ecvlastname{Kunjom(ijiet)}
 \ecvfirstname{Isem}

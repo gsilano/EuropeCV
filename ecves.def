@@ -1,7 +1,7 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/02/2024
-\ProvidesFile{ecves.def}[2026/10/14 europecv Spanish definitions]
+\ProvidesFile{ecves.def}[2026/10/19 europecv Spanish definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informaci\'on personal}}
 \def\ecv@datekey{\ecv@utf{Actualizado el\\}}
@@ -39,6 +39,9 @@
 \def\ecv@cefbasickey{\ecv@utf{Usuario b\'asico}}
 \def\ecv@cefindepkey{\ecv@utf{Usuario independiente}}
 \def\ecv@cefprofkey{\ecv@utf{Usuario competente}}
+% Used by the europecv2020 class
+\def\ecv@otherlangkey{\ecv@utf{Otro(s) idioma(s)}}
+\def\ecv@levelskey{\ecv@utf{Niveles}}
 
 \renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}

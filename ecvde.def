@@ -1,7 +1,7 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvde.def}[2026/10/14 europecv German definitions]
+\ProvidesFile{ecvde.def}[2026/10/19 europecv German definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Angaben zur Person}}
 \def\ecv@datekey{\ecv@utf{Aktualisiert am}}
@@ -39,6 +39,9 @@
 \def\ecv@cefbasickey{\ecv@utf{Elementare Sprachverwendung}}
 \def\ecv@cefindepkey{\ecv@utf{Selbst\"andige Sprachverwendung}}
 \def\ecv@cefprofkey{\ecv@utf{Kompetente Sprachverwendung}}
+% Used by the europecv2020 class
+\def\ecv@otherlangkey{\ecv@utf{Weitere Sprache(n)}}
+\def\ecv@levelskey{\ecv@utf{Niveaus}}
 
 \renewcommand*{\ecvbranding}{\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}\\[5pt]}}

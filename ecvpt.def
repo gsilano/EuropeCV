@@ -1,7 +1,7 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 04/02/2021
-\ProvidesFile{ecvpt.def}[2026/10/14 europecv Portuguese definitions]
+\ProvidesFile{ecvpt.def}[2026/10/19 europecv Portuguese definitions]
 % Personal information
 \def\ecv@infosectionkey{\ecv@utf{Informa\c{c}\~ao pessoal}}
 \def\ecv@datekey{\ecv@utf{Atualizado a}}
@@ -39,6 +39,9 @@
 \def\ecv@cefbasickey{\ecv@utf{Utilizador elementar}}
 \def\ecv@cefindepkey{\ecv@utf{Utilizador independente}}
 \def\ecv@cefprofkey{\ecv@utf{Utilizador experiente}}
+% Used by the europecv2020 class
+\def\ecv@otherlangkey{\ecv@utf{Outra(s) l\'{\i}ngua(s)}}
+\def\ecv@levelskey{\ecv@utf{N\'{\i}veis}}
 
 \renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}
 \renewcommand*{\ecvtitle}{\ecv@utf{\Large\textbf{C\ecv@kern u\ecv@kern r\ecv@kern r\ecv@kern i\ecv@kern c\ecv@kern u\ecv@kern l\ecv@kern u\ecv@kern m \ecv@kern v\ecv@kern i\ecv@kern t\ecv@kern a\ecv@kern e}}\ecvbranding}

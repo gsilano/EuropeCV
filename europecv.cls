@@ -1,4 +1,4 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %%
 %% europecv.cls -- An unofficial LaTeX class for European curricula vitae
 %%
@@ -16,181 +16,24 @@
 %% This work has the LPPL maintenance status `maintained'.
 %% The Current Maintainer of this work is Giuseppe Silano.
 %%
-%% This work consists of the files europecv.cls, ecv*.def and
-%% europecv.tex, together with the images, examples and templates
-%% listed in the README.md file.
+%% This work consists of the files europecv.cls, europecv2020.cls,
+%% europecv-common.def, ecv*.def and europecv.tex, together with the
+%% images, examples and templates listed in the README.md file.
 %%
 %% Development: https://github.com/gsilano/EuropeCV
 %% CTAN:        https://ctan.org/pkg/europecv
 %%
 \NeedsTeXFormat{LaTeX2e}[2020/10/01]
-\ProvidesClass{europecv}[2026/10/14 v2026.10.14 European curriculum vitae class]
+\ProvidesClass{europecv}[2026/10/19 v2026.10.19 European curriculum vitae class]
 
 % Europass CV models and instructions:
 %   https://europass.europa.eu/
 % Common European Framework of Reference for Languages (CEFR):
 %   https://www.coe.int/en/web/common-european-framework-reference-languages
 
-% Wrapper used by the language definition files (ecv*.def), which are
-% always UTF-8 encoded. With 8-bit engines, the text is locally read as
-% UTF-8 even when the document uses another input encoding (e.g., latin1).
-% Unicode engines (XeTeX and LuaTeX) need no special treatment.
-% The detection of Unicode engines was originally contributed by
-% David Carlisle.
-\ifx\Umathchar\@undefined
-  \def\ecv@str@utfviii{utf8}
-  \def\ecv@str@utfviiix{utf8x}
-  \newcommand\ecv@utf[1]{{%
-    \ifx\inputencodingname\@undefined\else
-      \edef\@tempa{\inputencodingname}%
-      \ifx\@tempa\ecv@str@utfviii\else
-        \ifx\@tempa\ecv@str@utfviiix\else
-          \inputencoding{utf8}%
-        \fi
-      \fi
-    \fi
-    #1}}
-\else
-  \newcommand\ecv@utf[1]{{#1}}
-\fi
-\newcommand{\ecv@upshape}[1]{\textup{#1}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Language options
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \ecv@declarelanguage{<option>}{<def file suffix>}{<language name>}
-% loads ecv<suffix>.def at the end of the class.
-\newcommand*\ecv@declarelanguage[3]{%
-  \DeclareOption{#1}{%
-    \AtEndOfClass{%
-      \InputIfFileExists{ecv#2.def}{}{%
-        \ClassWarningNoLine{europecv}%
-          {#3 definition file `ecv#2.def' not found}}%
-    }%
-  }%
-}
-
-% English is always loaded first (see \ExecuteOptions below): it provides
-% the fallback for any key that a translation does not define.
-\DeclareOption{english}{%
-  \AtEndOfClass{%
-    \InputIfFileExists{ecven.def}{}{%
-      \ClassError{europecv}{English definition file `ecven.def' not found}%
-      {The file should be inside the europecv folder.\MessageBreak
-       Try to re-install the europecv class.}}%
-  }%
-}
-\ecv@declarelanguage{italian}{it}{Italian}
-\ecv@declarelanguage{spanish}{es}{Spanish}
-\ecv@declarelanguage{french}{fr}{French}
-\ecv@declarelanguage{danish}{da}{Danish}
-\ecv@declarelanguage{german}{de}{German}
-\ecv@declarelanguage{finnish}{fi}{Finnish}
-\ecv@declarelanguage{portuges}{pt}{Portuguese}
-\ecv@declarelanguage{portuguese}{pt}{Portuguese}
-\ecv@declarelanguage{swedish}{sv}{Swedish}
-\ecv@declarelanguage{norwegian}{no}{Norwegian}
-\ecv@declarelanguage{dutch}{nl}{Dutch}
-\ecv@declarelanguage{catalan}{ca}{Catalan}
-\ecv@declarelanguage{polish}{pl}{Polish}
-\DeclareOption{hungarian}{%
-  \AtEndOfClass{%
-    \InputIfFileExists{ecvhu.def}{}{%
-      \ClassWarningNoLine{europecv}%
-        {Hungarian definition file `ecvhu.def' not found}}%
-    % Hungarian puts the page number before the word "page"
-    \ecvpage{\thepage\ifx\@empty\ecv@totpages.\else\ecv@totpages\fi~\ecv@pagekey}%
-    \def\ecv@lfoot{%
-      \footnotesize\textrm{\ecv@page~- \textrm{\ecv@footername} \ecv@cvofkey}}%
-  }%
-}
-\ecv@declarelanguage{estonian}{et}{Estonian}
-\ecv@declarelanguage{icelandic}{is}{Icelandic}
-\ecv@declarelanguage{lithuanian}{lt}{Lithuanian}
-\ecv@declarelanguage{czech}{cs}{Czech}
-\ecv@declarelanguage{slovak}{sk}{Slovak}
-\ecv@declarelanguage{latvian}{lv}{Latvian}
-\ecv@declarelanguage{slovenian}{sl}{Slovenian}
-\DeclareOption{romanian}{%
-  % Provides \cb for comma-below letters (s and t)
-  \AtEndOfClass{\RequirePackage{combelow}}%
-  \AtEndOfClass{%
-    \InputIfFileExists{ecvro.def}{}{%
-      \ClassWarningNoLine{europecv}%
-        {Romanian definition file `ecvro.def' not found}}%
-  }%
-}
-\ecv@declarelanguage{maltese}{mt}{Maltese}
-\ecv@declarelanguage{bulgarian}{bg}{Bulgarian}
-\ecv@declarelanguage{greek}{gr}{Greek}
-\ecv@declarelanguage{galician}{gl}{Galician}
-\ecv@declarelanguage{serbian}{sr}{Serbian}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Input encodings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Each option loads the inputenc package with the given encoding.
-% UTF-8 is the LaTeX default, so utf8 (and the obsolete utf8x, which is
-% mapped to utf8) is effectively a no-op with pdfLaTeX. Unicode engines
-% (XeLaTeX, LuaLaTeX) always read UTF-8 and ignore these options.
-\newcommand*\ecv@inputenc[1]{%
-  \ifx\Umathchar\@undefined
-    \AtEndOfClass{\RequirePackage[#1]{inputenc}}%
-  \else
-    \ClassWarningNoLine{europecv}{Option `#1' ignored: Unicode engines
-      always\MessageBreak read UTF-8 input}%
-  \fi
-}
-\newcommand*\ecv@declareinputenc[1]{%
-  \DeclareOption{#1}{\ecv@inputenc{#1}}%
-}
-\ecv@declareinputenc{ascii}
-\ecv@declareinputenc{latin1}
-\ecv@declareinputenc{latin2}
-\ecv@declareinputenc{latin3}
-\ecv@declareinputenc{latin4}
-\ecv@declareinputenc{latin5}
-\ecv@declareinputenc{latin9}
-\ecv@declareinputenc{latin10}
-\ecv@declareinputenc{decmulti}
-\ecv@declareinputenc{cp850}
-\ecv@declareinputenc{cp852}
-\ecv@declareinputenc{cp858}
-\ecv@declareinputenc{cp437}
-\ecv@declareinputenc{cp437de}
-\ecv@declareinputenc{cp865}
-\ecv@declareinputenc{applemac}
-\ecv@declareinputenc{next}
-\ecv@declareinputenc{cp1250}
-\ecv@declareinputenc{cp1252}
-\ecv@declareinputenc{cp1257}
-\ecv@declareinputenc{ansinew}
-\ecv@declareinputenc{utf8}
-\DeclareOption{utf8x}{\ecv@inputenc{utf8}}
-\ecv@declareinputenc{koi8-r}
-\ecv@declareinputenc{koi8-ru}
-\ecv@declareinputenc{koi8-u}
-\ecv@declareinputenc{cp1251}
-\ecv@declareinputenc{cp855}
-\ecv@declareinputenc{cp866}
-\ecv@declareinputenc{maccyr}
-\ecv@declareinputenc{macukr}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Fonts
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DeclareOption{helvetica}{%
-  \renewcommand{\rmdefault}{phv}%
-  \renewcommand{\sfdefault}{phv}%
-}
-\DeclareOption{arial}{%
-  \renewcommand{\rmdefault}{ma1}% (this font is NOT installed by default!)
-  \renewcommand{\sfdefault}{ma1}%
-}
-\DeclareOption{narrow}{%
-  \renewcommand{\seriesdefault}{c}% Narrow
-  \renewcommand{\bfdefault}{bc}%    Boldface narrow
-}
+% Code shared with the europecv2020 class: language and input encoding
+% options, cross-referencing and personal data commands
+\input{europecv-common.def}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title, branding, logo and flag
@@ -258,69 +101,6 @@
 
 \LoadClass{article}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Cross-referenced numbered entries (publications, projects, awards...)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \ecv@settarget{<key>}{<text>} typesets <text>, makes it the target of
-% a hyperlink named <key>, and records <text> in the .aux file so that
-% \ecv@reflink{<key>} can print it (as a link) anywhere in the document.
-% The recorded text is stored in \ecv@ref@<key>, so that any key can be
-% used without the risk of overwriting existing commands.
-\newcommand*\ecv@setref[2]{\global\@namedef{ecv@ref@#1}{#2}}
-\newcommand\ecv@settarget[2]{%
-  \hypertarget{#1}{#2}%
-  \protected@write\@auxout{}{\string\ecv@setref{#1}{#2}}%
-}
-\newcommand*\ecv@reflink[1]{%
-  \@ifundefined{ecv@ref@#1}{%
-    \textbf{??}%
-    \G@refundefinedtrue
-    \ClassWarning{europecv}{Reference `#1' on page \thepage\space
-      undefined}%
-  }{%
-    \hyperlink{#1}{\@nameuse{ecv@ref@#1}}%
-  }%
-}
-% \myhyperlink is kept for backward compatibility with older versions of
-% the class (it is defined at \begin{document} with \providecommand, so a
-% user definition made in the preamble takes precedence)
-\AddToHook{begindocument/before}{\providecommand*\myhyperlink[1]{\ecv@reflink{#1}}}
-
-% \ecvNewReferenceType{<Name>}{<prefix>} defines the counter <Name> and
-% the commands \ecvdisplay<Name>[<key>] and \ecvref<Name>[<key>].
-% \ecvdisplay<Name> steps the counter and prints [<prefix><number>];
-% \ecvref<Name> prints a link to the entry labelled <key>.
-\newcommand*\ecvNewReferenceType[2]{%
-  \newcounter{#1}%
-  \expandafter\newcommand\csname ecvdisplay#1\endcsname[1][]{%
-    \stepcounter{#1}%
-    \ecv@settarget{##1}{[#2\csname the#1\endcsname]}%
-  }%
-  \expandafter\newcommand\csname ecvref#1\endcsname[1][]{%
-    \ecv@reflink{##1}%
-  }%
-}
-\@onlypreamble\ecvNewReferenceType
-
-\ecvNewReferenceType{ConferencePublications}{C}
-\ecvNewReferenceType{BookChapterPublications}{BC}
-\ecvNewReferenceType{ReferredJournalsPublications}{J}
-\ecvNewReferenceType{Workshops}{W}
-\ecvNewReferenceType{Posters}{P}
-\ecvNewReferenceType{ResearchProjects}{RP}
-\ecvNewReferenceType{Awards}{A}
-% Old name, kept for backward compatibility
-\let\ecvrefWorkshopsPublications\ecvrefWorkshops
-
-% Footnote-like references are typeset as a superscript number
-\newcounter{FootNoteCounter}
-\newcommand{\ecvdisplayFootNoteCounter}[1][]{%
-  \stepcounter{FootNoteCounter}%
-  \ecv@settarget{#1}{\textsuperscript{\theFootNoteCounter}}%
-}
-\newcommand{\ecvrefFootNoteCounter}[1][]{%
-  \ecv@reflink{#1}%
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Required packages and page layout
@@ -335,8 +115,8 @@
 
 % Page number
 \def\ecv@lfoot{%
-  \footnotesize\textrm{\ecv@page~-~\ecv@cvofkey}\\
-  \textrm{\ecv@footername}
+  \footnotesize\textup{\ecv@page~-~\ecv@cvofkey}\\
+  \textup{\ecv@footername}
 }
 
 % Right Footnote to be shown on every page
@@ -366,104 +146,19 @@
   \renewcommand{\headrulewidth}{0pt}%
 } % End \AddToHook{begindocument/before}
 
-% Make sure that the .aux file can still be read if the class is
-% changed after a compilation
-\AddToHook{begindocument}{%
-  \if@filesw
-    \immediate\write\@mainaux{\string\providecommand\string\ecv@setref[2]{}}%
-  \fi
-}
 
 % Thanks to Roman Bertle for suggesting the following:
 \renewcommand{\labelitemi}{\normalfont\bfseries \textendash}
 \renewcommand{\labelitemii}{\textasteriskcentered}
 \renewcommand{\labelitemiii}{\textperiodcentered}
 
-\newcommand*{\ecvfirstname}[1]{\def\ecv@firstname{#1}} % Deprecated
-\newcommand*{\ecvlastname}[1]{\def\ecv@lastname{#1}} % Deprecated
-\newcommand*{\ecvname}[1]{\def\ecv@name{#1}} % Replaces the above
-\newcommand*{\ecvfootername}[1]{\def\ecv@footername{#1}}
-% \ecvaddress[mobileAddress][officeAddress]{homeAddress}
-\def\ecvaddress{%
-   \@ifnextchar[%
-     {\ecvaddress@i}
-     {\ecvaddress@i[]}%
-}
-\def\ecvaddress@i[#1]{%
-   \@ifnextchar[%
-     {\ecvaddress@ii{#1}}
-     {\ecvaddress@ii{#1}[]}%
-}
-\def\ecvaddress@ii#1[#2]#3{%
- \def\ecv@mobileAddress{#1}
- \def\ecv@officeAddress{#2}
- \def\ecv@address{#3}
-}
-% \ecvtelephone[mobile][office]{home}
-\def\ecvtelephone{%
-   \@ifnextchar[%
-     {\ecvtelephone@i}
-     {\ecvtelephone@i[]}%
-}
-\def\ecvtelephone@i[#1]{%
-   \@ifnextchar[%
-     {\ecvtelephone@ii{#1}}
-     {\ecvtelephone@ii{#1}[]}%
-}
-\def\ecvtelephone@ii#1[#2]#3{%
- \def\ecv@mobile{#1}
- \def\ecv@office{#2}
- \def\ecv@telephone{#3}
-}
-\newcommand*{\ecvfax}[1]{\def\ecv@fax{#1}}
-\newcommand*{\ecvdate}[1]{\def\ecv@date{#1}}
-\newcommand*{\ecvemail}[1]{\def\ecv@email{#1}}
-\newcommand*{\ecvprofessional}[1]{\def\ecv@professional{#1}}
-\newcommand*{\ecvskype}[1]{\def\ecv@skype{#1}}
-\newcommand*{\ecvmatrixriot}[1]{\def\ecv@matrixriot{#1}}
-\newcommand*{\ecvyoutube}[1]{\def\ecv@youtube{#1}}
-\newcommand*{\ecvpec}[1]{\def\ecv@pec{#1}}
-\newcommand*{\ecvhomepage}[1]{\def\ecv@homepage{#1}}
-\newcommand*{\ecvnationality}[1]{\def\ecv@nationality{#1}}
-\newcommand*{\ecvdateofbirth}[1]{\def\ecv@birth{#1}}
-\newcommand*{\ecvgender}[1]{\def\ecv@gender{#1}}
-% Personal picture
-\newcommand*{\ecvdrawpicture}{}
-\newcommand*{\ecvbeforepicture}[1]{\def\ecv@beforepic{#1}}
-\newcommand*{\ecvafterpicture}[1]{\def\ecv@afterpic{#1}}
-\newcommand*\ecvpicture{%
-\@ifnextchar[\ecv@picture{\ecv@picture[]}}
-\def\ecv@picture[#1]#2{%
-\def\ecvarg{#2}
-\ifx\@empty\ecvarg\renewcommand*{\ecvdrawpicture}{}\else
-\renewcommand*{\ecvdrawpicture}{\includegraphics[#1]{#2}}
-\fi}
-% The following must be used inside \ecvbeforepicture
-% or \ecvafterpicture
-\newcommand*{\ecvspace}[1]{\tabularnewline[#1] &}
-\ecvbeforepicture{\raggedleft}
-\ecvdate{}
-\ecvafterpicture{}
-\ecvfirstname{}
-\ecvlastname{}
-\ecvname{\ecv@lastname\ \ecv@firstname}
-\ecvfootername{\ecv@name}
-\ecvaddress{}
-\ecvskype{}
-\ecvmatrixriot{}
-\ecvyoutube{}
-\ecvprofessional{}
-\ecvtelephone{}
-\ecvfax{}
-\ecvemail{}
-\ecvpec{}
-\ecvnationality{}
-\ecvdateofbirth{}
-\ecvgender{}
-\ecvhomepage{}
-\ecvpicture{}
 
-
+% Footer of the hungarian option (see europecv-common.def)
+\def\ecv@hungarianfooter{%
+  \ecvpage{\thepage\ifx\@empty\ecv@totpages.\else\ecv@totpages\fi~\ecv@pagekey}%
+  \def\ecv@lfoot{%
+    \footnotesize\textup{\ecv@page~- \textup{\ecv@footername} \ecv@cvofkey}}%
+}
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
 {\ifx\@empty\ecv@date\else
 	\vspace{1em}\large\par\textbf{\ecv@datekey \ecv@date}
@@ -629,7 +324,13 @@
             \addtolength{\ecv@rightcolwidth}{-\ecv@rulewidth}}
 \newcommand*{\ecvExtraRowHeight}[1]{\setlength\ecv@extrarowheight{#1}}
 \newcommand*{\ecvNoHorRule}{\def\ecv@hrule{}}
-\newcommand*{\ecvWithHorRule}{\def\ecv@hrule{\cline{1-1}}}
+% The rule spanning the first column at the beginning of the environment.
+% It works like \cline{1-1}, but a page break after it is not allowed:
+% otherwise the rule could be left alone at the bottom of a page (#39).
+\newcommand*{\ecv@hrulerow}{%
+  \omit\leaders\hrule\@height\arrayrulewidth\hfill\cr
+  \noalign{\nobreak\vskip-\arrayrulewidth}}
+\newcommand*{\ecvWithHorRule}{\def\ecv@hrule{\ecv@hrulerow}}
 % Initialization
 \ecvRuleWidth{\arrayrulewidth}
 \setlength\ecv@colsep{12pt}

@@ -1,0 +1,80 @@
+% Modello di curriculum vitae nel formato Europass introdotto nel 2020,
+% composto con la classe europecv2020. Compilare con pdfLaTeX, XeLaTeX o
+% LuaLaTeX (due volte, per ottenere il numero totale di pagine corretto).
+\documentclass[italian,a4paper,10pt]{europecv2020}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.92]{helvet} % Helvetica, simile all'Arial del CV Europass
+\usepackage[italian]{babel}
+
+% Dati personali: i campi vuoti o omessi non vengono stampati
+\ecvname{Nome Cognome}
+\ecvdateofbirth{01/01/1990}
+\ecvnationality{Italiana}
+\ecvgender{Maschile}
+\ecvtelephone[(+39) 333 1234567]{(+39) 02 1234567} % [cellulare] {casa}
+\ecvemail{\href{mailto:nome.cognome@email.com}{nome.cognome@email.com}}
+\ecvhomepage{\url{https://www.homepage.com}}
+\ecvcontact{LinkedIn}{\href{https://www.linkedin.com/in/nomecognome}{nomecognome}}
+\ecvaddress{Via Roma 1, 20100 Milano (Italia)}
+\ecvpicture{europecv_photo}
+% \ecvdate{\today}  % data dell'ultimo aggiornamento
+\ecvfootnote{Autorizzo il trattamento dei dati personali contenuti nel mio
+  curriculum vitae ai sensi dell'art.~13 del Regolamento (UE) 2016/679 (GDPR).}
+
+\begin{document}
+
+\ecvpersonalinfo
+
+\section{Su di me}
+Breve presentazione: descrivere in poche righe chi si è, i principali
+interessi e gli obiettivi professionali.
+
+\section{Esperienza lavorativa}
+
+\ecventry{01/09/2020 -- Attuale}{Milano, Italia}
+  {Ricercatore}{\href{https://www.azienda.it}{Nome Azienda S.p.A.}}
+\begin{itemize}
+  \item Principali attività e responsabilità.
+  \item Altra attività, possibilmente con risultati misurabili.
+\end{itemize}
+
+\ecventry{01/01/2018 -- 31/08/2020}{Praga, Repubblica Ceca}
+  {Assegnista di ricerca}{Nome Università}
+Descrizione delle principali attività e responsabilità.
+
+\section{Istruzione e formazione}
+
+\ecventry{01/11/2014 -- 31/12/2017}{Roma, Italia}
+  {Dottorato di ricerca in Ingegneria}{Nome Università}
+Tesi: \emph{Titolo della tesi}. Livello EQF~8.
+
+\ecventry{01/09/2012 -- 31/10/2014}{Roma, Italia}
+  {Laurea magistrale in Ingegneria}{Nome Università}
+Voto finale: 110/110 e lode. Livello EQF~7.
+
+\section{Competenze linguistiche}
+
+\ecvmothertongue{Italiano}
+\ecvlanguageheader{}
+\ecvlanguage{Inglese}{\ecvCOne}{\ecvCOne}{\ecvBTwo}{\ecvBTwo}{\ecvCOne}
+\ecvlanguage{Spagnolo}{\ecvBOne}{\ecvBTwo}{\ecvAOne}{\ecvATwo}{\ecvAOne}
+\ecvlanguagefooter{}
+
+\section{Competenze digitali}
+\LaTeX\ \textbar{} C/C++ \textbar{} Python \textbar{} MATLAB/Simulink \textbar{} ROS \textbar{} Git
+
+\section{Progetti}
+
+\ecventry{2021 -- 2024}{}{Nome del progetto}{Finanziato dall'Unione europea -- Horizon Europe}
+Ruolo nel progetto e principali risultati.
+
+\section{Pubblicazioni}
+\ecvitem{\ecvdisplayReferredJournalsPublications[jour1]}{Nome Cognome, Coautore.
+  ``Titolo dell'articolo''. \emph{Nome della rivista}, vol.~1, no.~1, pp.~1--10, 2024.}
+\ecvitem{\ecvdisplayConferencePublications[conf1]}{Nome Cognome, Coautore.
+  ``Titolo dell'articolo''. In \emph{Nome della conferenza}, pp.~1--6, 2023.}
+
+\section{Patente di guida}
+Patente di guida: B
+
+\end{document}

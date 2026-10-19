@@ -1,7 +1,7 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %
 % Translation completed on 01/03/2020
-\ProvidesFile{ecvfr.def}[2026/10/14 europecv French definitions]
+\ProvidesFile{ecvfr.def}[2026/10/19 europecv French definitions]
 % Informations personnelles
 \def\ecv@infosectionkey{\ecv@utf{Informations personnelles}}
 \def\ecv@datekey{\ecv@utf{Mis à jour le }}
@@ -39,6 +39,9 @@
 \def\ecv@cefbasickey{\ecv@utf{Utilisateur \'el\'ementaire}}
 \def\ecv@cefindepkey{\ecv@utf{Utilisateur Ind\'ependant}}
 \def\ecv@cefprofkey{\ecv@utf{Utilisateur exp\'eriment\'e}}
+% Used by the europecv2020 class
+\def\ecv@otherlangkey{\ecv@utf{Autre(s) langue(s)}}
+\def\ecv@levelskey{\ecv@utf{Niveaux}}
 
 \renewcommand*{\ecvbranding}{\\[5pt]\ecv@utf{\Large\textbf{E\ecv@kern u\ecv@kern
 r\ecv@kern o\ecv@kern p\ecv@kern a\ecv@kern s\ecv@kern s}}}

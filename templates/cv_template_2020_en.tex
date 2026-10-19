@@ -1,0 +1,80 @@
+% Template for a curriculum vitae in the Europass format introduced in 2020,
+% typeset with the europecv2020 class. Compile with pdfLaTeX, XeLaTeX or
+% LuaLaTeX (twice, to get the total number of pages right).
+\documentclass[english,a4paper,10pt]{europecv2020}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.92]{helvet} % Helvetica, close to the Arial of the Europass CV
+\usepackage[english]{babel}
+
+% Personal data: empty or omitted fields are not printed
+\ecvname{Name Surname}
+\ecvdateofbirth{01/01/1990}
+\ecvnationality{Italian}
+\ecvgender{Male}
+\ecvtelephone[(+39) 333 1234567]{(+39) 02 1234567} % [mobile] {home}
+\ecvemail{\href{mailto:name.surname@email.com}{name.surname@email.com}}
+\ecvhomepage{\url{https://www.homepage.com}}
+\ecvcontact{LinkedIn}{\href{https://www.linkedin.com/in/namesurname}{namesurname}}
+\ecvaddress{Street 1, 20100 Milan (Italy)}
+\ecvpicture{europecv_photo}
+% \ecvdate{\today}  % date of the last update
+\ecvfootnote{I authorise the processing of personal data contained in my
+  curriculum vitae based on Art.~6 of the Regulation (EU) 2016/679 (GDPR).}
+
+\begin{document}
+
+\ecvpersonalinfo
+
+\section{About me}
+Short presentation: describe who you are, your main interests and your
+career objectives in a few lines.
+
+\section{Work experience}
+
+\ecventry{01/09/2020 -- Current}{Milan, Italy}
+  {Research Engineer}{\href{https://www.company.com}{Company Name S.p.A.}}
+\begin{itemize}
+  \item Main activities and responsibilities.
+  \item Another activity, possibly with measurable results.
+\end{itemize}
+
+\ecventry{01/01/2018 -- 31/08/2020}{Prague, Czech Republic}
+  {Postdoctoral Researcher}{University Name}
+Description of the main activities and responsibilities.
+
+\section{Education and training}
+
+\ecventry{01/11/2014 -- 31/12/2017}{Rome, Italy}
+  {Ph.D. in Engineering}{University Name}
+Thesis: \emph{Title of the thesis}. EQF level~8.
+
+\ecventry{01/09/2012 -- 31/10/2014}{Rome, Italy}
+  {Master's degree in Engineering}{University Name}
+Final grade: 110/110 cum laude. EQF level~7.
+
+\section{Language skills}
+
+\ecvmothertongue{Italian}
+\ecvlanguageheader{}
+\ecvlanguage{English}{\ecvCOne}{\ecvCOne}{\ecvBTwo}{\ecvBTwo}{\ecvCOne}
+\ecvlanguage{Spanish}{\ecvBOne}{\ecvBTwo}{\ecvAOne}{\ecvATwo}{\ecvAOne}
+\ecvlanguagefooter{}
+
+\section{Digital skills}
+\LaTeX\ \textbar{} C/C++ \textbar{} Python \textbar{} MATLAB/Simulink \textbar{} ROS \textbar{} Git
+
+\section{Projects}
+
+\ecventry{2021 -- 2024}{}{Project Name}{Funded by the European Union -- Horizon Europe}
+Role in the project and main results.
+
+\section{Publications}
+\ecvitem{\ecvdisplayReferredJournalsPublications[jour1]}{Name Surname, Coauthor.
+  ``Title of the paper''. \emph{Journal Name}, vol.~1, no.~1, pp.~1--10, 2024.}
+\ecvitem{\ecvdisplayConferencePublications[conf1]}{Name Surname, Coauthor.
+  ``Title of the paper''. In \emph{Conference Name}, pp.~1--6, 2023.}
+
+\section{Driving licence}
+Driving licence: B
+
+\end{document}

@@ -5,13 +5,20 @@
 
 # europecv – An unofficial LaTeX class for European curricula vitae
 
-Version 2026.10.14 (2026-10-14)
+Version 2026.10.19 (2026-10-19)
 
 `europecv` is an unofficial LaTeX implementation of the standard model for
 curricula vitae (the *Europass CV*) as recommended by the European Commission.
 Although primarily intended for users in the European Union, the class can be
 used for any kind of curriculum vitae (possibly with the options `notitle`,
 `nobranding` and `nologo`).
+
+The package also contains the `europecv2020` class, which implements the
+single-column layout of the CVs created with the Europass online editor since
+2020 (header with picture and personal data, section titles followed by a
+rule, entries with dates, title and organisation, language self-assessment
+grid). It shares most commands with `europecv`, so an existing CV can usually
+be converted by just changing the name of the class.
 
 The class supports 27 languages (Bulgarian, Catalan, Czech, Danish, Dutch,
 English, Estonian, Finnish, French, Galician, German, Greek, Hungarian,
@@ -40,6 +47,22 @@ A minimal curriculum vitae:
 \end{document}
 ```
 
+With the 2020 layout:
+
+```latex
+\documentclass[english,a4paper]{europecv2020}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.92]{helvet}
+\ecvname{Name Surname}
+\ecvemail{name.surname@email.com}
+\begin{document}
+\ecvpersonalinfo
+\section{Work experience}
+\ecventry{01/09/2020 -- Current}{Milan, Italy}{Engineer}{Company}
+Description of the activities.
+\end{document}
+```
+
 The full documentation is in `europecv.pdf`. Ready-to-use templates are in the
 `templates` folder and further examples in the `examples` folder.
 
@@ -47,13 +70,15 @@ The full documentation is in `europecv.pdf`. Ready-to-use templates are in the
 
 | File(s)                         | Description                                          |
 |---------------------------------|------------------------------------------------------|
-| `europecv.cls`                  | The document class                                   |
+| `europecv.cls`                  | The document class (original Europass layout)        |
+| `europecv2020.cls`              | The document class for the 2020 Europass layout      |
+| `europecv-common.def`           | Code shared by the two classes                       |
 | `ecv*.def`                      | Language definition files (`ecven.def` is English, `ecvit.def` Italian, ...) |
 | `europasslogo.{eps,pdf}`        | Europass logo (unofficial vector version)            |
 | `EuropeFlag*.{eps,pdf}`         | Flags of the European Union                          |
 | `europecv.tex`, `europecv.pdf`  | Documentation (source and PDF)                       |
 | `examples/`                     | Examples (minimal CV, Bulgarian, Greek, Maltese, ...) |
-| `templates/`                    | Templates (standard, academic, and with biblatex/biber) |
+| `templates/`                    | Templates (standard, academic, with biblatex/biber, and 2020 layout in English and Italian) |
 | `CHANGELOG.rst`                 | History of changes                                   |
 | `CONTRIBUTING.md`               | How to contribute                                    |
 | `LICENSE`                       | The LaTeX Project Public License, version 1.3c       |
@@ -63,7 +88,8 @@ The full documentation is in `europecv.pdf`. Ready-to-use templates are in the
 `europecv` is part of TeX Live and MiKTeX: use the package manager of your TeX
 distribution to install or update it.
 
-To install it manually, copy `europecv.cls`, the `ecv*.def` files, and the
+To install it manually, copy `europecv.cls`, `europecv2020.cls`, the
+`europecv-common.def` and `ecv*.def` files, and the
 logo and flag images (`europasslogo.*` and `EuropeFlag*.*`) into a directory
 searched by TeX, e.g. `TEXMFHOME/tex/latex/europecv/`, and the documentation
 into `TEXMFHOME/doc/latex/europecv/`. Alternatively, simply put these files in
@@ -131,7 +157,7 @@ The GitHub workflows in `.github/workflows` run automatically:
 - `build.yml` compiles the documentation, the examples, the templates and all
   the language options on every push and pull request;
 - `ctan.yml` builds and checks the CTAN archive (including CTAN's `pkgcheck`);
-  pushing a tag named after the version (e.g. `v2026.10.14`) also creates a
+  pushing a tag named after the version (e.g. `2026.10.19`) also creates a
   GitHub release with `europecv.zip` attached, ready for the CTAN upload;
 - `links.yml` looks for dead links in the documentation once a month;
 - `stale.yml` and `welcome.yml` manage stale issues and greet new contributors.

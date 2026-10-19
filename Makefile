@@ -15,7 +15,7 @@
 PKG      = europecv
 LATEX    = pdflatex -interaction=nonstopmode -halt-on-error
 EXAMPLES = minimal europass-cv bulgarian-utf8 bulgarian-koi8-r greek-utf8
-TEMPLATES = cv_template_en cv_template_academic_en
+TEMPLATES = cv_template_en cv_template_academic_en cv_template_2020_en cv_template_2020_it
 
 .PHONY: all doc examples templates check ctan ctancheck clean
 
@@ -44,6 +44,9 @@ check: doc examples templates
 	sh tests/languages.sh pdflatex
 	sh tests/languages.sh xelatex
 	sh tests/languages.sh lualatex
+	sh tests/languages.sh pdflatex europecv2020
+	sh tests/languages.sh xelatex europecv2020
+	sh tests/languages.sh lualatex europecv2020
 
 ctan:
 	rm -rf build

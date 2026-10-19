@@ -56,7 +56,7 @@
     Faculty of Electrical Engineering\\
     Czech Technical University in Prague, Czech Republic\\
 }
-\date{Version 2026.10.14 -- October 14, 2026}
+\date{Version 2026.10.19 -- October 19, 2026}
 
 
 \begin{document}
@@ -72,7 +72,9 @@
 \label{ABSTRACT}
 \begin{abstract}
 
-As of 11 March 2002 the European Commission has defined a common format for curricula vit\ae. This class is an unofficial \LaTeX\ implementation of that format. Although primarily intended for users in the European Union, the class can be used for any kind of curriculum vit\ae.
+As of 11 March 2002 the European Commission has defined a common format for curricula vit\ae. The \textsf{europecv} class is an unofficial \LaTeX\ implementation of that format. Although primarily intended for users in the European Union, the class can be used for any kind of curriculum vit\ae.
+
+Since 2020, the CVs created with the Europass online editor use a new, single-column layout. The \textsf{europecv2020} class, included in the package and described in Section~5, is an unofficial implementation of this layout that shares most of its commands with \textsf{europecv}.
 
 To simplify the package distribution and its improvements, a GitHub repository has been opened.
 Such repository is available at the link \url{https://github.com/gsilano/EuropeCV}. Please, feel
@@ -835,19 +837,100 @@ A complete example can be found in the \texttt{cv\_template\_academic\_en} templ
 %%% START SECTION ==========================================================
 
 \vspace{0.5cm}
-\textbf{\large{5\hspace{0.5cm}\setword{Dependencies}{sec:dependencies}}}
+\textbf{\large{5\hspace{0.5cm}\setword{The 2020 Europass layout: the \textsf{europecv2020} class}{sec:europecv2020}}}
 \vspace{0.25cm}
 
-The \textsf{europecv} class is built upon the \textsf{article} class, so you can use all standard \textsf{article} options, such as \verb|12pt|, \verb|draft|, \verb|a4paper|, and so on. It requires a \LaTeX\ kernel released on 2020/10/01 or later, and it loads the \textsf{array}, \textsf{longtable}, \textsf{fancyhdr}, \textsf{etoolbox}, \textsf{graphicx} and~\textsf{hyperref} packages. Depending on the class options, it also loads \textsf{inputenc} (input encoding options), \textsf{totpages} (\texttt{totpages}), \textsf{booktabs} (\texttt{booktabs}) and \textsf{combelow} (\texttt{romanian}). All of them are part of any decent \TeX\ distribution, such as \TeX~Live and MiK\TeX.
+The CVs created with the Europass online editor\footnote{\url{https://europass.europa.eu/}.} since 2020 no longer use the two-column layout of the original model implemented by \textsf{europecv}. They have a header with the picture, the name and the personal data, the titles of the sections followed by a horizontal rule, entries made of dates, title and organisation, and a grid for the self-assessment of the language skills. The \textsf{europecv2020} class, included in the \textsf{europecv} package, is an unofficial implementation of this layout. The figure below shows the first page of the \texttt{cv\_template\_2020\_en} template, which can be found, together with its Italian version \texttt{cv\_template\_2020\_it}, in the \textsf{templates} folder.
 
-The class can be used with pdf\LaTeX, Xe\LaTeX\ and Lua\LaTeX. With Xe\LaTeX\ and Lua\LaTeX\ you may want to load the \textsf{fontspec} package to choose a Unicode font.
+\begin{center}
+	\fbox{\includegraphics[page=1,width=.62\textwidth]{templates/cv_template_2020_en.pdf}}
+\end{center}
+
+A minimal curriculum vit\ae\ looks like this:
+\begin{quote}
+	\begin{verbatim}
+	\documentclass[english,a4paper]{europecv2020}
+	\usepackage[T1]{fontenc}
+	\usepackage[scaled=.92]{helvet}
+	\ecvname{Name Surname}
+	\ecvdateofbirth{01/01/1990}
+	\ecvemail{name.surname@email.com}
+	\ecvpicture{photo}
+	\begin{document}
+	\ecvpersonalinfo
+	\section{Work experience}
+	\ecventry{01/09/2020 -- Current}{Milan, Italy}{Engineer}{Company}
+	Description of the activities.
+	\section{Language skills}
+	\ecvmothertongue{Italian}
+	\ecvlanguageheader{}
+	\ecvlanguage{English}{C1}{C1}{B2}{B2}{C1}
+	\ecvlanguagefooter{}
+	\end{document}
+	\end{verbatim}
+\end{quote}
+
+Unlike \textsf{europecv}, no \texttt{europecv} environment is needed: the commands can be used anywhere in the document, together with normal text, lists, and so on.
+
+\begin{europecv}
+	\section{Class options}
+	\ecvitem{Languages and encodings}{The language and input encoding options are the same as for \textsf{europecv} (Section~2). The translations of the new labels ``Other language(s)'' and ``Levels'' are available in English, French, German, Italian, Portuguese and Spanish; the other languages use the English labels until a translation is added to their \texttt{.def} file (\texttt{\textbackslash ecv@otherlangkey} and \texttt{\textbackslash ecv@levelskey}).}
+	\ecvitem{\texttt{logo}, \texttt{nologo}}{Draw (the default) or omit the Europass logo in the header. \texttt{nobranding} is the same as~\texttt{nologo}.}
+	\ecvitem{\texttt{serif}}{Use the serif font of the document. By default, the sans serif font is used, as in the Europass CV: load the \textsf{helvet} package (or, with Xe\LaTeX\ and Lua\LaTeX, choose a font with \textsf{fontspec}) to get a typeface close to Arial.}
+	\ecvitem{\texttt{nogeometry}}{Do not set the page margins. By default the class sets them with the \textsf{geometry} package, unless the package is loaded by the document.}
+	\ecvitem[15pt]{Ignored options}{\texttt{notitle}, \texttt{noflag}, \texttt{flagWB}, \texttt{flagBW}, \texttt{flagCMYK}, \texttt{flagBlueCMYK}, \texttt{booktabs} and \texttt{totpages} have no meaning in this layout and are accepted only to make the conversion of existing CVs easier. Other options (\texttt{a4paper}, \texttt{10pt}, \ldots) are passed to the \textsf{article} class.}
+
+	\section{Header}
+	\ecvitem{\ecv{personalinfo}\texttt{[}\textit{vspace}\texttt{]}}{Typesets the header: the picture, the name, the personal data and the Europass logo. The personal data are set with the same commands as in \textsf{europecv} (\ecv{name}, \ecv{dateofbirth}, \ecv{nationality}, \ecv{gender}, \ecv{telephone}, \ecv{fax}, \ecv{email}, \ecv{professional}, \ecv{pec}, \ecv{homepage}, \ecv{skype}, \ecv{matrixriot}, \ecv{youtube}, \ecv{address}, \ecv{date}, see Section~3); empty or omitted fields are not printed. The optional argument is the space after the header (default \texttt{1.5em}).}
+	\ecvitem{\ecv{contact}\texttt{\{}\textit{label}\texttt{\}\{}\textit{value}\texttt{\}}}{Adds a contact not provided by the class, e.g., \ecv{contact}\texttt{\{LinkedIn\}\{\ldots\}}. It can be used several times.}
+	\ecvitem[15pt]{\ecv{picture}\texttt{[}\textit{options}\texttt{]\{}\textit{file}\texttt{\}}}{Sets the picture. Without \textit{options}, the picture is scaled to the width set by \ecv{PhotoWidth} (default \texttt{3cm}); otherwise the \textit{options} are passed to \texttt{\textbackslash includegraphics}.}
+
+	\section{Sections and entries}
+	\ecvitem{\texttt{\textbackslash section[}\textit{vspace}\texttt{]\{}\textit{title}\texttt{\}}}{Starts a new section: the title is set in capitals and followed by a rule, and it is added to the PDF bookmarks. The optional argument is the space after the title. \ecv{section} and \texttt{\textbackslash section*} are the same.}
+	\ecvitem{\texttt{\textbackslash subsection\{}\textit{title}\texttt{\}}}{Starts a subsection (a bold title), e.g., to group digital skills.}
+	\ecvitem{\ecv{entry}\texttt{\{}\textit{dates}\texttt{\}\{}\textit{place}\texttt{\}}\\\texttt{\{}\textit{title}\texttt{\}\{}\textit{organisation}\texttt{\}}}{Typesets an entry of the work experience, of the education and training, and so on: the dates and the place, the title in bold and the organisation (which can be a link made with \texttt{\textbackslash href}). Empty arguments are omitted. The description follows as normal text or lists.}
+	\ecvitem[15pt]{\ecv{item}\texttt{[}\textit{vspace}\texttt{]\{}\textit{label}\texttt{\}\{}\textit{text}\texttt{\}}}{As in \textsf{europecv}, but the layout is single-column: a short label, such as the [J1] of a publication, is set on the left of the text, a longer one above it. \ecv{item*} puts a bullet before the label. The cross-referencing commands for publications, projects and awards (\ecv{display\ldots}, \ecv{ref\ldots}, \ecv{NewReferenceType}) work as in \textsf{europecv}.}
+
+	\section{Language skills}
+	\ecvitem{\ecv{mothertongue}\texttt{\{}\textit{language}\texttt{\}}}{Typesets the mother tongue.}
+	\ecvitem{\ecv{languageheader}\texttt{\{\}}}{Typesets ``Other language(s)'' and the header of the self-assessment grid. The argument is accepted for compatibility with \textsf{europecv} and ignored.}
+	\ecvitem{\ecv{language}\texttt{\{}\textit{language}\texttt{\}\{}\textit{l1}\texttt{\}}\ldots\texttt{\{}\textit{l5}\texttt{\}}}{Typesets a row of the grid. As in \textsf{europecv}, the levels are given in the order listening, reading, spoken interaction, spoken production, writing. The levels are usually written directly (\texttt{C1}); \ecv{AOne}, \ldots, \ecv{CTwo} print the corresponding code, and \ecv{lastlanguage} is the same as~\ecv{language}.}
+	\ecvitem[15pt]{\ecv{languagefooter}\texttt{\{\}}}{Prints the legend of the levels (basic, independent and proficient user). The argument is ignored.}
+
+	\section{Footer}
+	\ecvitem[15pt]{\ecv{footnote}, \ecv{page}}{As in \textsf{europecv}: \ecv{footnote} puts a note, e.g., the authorisation to process personal data (GDPR), in the footer of every page; \ecv{page} changes the page numbering, by default ``Page 1 / 2''.}
+
+	\section{Fine tuning}
+	\ecvitem{\ecv{AccentColor}\texttt{[}\textit{model}\texttt{]\{}\textit{colour}\texttt{\}}}{Sets the colour of the titles, rules and links. The default is \ecv{AccentColor}\texttt{[HTML]\{003399\}}, the blue of the flag of the European Union; any \textsf{xcolor} model can be used, e.g., \ecv{AccentColor}\texttt{[named]\{black\}}.}
+	\ecvitem{\ecv{DateColor}\texttt{[}\textit{model}\texttt{]\{}\textit{colour}\texttt{\}}}{Sets the colour of the dates and labels (default dark grey).}
+	\ecvitem{\ecv{PhotoWidth}, \ecv{LogoWidth}}{Set the width of the picture (default \texttt{3cm}) and of the logo (default \texttt{2.3cm}).}
+	\ecvitem[15pt]{\ecv{LanguageWidth}}{Sets the width of the first column of the language grid (default \texttt{.2\textbackslash linewidth}).}
+\end{europecv}
+
+\textbf{Converting a CV from \textsf{europecv}.} In most cases, it is enough to change the name of the class in \verb|\documentclass|: the \texttt{europecv} environment is accepted (it does nothing), the commands that only make sense in the two-column layout (\ecv{LeftColumnWidth}, \ecv{RuleWidth}, \ecv{ColSep}, \ecv{beforepicture}, \ldots) are ignored, and \ecv{item} produces a single-column layout. Code that relies on the table of \textsf{europecv} (\texttt{\&}, \texttt{\textbackslash tabularnewline}, \texttt{\textbackslash hline}, as in the biber template) must be adapted. Entries written as a sequence of \ecv{item} commands can be rewritten with \ecv{entry} to get the look of the Europass CV.
+
+As for \textsf{europecv}, this class is not endorsed by the European Union: the layout is an approximation of the one produced by the Europass editor.
 
 %%% END SECTION ============================================================
 
 %%% START SECTION ==========================================================
 
 \vspace{0.5cm}
-\textbf{\large{6\hspace{0.5cm}Official Europass CV and \textsf{europecv}: the differences}}
+\textbf{\large{6\hspace{0.5cm}\setword{Dependencies}{sec:dependencies}}}
+\vspace{0.25cm}
+
+The \textsf{europecv} class is built upon the \textsf{article} class, so you can use all standard \textsf{article} options, such as \verb|12pt|, \verb|draft|, \verb|a4paper|, and so on. It requires a \LaTeX\ kernel released on 2020/10/01 or later, and it loads the \textsf{array}, \textsf{longtable}, \textsf{fancyhdr}, \textsf{etoolbox}, \textsf{graphicx} and~\textsf{hyperref} packages. Depending on the class options, it also loads \textsf{inputenc} (input encoding options), \textsf{totpages} (\texttt{totpages}), \textsf{booktabs} (\texttt{booktabs}) and \textsf{combelow} (\texttt{romanian}). All of them are part of any decent \TeX\ distribution, such as \TeX~Live and MiK\TeX.
+
+The \textsf{europecv2020} class loads the \textsf{array}, \textsf{fancyhdr}, \textsf{totpages}, \textsf{graphicx}, \textsf{xcolor}, \textsf{hyperref} and (unless the \texttt{nogeometry} option is used) \textsf{geometry} packages.
+
+Both classes can be used with pdf\LaTeX, Xe\LaTeX\ and Lua\LaTeX. With Xe\LaTeX\ and Lua\LaTeX\ you may want to load the \textsf{fontspec} package to choose a Unicode font.
+
+%%% END SECTION ============================================================
+
+%%% START SECTION ==========================================================
+
+\vspace{0.5cm}
+\textbf{\large{7\hspace{0.5cm}Official Europass CV and \textsf{europecv}: the differences}}
 \vspace{0.25cm}
 
 Unless you want to install Arial (Narrow), you will probably typeset your curriculum vit\ae\ in (condensed) Helvetica typeface if you want to adhere to the standard model.\footnote{The models generated using the form at the EU web site are typeset in Arial, not in Arial Narrow.} Differences, however, are quite small:
@@ -882,7 +965,7 @@ The \textsf{europecv} class uses standard \LaTeX\ relative font sizes, so there 
 %%% START SECTION ==========================================================
 
 \vspace{0.5cm}
-\textbf{\large{7\hspace{0.5cm}Acknowledgments}}
+\textbf{\large{8\hspace{0.5cm}Acknowledgments}}
 \vspace{0.25cm}
 
 Thanks to \textbf{Johann} for adding Norwegian language definitions, to \textbf{Thomas Clijsner}
@@ -910,7 +993,7 @@ release. Thanks to \textbf{Scott Kostyshak} for his fix $\#29$ and $\#30$, into 
 %%% START SECTION ==========================================================
 
 \vspace{0.5cm}
-\textbf{\large{8\hspace{0.5cm}Disclaimer}}
+\textbf{\large{9\hspace{0.5cm}Disclaimer}}
 \vspace{0.5cm}
 
 I was not involved in any way in the development of the Europass~CV, as I was not involved in the definition of the previous European~CV. So, if you don't like it (I don't), don't complain to me, but write to the European Commission and teach them about good style and typography. And, maybe, about~\TeX.
@@ -924,7 +1007,7 @@ The flags have been downloaded from the website of the European Union (see \url{
 %%% START SECTION ==========================================================
 
 \vspace{0.5cm}
-\textbf{\large{9\hspace{0.5cm}License}}
+\textbf{\large{10\hspace{0.5cm}License}}
 \vspace{0.5cm}
 
 This work may be distributed and/or modified under the conditions of the \LaTeX\ Project Public License, either version~1.3c of this license or (at your option) any later version. The latest version of this license is in \url{https://www.latex-project.org/lppl.txt} and version~1.3c or later is part of all distributions of \LaTeX\ version 2008 or later.
@@ -938,7 +1021,7 @@ This work has the LPPL maintenance status ``maintained''. The Current Maintainer
 \appendix
 
 \vspace{0.5cm}
-\textbf{\large{10\hspace{0.5cm}\setword{Language self-assessment}{sec:selfassess}}}
+\textbf{\large{11\hspace{0.5cm}\setword{Language self-assessment}{sec:selfassess}}}
 \vspace{0.5cm}
 
 The following is a short description of the different levels of language assessment as defined by the \emph{Common European Framework of Reference for Languages}. See \url{https://www.coe.int/en/web/common-european-framework-reference-languages} for more details.

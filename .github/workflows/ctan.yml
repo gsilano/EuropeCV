@@ -1,13 +1,13 @@
 name: CTAN package
 
 # Builds the archive to upload to CTAN and checks it against the CTAN
-# rules. When a tag such as v2026.10.14 is pushed, the archive is also
+# rules. When a tag such as 2026.10.19 is pushed, the archive is also
 # attached to a GitHub release, ready for https://ctan.org/upload.
 
 on:
   push:
     branches: ['**']
-    tags: ['v*']
+    tags: ['[0-9]*', 'v*']
   pull_request:
   workflow_dispatch:
 
@@ -29,7 +29,7 @@ jobs:
 
       - name: Check version information
         env:
-          TAG: ${{ startsWith(github.ref, 'refs/tags/v') && github.ref_name || '' }}
+          TAG: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || '' }}
         run: sh tests/version.sh $TAG
 
       - name: Create the CTAN archive
@@ -50,7 +50,7 @@ jobs:
 
   release:
     needs: package
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     permissions:
       contents: write

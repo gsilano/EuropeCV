@@ -2,8 +2,13 @@
 Changelog for package europecv
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2026.10.14
+2026.10.19
 ----------
+* New class europecv2020, implementing the single-column layout of the Europass CV introduced in 2020 (#37): header with picture, name, personal data and logo, section titles followed by a rule, \ecventry for dates/place/title/organisation, language self-assessment grid, customizable colours. It accepts the commands and options of europecv, so that existing CVs can be converted by changing the name of the class
+* New templates cv_template_2020_en.tex and cv_template_2020_it.tex
+* The code shared by the two classes (language and encoding options, personal data and cross-referencing commands) has been moved to europecv-common.def
+* Translations of the new labels "Other language(s)" and "Levels" in English, French, German, Italian, Portuguese and Spanish
+* The GitHub release workflow is triggered by tags without the "v" prefix (e.g. 2026.10.19), as used in the repository
 * Fix the input encoding options (latin1, cp1250, koi8-r, ...), which failed with "Undefined control sequence \inputencoding": they now load the inputenc package. The obsolete utf8x option is now the same as utf8 (the ucs package is no longer needed)
 * Fix the dutch, slovenian and maltese options, which stopped the compilation because of typos in ecvnl.def, ecvsl.def and ecvmt.def
 * Maltese: the letters h and H with stroke now work with pdfLaTeX (they are taken from the maltese package if loaded, and drawn otherwise); updated the Maltese example for XeLaTeX/LuaLaTeX
@@ -18,7 +23,8 @@ Changelog for package europecv
 * Fix the biber template (renamed to cv_template_en_biber.tex, missing photo, configuration file not matching the bib file names)
 * Removed generated files (*-eps-converted-to.pdf) from the package; added a Makefile to build the documentation and the CTAN archive, a smoke test for all languages and a GitHub workflow
 * Updated documentation: dead links, dependencies, encodings, Maltese, typos; rewritten README for CTAN
-* Contributors: Giuseppe Silano
+* Improved French translation (#45)
+* Contributors: tytyvillus, Giuseppe Silano
 
 2025.05.14
 ----------

@@ -1,4 +1,4 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %%
 %% europecv2020.cls -- An unofficial LaTeX class for curricula vitae in
 %% the Europass format introduced in 2020

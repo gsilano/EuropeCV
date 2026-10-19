@@ -1,4 +1,4 @@
-%!TEX encoding = UTF-8 Unicode
+% !TEX encoding = UTF-8 Unicode
 %%
 %% europecv.cls -- An unofficial LaTeX class for European curricula vitae
 %%
@@ -115,8 +115,8 @@
 
 % Page number
 \def\ecv@lfoot{%
-  \footnotesize\textrm{\ecv@page~-~\ecv@cvofkey}\\
-  \textrm{\ecv@footername}
+  \footnotesize\textup{\ecv@page~-~\ecv@cvofkey}\\
+  \textup{\ecv@footername}
 }
 
 % Right Footnote to be shown on every page
@@ -157,7 +157,7 @@
 \def\ecv@hungarianfooter{%
   \ecvpage{\thepage\ifx\@empty\ecv@totpages.\else\ecv@totpages\fi~\ecv@pagekey}%
   \def\ecv@lfoot{%
-    \footnotesize\textrm{\ecv@page~- \textrm{\ecv@footername} \ecv@cvofkey}}%
+    \footnotesize\textup{\ecv@page~- \textup{\ecv@footername} \ecv@cvofkey}}%
 }
 \providecommand{\ecvpersonalinfo}[1][0pt]{%
 {\ifx\@empty\ecv@date\else
@@ -324,7 +324,13 @@
             \addtolength{\ecv@rightcolwidth}{-\ecv@rulewidth}}
 \newcommand*{\ecvExtraRowHeight}[1]{\setlength\ecv@extrarowheight{#1}}
 \newcommand*{\ecvNoHorRule}{\def\ecv@hrule{}}
-\newcommand*{\ecvWithHorRule}{\def\ecv@hrule{\cline{1-1}}}
+% The rule spanning the first column at the beginning of the environment.
+% It works like \cline{1-1}, but a page break after it is not allowed:
+% otherwise the rule could be left alone at the bottom of a page (#39).
+\newcommand*{\ecv@hrulerow}{%
+  \omit\leaders\hrule\@height\arrayrulewidth\hfill\cr
+  \noalign{\nobreak\vskip-\arrayrulewidth}}
+\newcommand*{\ecvWithHorRule}{\def\ecv@hrule{\ecv@hrulerow}}
 % Initialization
 \ecvRuleWidth{\arrayrulewidth}
 \setlength\ecv@colsep{12pt}

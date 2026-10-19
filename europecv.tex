@@ -1,5 +1,5 @@
-%!TEX TS-program = pdflatex
-%!TEX encoding = UTF-8 Unicode
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
 \documentclass{europecv}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -923,7 +923,28 @@ The \textsf{europecv} class is built upon the \textsf{article} class, so you can
 
 The \textsf{europecv2020} class loads the \textsf{array}, \textsf{fancyhdr}, \textsf{totpages}, \textsf{graphicx}, \textsf{xcolor}, \textsf{hyperref} and (unless the \texttt{nogeometry} option is used) \textsf{geometry} packages.
 
-Both classes can be used with pdf\LaTeX, Xe\LaTeX\ and Lua\LaTeX. With Xe\LaTeX\ and Lua\LaTeX\ you may want to load the \textsf{fontspec} package to choose a Unicode font.
+Both classes can be used with pdf\LaTeX, Xe\LaTeX\ and Lua\LaTeX.
+
+\medskip
+\textbf{Using Xe\LaTeX\ and Lua\LaTeX.} The Unicode engines read the input as UTF-8 and can use the OpenType and TrueType fonts installed on your system through the \textsf{fontspec} package. With them:
+\begin{itemize}
+	\item do not load the \textsf{inputenc} and \textsf{fontenc} packages, and do not use the input encoding options of the class (they are ignored with a warning);
+	\item load \textsf{fontspec} and choose the fonts with \verb|\setmainfont|, \verb|\setsansfont| and \verb|\setmonofont|; the language options work as with pdf\LaTeX, but the font must contain the characters of the language (e.g., Greek or Cyrillic letters, which are missing in Latin Modern, the default font);
+	\item the \texttt{helvetica}, \texttt{arial} and \texttt{narrow} options select the fonts of pdf\LaTeX: do not use them. To get a typeface similar to the Europass one, select a sans serif font (e.g., \emph{TeX Gyre Heros}, a Helvetica clone included in \TeX~Live, or Arial if it is installed) and make it the default family with \verb|\renewcommand{\familydefault}{\sfdefault}|; for the condensed look of the \texttt{narrow} option, select a condensed family, such as \emph{TeX Gyre Heros Cn}. The footer uses the default family as well;
+	\item load \textsf{babel} (or \textsf{polyglossia}) for the hyphenation patterns of your language, as with pdf\LaTeX.
+\end{itemize}
+For example, the following preamble typesets a curriculum vit\ae\ with a condensed Helvetica clone:
+\begin{quote}
+	\begin{verbatim}
+	\documentclass[english]{europecv}  % compile with xelatex or lualatex
+	\usepackage{fontspec}
+	\setmainfont{TeX Gyre Termes}
+	\setsansfont{TeX Gyre Heros Cn}    % or {TeX Gyre Heros}, {Arial}, ...
+	\renewcommand{\familydefault}{\sfdefault}
+	\usepackage[english]{babel}
+	\end{verbatim}
+\end{quote}
+The same preamble works with the \textsf{europecv2020} class, which uses the sans serif family by default (the \verb|\familydefault| line is then not needed). The file \texttt{maltese-utf8.tex} in the \textsf{examples} folder is an example for Xe\LaTeX\ and Lua\LaTeX.
 
 %%% END SECTION ============================================================
 
